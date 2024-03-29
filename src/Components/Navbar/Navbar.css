@@ -261,7 +261,7 @@
     color: #191919 !important;
     position: fixed;
     top: 50px;
-    left: 28vw;
+    left: 20vw;
     flex-direction: column;
     font-weight: 600;
     z-index: 8;
@@ -428,7 +428,7 @@
     }
 
     #dropdown {
-        left: 32vw;
+        left: 28vw;
     }
 
     #dropdown ul li {
@@ -442,7 +442,7 @@
 
 @media(max-width:2000px) and (min-width:1500px) {
     #dropdown {
-        left: 30vw;
+        left: 24vw;
     }
 
     #dropdown ul li {
@@ -463,7 +463,7 @@
     }
 
     #dropdown {
-        left: 27vw;
+        left: 24vw;
     }
 }
 
@@ -482,7 +482,7 @@
 
 @media(max-width:1010px) {
     #dropdown {
-        left: 26vw;
+        left: 27.4vw;
     }
 
     #dropdown ul li {
@@ -550,7 +550,7 @@
     }
 
     #dropdown {
-        left: 35vw;
+        left: 32vw;
     }
 
     #dropdown ul li {
