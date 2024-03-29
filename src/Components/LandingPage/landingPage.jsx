@@ -32,7 +32,10 @@ import { RegOpenThunk } from "../../Redux/registerSlice";
 import { Spinner } from "react-bootstrap";
 import Footer from "../footer/footer";
 import { setProcess } from "../../Redux/heading";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import imageCar1 from "../Assets/imageP1.JPG";
 function LandingPage() {
   const reducer = useSelector((s) => s.login);
   const reducerReg = useSelector((s) => s.register);
@@ -44,6 +47,13 @@ function LandingPage() {
   const navigate = useNavigate();
   const step = useSelector((s) => s.step);
   const { title, processBool } = useSelector((s) => s.heading);
+
+  const settings = {
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+  };
 
   const [stepDialog, setStepDialog] = useState({
     one: false,
@@ -327,8 +337,37 @@ function LandingPage() {
             <img src={timelinePhone} className="mob_timeline" />
           </div>
         </div>
+
+      <div className="landScrolls">
+          <div id="text1Border">
+            <p className="aboutScroll" id="timelineHeading">
+              SCROLLS' 23
+            </p>
+          </div>
+          <div style={{width:'100%',marginTop:'4rem'}}>
+          <Slider {...settings}>
+        <div className="">
+          <img className="sliderItem" src={imageCar1} />
+        </div>
+        <div className="">
+          <img className="sliderItem" src={imageCar1} />
+        </div>
+        <div className="">
+          <img className="sliderItem" src={imageCar1} />
+        </div>
+        <div className="">
+          <img className="sliderItem" src={imageCar1} />
+        </div>
+      </Slider>
       </div>
+        </div>
+
+      
+      </div>
+
       <Footer />
+
+
 
       <div className="Dialogue1">
         <Dialog
