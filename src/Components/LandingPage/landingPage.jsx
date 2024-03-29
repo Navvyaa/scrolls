@@ -36,6 +36,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import imageCar1 from "../Assets/imageP1.JPG";
+import Question from "./question";
 function LandingPage() {
   const reducer = useSelector((s) => s.login);
   const reducerReg = useSelector((s) => s.register);
@@ -190,6 +191,41 @@ function LandingPage() {
     }
   }, [reducerReg.loading, timer]);
 
+  const faqData = [
+    {
+        question: "What is Scrolls?",
+        answer: "SCROLLS ( Student's Creative and Oratory Learning Skills) is an annually held National level technical paper presentation competition, inviting students to elaborate on the most thriving and progressive fields of technology and management."
+    },
+    {
+        question: "Who all can participate?",
+        answer: "As this is an Inter college competition anyone pursuing an Under Graduate or Post Graduate program in any technical or management domain from any college can participate in this competition."
+    },
+    {
+        question: "How many members can participate in a team ?",
+        answer: " A minimum of 2(two) and maximum of 3(three) members can participate in a team."
+    },
+    {
+        question: "What are the prerequisite skills for this event?",
+        answer: "The event doesn't require any pre-requisite skill. It will be solely based upon your creativity and ingenuity to analyse the topic and write the technical paper on the same."
+    },
+    {
+        question: "What are the benefits of this event?",
+        answer: "This event provides rostrum to the evolving professionals who can channelize their talent, creativity and give their imagination a cutting edge."
+    },
+    {
+        question: "What is the purpose of this event ?",
+        answer: "The sole purpose of this event is to provide an opportunity for the students to gain an experience to widen the vision of creativity and innovation. This experience will be an aid for the participants who want to publish research papers in the near future."
+    },
+    {
+        question: "What will be the rewards and recognitions for the emerging winners?",
+        answer: "Total cash prizes worth 72K would be distributed for the winners and along with the certificate of participation for every participant in addition to many more perks."
+    },
+    {
+        question: "What are the steps?",
+        answer: "Step 1- Registration\nStep 2- Disclosure of topics from every domain.\nStep 3- Submission of the synopsis on any one of the topics.\nStep 4- Based on the synopsis submitted, selected participants will present the technical paper on the day of the event( 5th May, 2023).\nStep 5- Announcement of winners.\n"
+    }
+];
+
   return (
     <>
       <Navbar />
@@ -200,7 +236,7 @@ function LandingPage() {
           </div>
           <div className="landFlex">
             <p className="landText1">
-              Students Creative & Oratory Learning Skills 2023
+              Students Creative & Oratory Learning Skills 2024
             </p>
             <p className="landText2">
               Prestigious National Level Technical Paper Presentation organized
@@ -362,6 +398,19 @@ function LandingPage() {
       </div>
         </div>
 
+<div className="landFAQ">
+<div id="text1Border">
+            <p className="aboutScroll">
+              FAQs
+            </p>
+          </div>
+          <div className="faqContainer">
+                {faqData.map((faq, index) => (
+                  <Question key={index} question={faq.question} ans={faq.answer} />
+                ))}
+              </div>
+
+</div>
       
       </div>
 
