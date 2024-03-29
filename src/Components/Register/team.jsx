@@ -226,8 +226,8 @@ function Team() {
                     <option value="3">3</option>
                 </select>
                 <p className="teamError">{msg}</p>
-                {/* <p className="regName">Referral Code</p>
-                <input type="text" className="regInputname" placeholder="Enter referral code" value={team.referral} onChange={(e) => { setTeam({ ...team, referral: e.target.value }) }} /> */}
+                <p className="regName">Referral Code</p>
+                <input type="text" className="regInputname" placeholder="Enter referral code" value={team.referral} onChange={(e) => { setTeam({ ...team, referral: e.target.value }) }} />
                 <p className="regName">Password</p>
                 {show1 ? (
                     <FontAwesomeIcon icon={faEye} id="TEye" onClick={handleShow1} />
