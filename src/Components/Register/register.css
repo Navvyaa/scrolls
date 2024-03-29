@@ -168,11 +168,15 @@
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 20px;
+    /* line-height: 2px; */
     color: #000000;
-    margin-top: 16px;
-    margin-bottom: 6px;
+    /* padding-top: 16px; */
+    padding-bottom: 6px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem
+    /* overflow-y: hidden; */
 }
+
 
 .regInputname {
     width: 25vw;
@@ -192,7 +196,7 @@
 
 .genders {
     display: flex;
-    height: 50px;
+    height: 67px;
 }
 
 .regGender {
