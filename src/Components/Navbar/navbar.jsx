@@ -394,8 +394,11 @@ function Navbar() {
             {" "}
             <li>How To Register</li>
           </NavLink>
-          <NavLink to="/faq">
+          {/* <NavLink to="/faq">
             <li>FAQs</li>
+          </NavLink> */}
+          <NavLink to="/accommodations">
+            <li>Accommodations</li>
           </NavLink>
         </ul>
       </div>
@@ -412,13 +415,17 @@ function Navbar() {
             {" "}
             <li>How To Register</li>
           </NavLink>
-          <NavLink to="/faq">
+          {/* <NavLink to="/faq">
             <li>FAQs</li>
+          </NavLink> */}
+          <NavLink to="/accommodations">
+            <li>Accommodations</li>
           </NavLink>
         </ul>
       </div>
 
       <div className="navbar" onMouseLeave={closeDropdown}>
+        <div style={{display:"flex",alignItems:'center',gap:'2rem'}}>
         <NavLink to="/">
           <p className="navScroll">
             SCROLLS<span className="navDot">.</span>
@@ -458,9 +465,14 @@ function Navbar() {
               Results
             </p>
           </NavLink>
-          <NavLink to="/faq">
+          {/* <NavLink to="/faq">
             <p id="navCA" className="navHead">
               FAQs
+            </p>
+          </NavLink> */}
+          <NavLink to="/accommodations">
+            <p id="navCA" className="navHead">
+              Accommodations
             </p>
           </NavLink>
           <p
@@ -512,9 +524,14 @@ function Navbar() {
               Results
             </p>
           </NavLink>
-          <NavLink to="/faq">
+          {/* <NavLink to="/faq">
             <p id="navCA" className="navHead">
               FAQs
+            </p>
+          </NavLink> */}
+          <NavLink to="/accommodations">
+            <p id="navCA" className="navHead">
+              Accommodations
             </p>
           </NavLink>
           <p
@@ -526,6 +543,9 @@ function Navbar() {
             More
           </p>
         </div>
+        </div>
+
+
         <div className="navFlex2">
           <button
             className="navRegister"
