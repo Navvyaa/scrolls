@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "@chakra-ui/accordion": "^2.3.1",
+    "@chakra-ui/layout": "^2.3.1",
+    "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
@@ -20,7 +23,7 @@
     "gh-pages": "^5.0.0",
     "querystring-es3": "^0.2.1",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.7.2",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^2.1.0",
     "react-google-recaptcha-v3": "^1.10.1",

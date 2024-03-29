@@ -3,6 +3,7 @@ html {
     box-sizing: border-box;
 }
 
+
 body {
     position: relative;
     padding-bottom: 40px;
@@ -146,11 +147,41 @@ body {
     overflow: hidden;
 }
 
+.aboutFAQ {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #252525;
+    /* width: 24vw; */
+    padding-bottom: 2px;
+    border: 2px solid #252525;
+    padding-top: 10px;
+    transform: rotate(2deg);
+    position: relative;
+    z-index: 4;
+    overflow: hidden;
+}
+
 #text1Border {
     display: block;
     border: 2px solid #FAC949;
     transform: rotate(-2deg);
     width: 18vw;
+    height: 72px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#text2Border {
+    display: block;
+    border: 2px solid #FAC949;
+    transform: rotate(-2deg);
+    width: 40vw;
     height: 72px;
     position: relative;
     z-index: 2;
@@ -513,6 +544,26 @@ body {
     align-items: center;
 }
 
+.landFAQ{
+    padding-bottom: 40px;
+    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faqContainer{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1rem;
+    align-items: center;
+    width: 80%;
+
+}
+
 #timelineBorder {
     display: block;
     border: 2px solid #FAC949;
@@ -565,6 +616,12 @@ body {
     #text1Border,
     .aboutScroll {
         width: 10vw;
+        height: 76px;
+    }
+
+    #text2Border,
+    .aboutFAQ {
+        width: 24vw;
         height: 76px;
     }
 
@@ -651,6 +708,10 @@ body {
 
 @media(max-width:1900px) and (min-width:1500px) {
 
+
+    .accordion-item {
+        width: 60vw;
+       }
     .landBlock1,
     .landImage,
     #loginBg {
@@ -664,6 +725,11 @@ body {
     #text1Border,
     .aboutScroll {
         width: 15vw;
+        font-size: 1.8rem;
+    }
+
+    #text2Border,.aboutFAQ{
+        width: 32vw;
         font-size: 1.8rem;
     }
 
@@ -700,6 +766,10 @@ body {
         overflow: hidden;
     }
 
+    .accordion-item {
+        width: 60vw;
+       }
+
     .landBlock1 {
         overflow: hidden;
     }
@@ -721,6 +791,11 @@ body {
         margin-bottom: 12px;
     }
 
+    .accordion-item {
+        width: 70vw;
+
+       }
+
     .footHead2 {
         width: 20vw;
     }
@@ -734,6 +809,9 @@ body {
 
     .aboutScroll {
         font-size: 1.4rem;
+    }
+    .aboutFAQ {
+       font-size: 1.4rem;
     }
 
     .domainCard1,
@@ -760,6 +838,12 @@ body {
     #text1Border,
     .aboutScroll {
         width: 22vw;
+    }
+
+    #text2Border,
+    .aboutFAQ {
+        width: 46vw;
+        height: 76px;
     }
 
     #domainBorder {
@@ -832,6 +916,11 @@ body {
 }
 
 @media(max-width:850px) {
+
+    .accordion-item {
+        width: 80vw;
+
+       }
     .aboutScroll {
         font-size: 1.5rem;
         padding-left: 1vw;
@@ -841,6 +930,12 @@ body {
     #text1Border,
     .aboutScroll {
         width: 26vw;
+    }
+
+    #text2Border,
+    .aboutFAQ {
+        width: 56vw;
+        height: 76px;
     }
 
     #domainBorder {
@@ -986,6 +1081,9 @@ body {
     .aboutScroll {
         font-size: 1.3rem;
     }
+    .aboutFAQ {
+        font-size: 1.3rem;
+    }
 
     .aboutHead {
         width: 60vw;
@@ -1040,6 +1138,10 @@ body {
     }
 
     .aboutScroll {
+        font-size: 1.2rem;
+    }
+
+    .aboutFAQ {
         font-size: 1.2rem;
     }
 
@@ -1131,6 +1233,12 @@ body {
     #text1Border,
     .aboutScroll {
         width: 30vw;
+    }
+
+    #text2Border,
+    .aboutFAQ {
+        width: 64vw;
+        height: 76px;
     }
 
     #timelineBorder {
@@ -1251,6 +1359,12 @@ body {
         width: 32vw;
     }
 
+    #text2Border,
+    .aboutFAQ {
+        width: 69vw;
+        height: 76px;
+    }
+
     #domainBorder,
     #timelineBorder {
         width: 32vw;
@@ -1309,6 +1423,12 @@ body {
     .aboutScroll {
         width: 38vw;
         font-size: 1.3rem;
+    }
+
+    #text2Border,
+    .aboutFAQ {
+        width: 76vw;
+        height: 76px;
     }
 
     #domainBorder {
@@ -1531,7 +1651,7 @@ button.slick-next {
 background-position: center center!important;
 background-repeat: no-repeat!important;
 background-size: contain!important;
-z-index:10;
+z-index:1;
 position: absolute;
 right: 5%;
 }
@@ -1542,7 +1662,7 @@ button.slick-next:focus {
 background-position: center center!important;
 background-repeat: no-repeat!important;
 background-size: contain!important;
-z-index:10;
+z-index:1;
 position: absolute;
 right: 5%;
 }
@@ -1553,7 +1673,7 @@ button.slick-next:hover {
 background-position: center center!important;
 background-repeat: no-repeat!important;
 background-size: contain!important;
-z-index:10;
+z-index:1;
 position: absolute;
 right: 5%;
 }
@@ -1564,7 +1684,7 @@ right: 5%;
 background-position: center center!important;
 background-repeat: no-repeat!important;
 background-size: contain !important;
-z-index:10;
+z-index:1;
 position: absolute;
 left: 5%;
       }
@@ -1575,7 +1695,7 @@ left: 5%;
 background-position: center center!important;
 background-repeat: no-repeat!important;
 background-size: contain !important;
-z-index:10;
+z-index:1;
 position: absolute;
 left: 5%;
       }
@@ -1586,7 +1706,7 @@ left: 5%;
 background-position: center center!important;
 background-repeat: no-repeat!important;
 background-size: contain !important;
-z-index:10;
+z-index:1;
 position: absolute;
 left: 5%;
       }
@@ -1607,4 +1727,37 @@ left: 5%;
             box-sizing: border-box;
             margin: 0px 12.5%;
           }
+
+          .questionBox{
+            display: flex;
+            height: 4.5rem;
+            width: 64vw;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid black;
+            padding: 0 1rem;
+            border-radius: 0.25rem;
+            font-weight: 400;
+          }
+
+          .accordion-header {
+            border: none;
+            background: white !important;
+
+        }
+        .accordion-button{
+            background: white !important;
+            color: black !important;
+            border-bottom: 1px solid #000000 !important;
+
+        }
+       
+        .accordion-button:not(.collapsed)::after {
+            filter: invert(50%);
+        }
+
+    
+       
+    
+    
       
