@@ -37,6 +37,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import imageCar1 from "../Assets/imageP1.JPG";
 import Question from "./question";
+import winnersImg from "../Assets/scrolls23Winner.svg";
 function LandingPage() {
   const reducer = useSelector((s) => s.login);
   const reducerReg = useSelector((s) => s.register);
@@ -222,8 +223,12 @@ function LandingPage() {
     },
     {
         question: "What are the steps?",
-        answer: "Step 1- Registration\nStep 2- Disclosure of topics from every domain.\nStep 3- Submission of the synopsis on any one of the topics.\nStep 4- Based on the synopsis submitted, selected participants will present the technical paper on the day of the event( 5th May, 2023).\nStep 5- Announcement of winners.\n"
-    }
+        answer: `Step 1- Registration \n
+        Step 2- Disclosure of topics from every domain. \n
+        Step 3- Submission of the synopsis on any one of the topics. \n
+        Step 4- Based on the synopsis submitted, selected participants will present the technical paper on the day of the event( 5th May, 2023).\n
+        Step 5- Announcement of winners.`
+            }
 ];
 
   return (
@@ -396,6 +401,24 @@ function LandingPage() {
         </div>
       </Slider>
       </div>
+        </div>
+
+        <div className="winner23">
+          <div className="winImg">
+        <img className="winnerImg" src={imageCar1} />
+        <img className="winnerImg1" src={winnersImg} />
+        </div>
+        <div className="winnerText">
+          <div className="winnerHead">SCROLLS'23 Winner</div>
+        ‘SCROLLS’ is a platform for the innovative minds to exchange their
+            ideas, inventiveness and enterprise and administer their erudition
+            in various flourishing sectors. It encompasses various aspects and
+            trends relating to computing, telecommunication and information
+            technologies along with advancements in management thus aiming to
+            discover the best possible ingenuity to solve problems with a
+            futuristic approach.
+          </div>
+
         </div>
 
 <div className="landFAQ">
