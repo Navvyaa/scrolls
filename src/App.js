@@ -21,7 +21,7 @@ import Timeline from "./Components/LandingPage/timeline";
 import RegProcess from "./Components/RegProcess/RegProcess";
 import "./App.css"
 import Result from "./Components/results/Result";
-
+import Accommodations from "./Components/Accommodations/accommodations";
 function App() {
 
   const team = localStorage.getItem("accessToken") ? true : false
@@ -71,6 +71,7 @@ function App() {
         <Route path="/updates" exact element={<Update />} />
         {/* <Route path="/previous_year" exact element={<PreviousYear />} /> */}
         <Route path="/faq" exact element={<FAQ />} />
+        <Route path="/accommodations" exact element={<Accommodations />} />
         <Route path="/domain_cs" exact element={<DomainCs />} />
         <Route path="/domain_me" exact element={<DomainMe />} />
         <Route path="/domain_civil" exact element={<DomainCivil />} />
