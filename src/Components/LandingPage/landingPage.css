@@ -1766,8 +1766,6 @@ left: 5%;
             width: 30rem;
             height: 25rem;
             border-radius: 0.5rem;
-            padding-right: 2rem;
-            padding-top: 2rem;
         }
         .winnerText{
             display: flex;
@@ -1781,16 +1779,19 @@ left: 5%;
             font-weight: 600;
         }
         .winImg{
-            position: relative;;
+            position: relative;
+            padding-right: 2rem;
+            padding-top: 2rem;
+            padding-left: 2rem;
         }
         .winnerImg1{
             position: absolute;
-            right: -2%;
+            right: -5%;
             z-index: 1;
-            top:-2%;
+            top:-5%;
         }
 
-@media(max-width:1007px) {
+@media(max-width:1087px) {
     .winnerHead{
         font-size: 2rem;
         font-weight: 600;
@@ -1817,7 +1818,7 @@ left: 5%;
     }
     .winnerImg1{
 
-    scale:80%;}
+    scale:90%;}
 }
     
        
