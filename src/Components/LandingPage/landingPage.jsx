@@ -506,7 +506,7 @@ function LandingPage() {
         <CA2 />
       </Dialog>
 
-      <Dialog
+      {/* <Dialog
         open={soon}
         onClose={handleSoonClose}
         PaperProps={{
@@ -537,9 +537,9 @@ function LandingPage() {
             Results
           </Button>
         </div>
-      </Dialog>
+      </Dialog> */}
 
-      <div style={{ position: "absolute", top: "40px", right: "20px" }}>
+      {/* <div style={{ position: "absolute", top: "40px", right: "20px" }}>
         <Dialog
           open={process}
           onClose={handleProcess}
@@ -576,7 +576,7 @@ function LandingPage() {
             </Button>
           </div>
         </Dialog>
-      </div>
+      </div> */}
 
       {loading ? (
         <Spinner animation="border" variant="dark" id="loadSpinner" />
