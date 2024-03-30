@@ -146,12 +146,17 @@
 
 .navFlex2 {
     display: flex;
+    align-items: center;
 }
 
 .navFlex3 {
     display: flex;
     display: none;
     margin-top: 6px;
+}
+.navRegister{
+    margin-bottom: 0px !important;
+
 }
 
 .navRegister,
@@ -176,6 +181,10 @@
     color: #FFFFFF;
 }
 
+.navLogin{
+    margin-bottom: 0px !important;
+
+}
 .navLogin,
 .liLogin {
     width: 8.5vw;
@@ -647,6 +656,10 @@
 
 @media(max-width:600px) {
 
+    .navScroll {
+        font-size: 1.5rem;
+        min-width:20rem !important;
+    }
     .navFlex1,
     .navRegister,
     .navLogin,
@@ -742,7 +755,7 @@
 
 @media(max-width:360px) {
     #menu {
-        margin-left: 40vw;
+        margin-left: 30vw;
     }
 
     #uli {

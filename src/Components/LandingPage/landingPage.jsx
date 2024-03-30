@@ -539,7 +539,7 @@ function LandingPage() {
         </div>
       </Dialog>
 
-      {/* <div style={{ position: "absolute", top: "40px", right: "20px" }}>
+      <div style={{ position: "absolute", top: "40px", right: "20px" }}>
         <Dialog
           open={process}
           onClose={handleProcess}
@@ -576,7 +576,7 @@ function LandingPage() {
             </Button>
           </div>
         </Dialog>
-      </div> */}
+      </div>
 
       {loading ? (
         <Spinner animation="border" variant="dark" id="loadSpinner" />
