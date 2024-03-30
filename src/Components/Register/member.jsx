@@ -177,7 +177,7 @@ function Member() {
     const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
     const [valu, setValu] = useState('')
     const [token, setToken] = useState(false);
-    const key = "6Lf7i6gpAAAAACYEnXjxMVcz6Hqu2No6daGGVUpb"
+    const key = "6Lc40yElAAAAAJuSuZ8MhKA4ZSB_gXoVmTWu6KWP"
     function onChange(value) {
         setValu(value)
         setToken(true)
@@ -443,17 +443,17 @@ function Member() {
                     </>}
                 </select>
                 <p className="teamError">{msg4}</p>
-                <div id="recaptcha">
+                <div>
                     {count ?
                         < GoogleReCaptchaProvider reCaptchaKey={key}>
                             <GoogleReCaptcha onVerify={onVerify} />
                         </GoogleReCaptchaProvider>
                         : null
                     }
-                    <ReCAPTCHA size="normal"
+                    {/* <ReCAPTCHA size="normal"
                         sitekey={key}
                         onChange={onChange}
-                    />
+                    /> */}
                 </div>
                 <button className="regButton" type="submit">Register</button>
             </form >

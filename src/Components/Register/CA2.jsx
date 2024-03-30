@@ -335,11 +335,11 @@ function CA2() {
                     </>}
                 </select>
                 <p className="teamError">{msg4}</p>
-                <div id="recaptcha">
-                    <ReCAPTCHA
+                <div>
+                    {/* <ReCAPTCHA
                         sitekey={key}
                         onChange={onChange}
-                    />
+                    /> */}
                 </div>
                 <button className="regButton" type="submit">Register</button>
             </form>
