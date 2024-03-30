@@ -443,7 +443,7 @@ function Member() {
                     </>}
                 </select>
                 <p className="teamError">{msg4}</p>
-                <div id="recaptcha">
+                <div>
                     {count ?
                         < GoogleReCaptchaProvider reCaptchaKey={key}>
                             <GoogleReCaptcha onVerify={onVerify} />

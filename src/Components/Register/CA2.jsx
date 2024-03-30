@@ -277,7 +277,7 @@ function CA2() {
             <form className="allForm" onSubmit={RegAsCA}>
                 <p className="regName">Name</p>
                 <input required type="text" className="regInputname" id="input" placeholder="Enter your name" value={ca.name} onChange={(e) => setCA({ ...ca, name: e.target.value })} />
-                <p id="wrongNameCA">Name must contain only alphabetic characters.</p>
+                <div id="wrongNameCA">Name must contain only alphabetic characters.</div>
                 <p className="regName">Password</p>
                 {show1 ? (
                     <FontAwesomeIcon icon={faEye} id="CEye" onClick={handleShow1} />
@@ -335,11 +335,11 @@ function CA2() {
                     </>}
                 </select>
                 <p className="teamError">{msg4}</p>
-                <div id="recaptcha">
-                    <ReCAPTCHA
+                <div>
+                    {/* <ReCAPTCHA
                         sitekey={key}
                         onChange={onChange}
-                    />
+                    /> */}
                 </div>
                 <button className="regButton" type="submit">Register</button>
             </form>

@@ -27,7 +27,6 @@ import { RegOpenThunk } from "../../Redux/registerSlice";
 import { Spinner } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 function Navbar() {
   const [dialogg, setDialogg] = useState(false);
   const [login, setLogin] = useState(false);
@@ -307,8 +306,11 @@ function Navbar() {
           <NavLink to="/rules">
             <li>Rules</li>
           </NavLink>
-          <NavLink to="/faq">
+          {/* <NavLink to="/faq">
             <li>FAQs</li>
+          </NavLink> */}
+          <NavLink to="/accommodations">
+            <li>Accommodations</li> 
           </NavLink>
           <NavLink to="/team_db">
             <li id="team">Dashboard</li>
@@ -584,9 +586,9 @@ function Navbar() {
         open={stepDialog.one}
         PaperProps={{
           sx: {
-            maxHeight: 1300,
-            marginTop: 60,
-            maxWidth: 1000,
+            maxHeight: 1000,
+            // marginTop: 18,
+            maxWidth: 1500,
           },
         }}
       >
@@ -598,8 +600,8 @@ function Navbar() {
         open={stepDialog.two}
         PaperProps={{
           sx: {
-            maxHeight: 1100,
-            marginTop: 94,
+            maxHeight: 1200,
+            marginTop: 64,
             maxWidth: 1000,
           },
         }}
@@ -611,8 +613,8 @@ function Navbar() {
         open={stepDialog.three}
         PaperProps={{
           sx: {
-            maxHeight: 1100,
-            marginTop: 76,
+            maxHeight: 1300,
+            marginTop: 46,
             maxWidth: 1000,
           },
         }}
@@ -634,7 +636,7 @@ function Navbar() {
         PaperProps={{
           sx: {
             maxHeight: 1240,
-            marginTop: 94,
+            marginTop: 64,
             maxWidth: 1000,
           },
         }}
@@ -648,9 +650,50 @@ function Navbar() {
           sx: { maxHeight: 450, maxWidth: 1000 },
         }}
       >
-        <LoginTeam />
-        {/* <Login1 /> */}
+        {/* <LoginTeam /> */}
+        <Login1 />
       </Dialog>
+
+      <Dialog
+      open={stepDialog.seven}
+      PaperProps={{
+        sx: { maxHeight: 500, maxWidth: 1000 },
+      }}
+      >
+        <Login />
+      </Dialog>
+
+      <Dialog
+        open={stepDialog.eight}
+        PaperProps={{
+          sx: { maxHeight: 500, maxWidth: 1000 },
+        }}  >
+          <Forgot />
+        </Dialog>
+
+        <Dialog
+        open={stepDialog.nine}
+        PaperProps={{
+          sx: { maxHeight: 500, maxWidth: 1000 },
+        }}>
+          <Otp />
+        </Dialog>
+
+        <Dialog
+        open={stepDialog.ten}
+        PaperProps={{
+          sx: { maxHeight: 500, maxWidth: 1000 },
+        }}>
+          <Reset />
+        </Dialog>
+
+        <Dialog
+        open={stepDialog.eleven}
+        PaperProps={{
+          sx: { maxHeight: 500, maxWidth: 1000 },
+        }}>
+          <LoginTeam />
+        </Dialog>
 
       <Dialog
         open={stepDialog.twelve}
