@@ -501,7 +501,7 @@
     }
 }
 
-@media(max-width:930px) {
+@media(max-width:1100px) {
     .navRegister {
         width: 10vw;
     }
@@ -538,11 +538,11 @@
     }
 
     #moreDD {
-        left: 58vw;
+        left: 43vw;
     }
 
     #moreDD2 {
-        left: 64vw;
+        left: 60vw;
     }
 
     .navLogin {
@@ -550,7 +550,7 @@
     }
 
     #dropdown {
-        left: 32vw;
+        left: 27vw;
     }
 
     #dropdown ul li {
@@ -563,6 +563,9 @@
 }
 
 @media(max-width:870px) {
+    #moreDD {
+        left: 52vw;
+    }
     #moreDD2 {
         left: 64vw;
     }
