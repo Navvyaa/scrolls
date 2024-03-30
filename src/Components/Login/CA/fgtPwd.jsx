@@ -117,10 +117,10 @@ function Forgot() {
                 <input type="text" required className="regInputname" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <p id="wrongEmailLog1">Please enter a valid Email address</p>
                 <div id="recaptcha">
-                    <ReCAPTCHA
+                    {/* <ReCAPTCHA
                         sitekey={key}
                         onChange={onChange}
-                    />
+                    /> */}
                 </div>
                 <button className="regButton" type="submit">Continue</button>
             </form>
