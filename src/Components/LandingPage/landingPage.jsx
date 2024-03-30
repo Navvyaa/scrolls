@@ -506,7 +506,7 @@ function LandingPage() {
         <CA2 />
       </Dialog>
 
-      <Dialog
+      {/* <Dialog
         open={soon}
         onClose={handleSoonClose}
         PaperProps={{
@@ -537,7 +537,7 @@ function LandingPage() {
             Results
           </Button>
         </div>
-      </Dialog>
+      </Dialog> */}
 
       {/* <div style={{ position: "absolute", top: "40px", right: "20px" }}>
         <Dialog

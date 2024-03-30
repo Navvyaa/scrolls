@@ -56,11 +56,17 @@ function Footer() {
                 </div>
             </div>
             <p className="footText">Powered by <a href="https://www.instagram.com/software.incubator/" target="_blank"  >
-                <span id="siIcon" ><img src={SI} /></span><span id="software">SOFTWARE</span><span id="incubator">INCUBATOR </span>
+            <div className="flex items-center gap-2 justify-center">
+                    <img src={SI} />
+                    <span id="software">SOFTWARE</span><span id="incubator">INCUBATOR </span></div>
             </a>
-                & Managed by <a href="https://instagram.com/horizon.akgec?igshid=MGU3ZTQzNzY=" target="_blank" ><img src={horizon} id="horizon" />
+                & Managed by <a href="https://instagram.com/horizon.akgec?igshid=MGU3ZTQzNzY=" target="_blank" >
+                    <div className="flex items-center gap-2 justify-center">
+                    <img src={horizon} id="horizon" />
                     <span id="incubator"> TEAM </span>
-                    <span id="horizonText"> HORIZON</span></a></p>
+                    <span id="horizonText"> HORIZON</span>
+                    </div></a></p>
+
         </div>
     </>
 }
