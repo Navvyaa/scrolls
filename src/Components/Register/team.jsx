@@ -210,7 +210,7 @@ function Team() {
     }, [reducer.loading, timer])
 
     return <>
-        <div className="register">
+        <div className="register" id="registerTeam">
             <div className="regFlex" id="teamReg">
                 <img className="arrow" src={arrow} onClick={() => { dispatch(dialog1()) }} />
                 <p className="heading">Register as <span id="member">Team</span></p>
