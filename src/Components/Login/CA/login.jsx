@@ -114,7 +114,7 @@ function Login() {
             <form className='allForm' onSubmit={LoginCA1}>
                 <p className="regName">Email ID</p>
                 <input type="text" className="regInputname" placeholder="Enter your email" required value={login1.email} onChange={(e) => setLogin1({ ...login1, email: e.target.value })} />
-                <p id="wrongEmailLog1">Please enter a valid Email address</p>
+                {/* <p id="wrongEmailLog1">Please enter a valid Email address</p> */}
                 <p className="regName">Password</p>
                 {show1 ? (
                     <FontAwesomeIcon icon={faEye} id="LEye" onClick={handleShow1} />
