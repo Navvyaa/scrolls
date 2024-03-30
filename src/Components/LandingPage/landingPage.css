@@ -1803,9 +1803,27 @@ left: 5%;
     .winner23{
         gap:1.5rem;
     }
+    button.slick-prev {
+        scale: 85%;}
+    button.slick-next {
+        scale: 85%;}
+
+}
+@media(max-width:900px) {
+    .sliderItem{
+        height:90%;
+    }
+    
+    button.slick-prev {
+        scale: 80%;}
+    button.slick-next {
+        scale: 80%;}
 
 }
 @media(max-width:700px) {
+    .sliderItem{
+        height:90%;
+    }
     .winnerText
     {
         width:80%;
@@ -1819,7 +1837,38 @@ left: 5%;
     .winnerImg1{
 
     scale:90%;}
+
+    button.slick-prev {
+        scale: 75%;
+        top:45%;
+
+    }
+    button.slick-next {
+        scale: 75%;
+        top:45%;
+    }
+
 }
+
+@media(max-width:500px) {
+    button.slick-prev {
+        scale: 70%;
+        top:40%;
+
+    }
+    button.slick-next {
+        scale: 70%;
+        top:40%;
+    }
+    button.slick-next,button.slick-prev{
+        
+        margin: 0px -5%;
+    }
+   
+
+
+}
+
     
        
     
