@@ -218,7 +218,7 @@
 
 .genders {
     display: flex;
-    padding-bottom: 4px;
+    padding-bottom: 0.5rem;
     overflow: hidden;
 }
 
@@ -381,7 +381,7 @@
     outline: none;
     margin-top: 32px;
     cursor: pointer;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 .forgotPass {
@@ -1559,3 +1559,4 @@
         -webkit-transform-origin: 0 0;
     }
 }
+
