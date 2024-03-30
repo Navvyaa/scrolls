@@ -336,7 +336,7 @@ body {
 
 .landFooter {
     width: 100%;
-    height: 360px;
+    height: 336px;
     background: #191919;
     padding-top: 56px;
     padding-left: 2vw;
@@ -699,7 +699,7 @@ body {
     }
 
     .landFooter {
-        height: 380px;
+        height: 356px;
     }
 
     #instagram,
@@ -745,7 +745,7 @@ body {
     }
 
     .landFooter {
-        height: 380px;
+        height: 360px;
     }
 
     .domainCard1,
@@ -1263,7 +1263,7 @@ body {
     }
 
     .landFooter {
-        height: 625px;
+        height: 600px;
         padding-top: 36px;
         padding-left: 8vw;
     }
@@ -1510,7 +1510,7 @@ body {
     }
 
     .landFooter {
-        height: 640px;
+        height: 600px;
     }
 
     .footText {
@@ -1619,7 +1619,7 @@ body {
     }
 
     .landFooter {
-        height: 650px;
+        height: 610px;
     }
 
     .footText {
@@ -1629,7 +1629,7 @@ body {
 
 @media(max-width:300px) {
     .landFooter {
-        height: 670px;
+        height: 620px;
     }
 
     #text1Border,
