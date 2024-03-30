@@ -27,7 +27,6 @@ import { RegOpenThunk } from "../../Redux/registerSlice";
 import { Spinner } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 function Navbar() {
   const [dialogg, setDialogg] = useState(false);
   const [login, setLogin] = useState(false);
@@ -588,7 +587,7 @@ function Navbar() {
         PaperProps={{
           sx: {
             maxHeight: 1000,
-            marginTop: 18,
+            // marginTop: 18,
             maxWidth: 1500,
           },
         }}
@@ -601,8 +600,8 @@ function Navbar() {
         open={stepDialog.two}
         PaperProps={{
           sx: {
-            maxHeight: 1100,
-            marginTop: 44,
+            maxHeight: 1200,
+            marginTop: 64,
             maxWidth: 1000,
           },
         }}

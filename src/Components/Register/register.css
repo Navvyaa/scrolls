@@ -72,7 +72,7 @@
     display: flex;
     flex-direction: column;
     width: 40vw;
-    height: 1000px;
+    height: 1150px;
     /* height:1400px; */
     /* height: 1000px; */
     padding-top: 2rem;
@@ -193,9 +193,9 @@
     /* padding-top: 16px; */
     padding-bottom: 4px;
     padding-top: 2px;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem
-    /* overflow-y: hidden; */
+    margin-bottom: 0.25rem;
+    margin-top: 0.75rem;
+    overflow-y: hidden;
 }
 
 
@@ -206,18 +206,20 @@
     outline: none;
     border: 1px solid #D9D9D9;
     border-radius: 5px;
-    padding-left: 1vw;
+    padding: 0 0.5rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     height: 48px;
+    outline:none !important;
 }
 
 .genders {
     display: flex;
-    height: 71px;
+    padding-bottom: 4px;
+    overflow: hidden;
 }
 
 .regGender {
@@ -327,9 +329,9 @@
     margin-top: 2px;
     width: 25vw;
     display: none;
-    /* margin-bottom: 4px; */
+    margin-bottom: 0px;
     padding-top: 2px;
-    padding-bottom: 2px;
+    padding-bottom: 6px;
     overflow: hidden;
 
 }
@@ -351,7 +353,7 @@
 #CEye {
     position: relative;
     /* top:1.5vw; */
-    top: 14px;
+    top: 15px;
     left: 23vw;
     cursor: pointer;
     width: 18px;
@@ -361,7 +363,7 @@
 
 .inputPwd {
     /* position */
-    margin-top: -20px;
+    margin-top: -16px;
 }
 
 .regButton {
@@ -532,7 +534,7 @@
     #wrongEmailLog1,
     #wrongPwdLog1,
     .teamError {
-        width: 20vw;
+        width: 21vw;
         margin-bottom: 4px;
     }
 
@@ -664,7 +666,7 @@
     #wrongPwdLog1,
     .forgotText,
     .teamError {
-        width: 27vw;
+        width: 28vw;
         font-size: 0.85rem;
     }
 
@@ -716,7 +718,7 @@
     #wrongPwdLog1,
     .forgotText,
     .teamError {
-        width: 27vw;
+        width: 28vw;
         font-size: 0.8rem;
     }
 
@@ -796,7 +798,7 @@
     #wrongEmailLog1,
     #wrongPwdLog1,
     .teamError {
-        width: 30vw;
+        width: 32vw;
     }
 
     #LEye,
@@ -1067,7 +1069,7 @@
     #wrongEmailLog1,
     #wrongPwdLog1,
     .teamError {
-        width: 41vw;
+        width: 44vw;
     }
 
     #LEye,
@@ -1157,7 +1159,7 @@
     #wrongEmailLog1,
     #wrongPwdLog1,
     .teamError {
-        width: 45vw;
+        width: 47vw;
     }
 
     #registerCA {
@@ -1213,7 +1215,7 @@
     #wrongEmailLog1,
     #wrongPwdLog1,
     .teamError {
-        width: 51vw;
+        width: 54vw;
     }
 
     .regGender {
@@ -1299,7 +1301,7 @@
     #wrongEmailLog1,
     #wrongPwdLog1,
     .teamError {
-        width: 54vw;
+        width: 58vw;
         font-size: 0.8rem;
     }
 
@@ -1396,7 +1398,7 @@
     #wrongEmailLog1,
     #wrongPwdLog1,
     .teamError {
-        width: 63vw;
+        width: 65vw;
     }
 
     #recaptcha {
@@ -1462,7 +1464,7 @@
     #wrongEmailLog1,
     #wrongPwdLog1,
     .teamError {
-        width: 58vw;
+        width: 62vw;
     }
 
     #regCA {
