@@ -126,7 +126,7 @@ function Reset() {
                     <FontAwesomeIcon icon={faEyeSlash} id="LEye" onClick={handleShow1} />
                 )}
                 <input type={show1 ? "text" : "password"} className="regInputname inputPwd" required placeholder="Enter password" value={input.pass} onChange={(e) => setInput({ ...input, pass: e.target.value })} />
-                <p id="WrongPwd1">Password must be minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character</p>
+                <p id="WrongPwd1">Password must be minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character</p>
                 <p className="regName">Confirm Password</p>
                 {show2 ? (
                     <FontAwesomeIcon icon={faEye} id="LEye" onClick={handleShow2} />

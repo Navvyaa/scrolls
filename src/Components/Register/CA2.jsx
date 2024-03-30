@@ -285,7 +285,7 @@ function CA2() {
                     <FontAwesomeIcon icon={faEyeSlash} id="CEye" onClick={handleShow1} />
                 )}
                 <input required type={show1 ? "text" : "password"} className="regInputname inputPwd" placeholder="Enter password" value={ca.pass} onChange={(e) => setCA({ ...ca, pass: e.target.value })} />
-                <p id="WrongPwdCA1">Password must be minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character</p>
+                <p id="WrongPwdCA1">Password must be minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character</p>
                 <p className="regName">Confirm Password</p>
                 {show2 ? (
                     <FontAwesomeIcon icon={faEye} id="CEye" onClick={handleShow2} />
