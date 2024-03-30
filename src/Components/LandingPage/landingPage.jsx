@@ -447,7 +447,7 @@ function LandingPage() {
           PaperProps={{
             sx: {
               maxHeight: 1300,
-              marginTop: 60,
+              // marginTop: 60,
               maxWidth: 1000,
             },
           }}

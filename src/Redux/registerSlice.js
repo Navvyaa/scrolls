@@ -19,6 +19,7 @@ const RegOpenThunk = createAsyncThunk("register", async () => {
 })
 
 const RegMemberThunk = createAsyncThunk("register/member", async (data) => {
+    console.log(data);
     return await Baseurl.post("participants/register/0", data)
         .then((res) => {
             return res
