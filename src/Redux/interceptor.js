@@ -3,7 +3,7 @@ import axios from "axios"
 
 const instance = axios.create(
     {
-        baseURL: "https://web-production-f8d3.up.railway.app/"
+        baseURL: "https://scrollsdev.silive.in/"
     }
 
 );
