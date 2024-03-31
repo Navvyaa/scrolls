@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     padding: 116px 8vw 40px 6vw;
-    margin-bottom: 240px;
+    /* margin-bottom: 240px; */
     overflow-x: visible;
 }
 
@@ -45,6 +45,6 @@
 
 @media(max-width:600px) {
     .regProcess {
-        padding-bottom: 300px;
+        /* padding-bottom: 300px; */
     }
 }

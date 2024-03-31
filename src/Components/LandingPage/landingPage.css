@@ -336,7 +336,7 @@ body {
 
 .landFooter {
     width: 100%;
-    height: 336px;
+    height: 300px;
     background: #191919;
     padding-top: 56px;
     padding-left: 2vw;
@@ -466,7 +466,7 @@ body {
     margin-top: -22px;
 }
 
-.footText {
+#footText {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -479,7 +479,7 @@ body {
     top: 45px;
 }
 
-.footText a {
+#footText a {
     text-decoration: none;
     color: #FFFFFF;
 }
@@ -694,12 +694,12 @@ body {
         line-height: 24px;
     }
 
-    .footText {
+    #footText {
         font-size: 1.1rem;
     }
 
     .landFooter {
-        height: 356px;
+        height: 326px;
     }
 
     #instagram,
@@ -745,7 +745,7 @@ body {
     }
 
     .landFooter {
-        height: 360px;
+        height: 320px;
     }
 
     .domainCard1,
@@ -753,13 +753,13 @@ body {
         width: 24vw;
     }
 
-    .footText {
+    #footText {
         top: 66px;
     }
 }
 
 @media(max-width:1800px) {
-    .footText {
+    #footText {
         top: 45px;
     }
 }
@@ -780,7 +780,7 @@ body {
 
 
 @media(max-width:1300px) {
-    .footText {
+    #footText {
         top: 20px;
     }
 
@@ -803,7 +803,7 @@ body {
         width: 20vw;
     }
 
-    .footText {
+    #footText {
         top: 48px;
     }
 }
@@ -885,7 +885,7 @@ body {
 }
 
 @media(max-width:1030px) {
-    .footText {
+    #footText {
         top: 28px;
     }
 
@@ -1115,7 +1115,7 @@ body {
         margin-top: -8px;
     }
 
-    .footText {
+    #footText {
         top: 40px;
     }
 
@@ -1192,7 +1192,7 @@ body {
         padding-left: 1vw;
     }
 
-    .footText {
+    #footText {
         top: 54px;
     }
 }
@@ -1254,7 +1254,7 @@ body {
 
     }
 
-    .footText {
+    #footText {
         top: 44px;
     }
 
@@ -1302,7 +1302,7 @@ body {
         width: 64vw;
     }
 
-    .footText {
+    #footText {
         top: 54px;
         margin-right: 2vw;
         margin-left: -5vw;
@@ -1315,7 +1315,7 @@ body {
 }
 
 @media(max-width:580px) {
-    .footText {
+    #footText {
         top: 32px;
     }
     #alert{
@@ -1379,7 +1379,7 @@ body {
 }
 
 @media(max-width:540px) {
-    .footText {
+    #footText {
         top: 12px;
     }
 }
@@ -1513,7 +1513,7 @@ body {
         height: 600px;
     }
 
-    .footText {
+    #footText {
         top: 28px;
     }
 
@@ -1622,7 +1622,7 @@ body {
         height: 610px;
     }
 
-    .footText {
+    #footText {
         top: 35px;
     }
 }
