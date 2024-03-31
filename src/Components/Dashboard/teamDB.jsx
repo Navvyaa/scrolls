@@ -108,20 +108,28 @@ function TeamDB() {
         //     setText2("Synopsis submission is closed now")
         //     document.getElementById('Paper').style.display = "none"
         // }
-        // if (!selected && synopsis != '' && synopsis != null) {
-        //     setImage(pending)
-        //     setText1("Pending")
-        //     setText3("Synopsis is submitted")
-        //     setText2("You cannot submit Paper until you are selected.")
-        //     document.getElementById('Paper').style.display = "none"
-        // }
-        if (!selected) {
-            setImage(fail)
-            setText1("Rejected")
-            setText3("You are not selected")
-            setText2("You are not selected")
+         if (!selected && (synopsis === '' || synopsis === null)) {
+            setImage(pending)
+            setText1("Pending")
+            setText3("Submit your synopsis")
+            setText2("Submit your synopsis")
             document.getElementById('Paper').style.display = "none"
         }
+        if (!selected && synopsis != '' && synopsis != null) {
+            setImage(pending)
+            setText1("Pending")
+            setText3("Synopsis is submitted")
+            setText2("You cannot submit Paper until you are selected.")
+            document.getElementById('Paper').style.display = "none"
+        }
+        // if (!selected) {
+    
+        //     setImage(fail)
+        //     setText1("Rejected")
+        //     setText3("You are not selected")
+        //     setText2("You are not selected")
+        //     document.getElementById('Paper').style.display = "none"
+        // }
         if (selected) {
             setImage(success)
             setText1("Congratulations")
@@ -129,23 +137,23 @@ function TeamDB() {
             setText2("You are selected, you can submit your Paper now.")
             document.getElementById('Paper').style.display = "block"
         }
-        if (wait) {
-            setImage(pending)
-            setText1("Pending")
-            setText3("Wait for the results")
-            setText2("Wait for the results")
-            document.getElementById('Paper').style.display = "none"
-        }
+        // if (wait) {
+        //     setImage(pending)
+        //     setText1("Pending")
+        //     setText3("Wait for the results")
+        //     setText2("Wait for the results")
+        //     document.getElementById('Paper').style.display = "none"
+        // }
     }, [synopsis, selected])
 
-    useEffect(() => {
-        if (synopsis === '' || synopsis === null || synopsis === undefined) {
-            document.getElementById('synopsis').style.display = "none";
-        }
-        else {
-            document.getElementById('synopsis').style.display = "block";
-        }
-    }, [synopsis])
+    // useEffect(() => {
+    //     if (synopsis === '' || synopsis === null || synopsis === undefined) {
+    //         document.getElementById('synopsis').style.display = "none";
+    //     }
+    //     else {
+    //         document.getElementById('synopsis').style.display = "block";
+    //     }
+    // }, [synopsis])
 
     function handleCancel() {
         if (domain === "" && topic === "") {
@@ -271,7 +279,7 @@ function TeamDB() {
 
     function handleSynopsis() {
         if ((topic === '' && domain === '') && (uplDom === "" && uplTop === "") || (uplDom != "" && uplTop === "")) {
-            toast.error("Please select a Topic or Domain to upload Papers", {
+            toast.error("Please select a Topic and Domain to upload Synopsis", {
                 position: "top-right",
                 theme: "light",
                 autoClose: 5000,
@@ -479,7 +487,7 @@ function TeamDB() {
                             </div>
                         }
                     </>
-                        : <div className="synopsis"><a href={`https://backend.scrollsakgec.in${synopsis}`}>{`https://backend.scrollsakgec.in${synopsis}`}</a></div>}
+                        : <div className="synopsis"><a href={`https://scrollsdev.silive.in/${synopsis}`}>{`https://scrollsdev.silive.in/${synopsis}`}</a></div>}
                 </div>
                 <hr className="dbHR2" />
             </div>
@@ -509,7 +517,7 @@ function TeamDB() {
                             </div>
                         }
                     </>
-                        : <div className="synopsis"><a href={`https://backend.scrollsakgec.in${paper}`}>{`https://backend.scrollsakgec.in${paper}`}</a></div>}
+                        : <div className="synopsis"><a href={`https://scrollsdev.silive.in/${paper}`}>{`https://scrollsdev.silive.in/${paper}`}</a></div>}
                 </div>
                 <hr className="dbHR2" />
             </div>

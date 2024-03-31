@@ -18,10 +18,11 @@ const TeamDBThunk = createAsyncThunk("db/team", async () => {
     }
     return await Baseurl.get("participants/team_dashboard/", config)
         .then((res) => {
-
+             console.log(res);
             return res
         })
         .catch((Err) => {
+            console.log(Err.response);
             return Err.response
         })
 })
@@ -36,9 +37,11 @@ const TeamDBDataThunk = createAsyncThunk("db_data/team", async (data) => {
    
     return await Baseurl.patch("participants/team_dashboard/", data, config)
         .then((res) => {
+            console.log(res);
             return res
         })
         .catch((Err) => {
+            console.log(Err.response);
             return Err.response
         })
 })
@@ -67,6 +70,7 @@ const DbSlice = createSlice({
             
             state.loading = false;
             state.dataTeam = action.payload.data
+            console.log(action.payload.data);
         })
         builder.addCase(TeamDBThunk.rejected, (state, action) => {
             state.loading = false;
