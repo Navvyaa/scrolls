@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from "react-redux"
 import { FgtTeamThunk } from "../../../Redux/loginSlice";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { dialog12, dialog0, dialog13, dialog11 } from "../../../Redux/step";
 import ReCAPTCHA from "react-google-recaptcha";
 import {
@@ -16,6 +17,7 @@ import { useCallback } from "react";
 
 function ForgotTeam() {
 
+    const {executeRecaptcha} = useGoogleReCaptcha();
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.login)
     const [email, setEmail] = useState("")
@@ -33,39 +35,64 @@ function ForgotTeam() {
         }
     }, [email]);
 
-    //captcha
-    const [valu, setValu] = useState('')
-    const [token, setToken] = useState(false);
     const [load, setLoad] = useState(false)
-    const key = "6Lc40yElAAAAAJuSuZ8MhKA4ZSB_gXoVmTWu6KWP"
 
-    const onVerify = useCallback((token) => {
-     
-        setValu(token)
-        setToken(true)
-    });
+    const handleSubmit = 
+    (e) => {
+      e.preventDefault();
+      if (!executeRecaptcha) {
+        console.log("recaptcha not loaded");
+        return;
+      }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
+        console.log(gReCaptcha, "recaptcha");
+        ForgotPassword(gReCaptcha);
 
-    const [count, setCount] = useState(false)
+      });
+    }
 
-    useEffect(() => {
-        if (valu != '')
-            setCount(false)
-    }, [valu])
-
-
-    function ForgotPassword(e) {
-        e.preventDefault();
-        
-        if (bool) {
-            setLoad(true)
-            setCount(true)
-        }
-
+    function ForgotPassword(valu) {
         const data = {
             email,
             "g-recaptcha-response": valu
         }
-        localStorage.setItem("login_email", email)
+        if (bool) {
+            setLoad(true)
+            localStorage.setItem("login_email", email);
+        dispatch(FgtTeamThunk(data)).
+            then((res) => {
+                setLoad(false)
+                var y = res.payload.data.msg.replace(
+                    /\w\S*/g,
+                    function (txt) {
+                        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                    }
+                );
+
+                if (res.payload.status == 400) {
+                    toast.error(y, {
+                        position: "top-right",
+                        theme: "light",
+                        autoClose: 5000,
+                    });
+                }
+                if (res.payload.status == 201) {
+                    dispatch(dialog13())
+                    toast.success(y, {
+                        position: "top-right",
+                        theme: "light",
+                        autoClose: 5000,
+                    });
+                }
+                if (res.payload.status === 429) {
+                    toast.error("You have attempted too many times Today, please try again tomorrow", {
+                        position: "top-right",
+                        theme: "light",
+                        autoClose: 5000,
+                    });
+                }
+            })
+    }}
         // if (token && email && bool) {
         //     dispatch(FgtTeamThunk(data)).
         //         then((res) => {
@@ -100,50 +127,6 @@ function ForgotTeam() {
         //             }
         //         })
         // }
-    }
-
-    useEffect(() => {
-        if (valu != '') {
-            const data = {
-                email,
-                "g-recaptcha-response": valu
-            }
-           
-            dispatch(FgtTeamThunk(data)).
-                then((res) => {
-                    setLoad(false)
-                    var y = res.payload.data.msg.replace(
-                        /\w\S*/g,
-                        function (txt) {
-                            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-                        }
-                    );
-
-                    if (res.payload.status == 400) {
-                        toast.error(y, {
-                            position: "top-right",
-                            theme: "light",
-                            autoClose: 5000,
-                        });
-                    }
-                    if (res.payload.status == 201) {
-                        dispatch(dialog13())
-                        toast.success(y, {
-                            position: "top-right",
-                            theme: "light",
-                            autoClose: 5000,
-                        });
-                    }
-                    if (res.payload.status === 429) {
-                        toast.error("You have attempted too many times Today, please try again tomorrow", {
-                            position: "top-right",
-                            theme: "light",
-                            autoClose: 5000,
-                        });
-                    }
-                })
-        }
-    }, [valu])
 
     const [timer, setTimer] = useState(10)
     useEffect(() => {
@@ -182,20 +165,11 @@ function ForgotTeam() {
                 <img className="cross" src={cross} onClick={() => { dispatch(dialog0()) }} />
             </div>
 
-            <form className='allForm' onSubmit={ForgotPassword} id="loginForm">
+            <form className='allForm' onSubmit={handleSubmit} id="loginForm">
                 <p className="forgotText">We’ll send you a One Time Password on this email.</p>
                 <p className="regName">Email ID</p>
                 <input type="text" className="regInputname" required placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <p id="wrongEmailLog1">Please enter a valid Email address</p>
-                <div id="recaptcha">
-                    {count ?
-
-                        < GoogleReCaptchaProvider reCaptchaKey={key}>
-                            <GoogleReCaptcha onVerify={onVerify} />
-                        </GoogleReCaptchaProvider>
-                        : null
-                    }
-                </div>
                 <button className="regButton" type="submit" >Continue</button>
             </form>
         </div>

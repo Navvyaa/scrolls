@@ -11,14 +11,12 @@ import { dialog0, dialog1 } from "../../Redux/step";
 import { RegMemberThunk } from "../../Redux/registerSlice";
 import { Spinner } from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
-import {
-    GoogleReCaptchaProvider,
-    GoogleReCaptcha
-} from 'react-google-recaptcha-v3';
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useCallback } from "react";
 
 function Member() {
 
+    const { executeRecaptcha } = useGoogleReCaptcha();
     const [loading, setLoading] = useState(false)
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.register)
@@ -177,16 +175,11 @@ function Member() {
     const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
     const [valu, setValu] = useState('')
     const [token, setToken] = useState(false);
-    const key = "6Lc40yElAAAAAJuSuZ8MhKA4ZSB_gXoVmTWu6KWP"
-    function onChange(value) {
-        setValu(value)
-        setToken(true)
-    }
-
-    const onVerify = useCallback((token) => {
+    const key = "6Lf7i6gpAAAAACYEnXjxMVcz6Hqu2No6daGGVUpb"
+    const onVerify = (token) => {
         setValu(token)
-        setToken(true)
-    });
+        console.log(token);
+    }
 
     const [count, setCount] = useState(false)
 
@@ -212,8 +205,21 @@ function Member() {
     // })
     const [load, setLoad] = useState(false)
 
-    function RegAsMember(e) {
-        e.preventDefault();
+const handleSubmit = 
+    (e) => {
+      e.preventDefault();
+      if (!executeRecaptcha) {
+        console.log("recaptcha not loaded");
+        return;
+      }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
+        console.log(gReCaptcha, "recaptcha");
+        RegAsMember(gReCaptcha);
+
+      });
+    }
+
+    const RegAsMember = (valuee)=> {
         if (!input.gender) {
             setMsg1("Chhose a gender")
         }
@@ -229,9 +235,112 @@ function Member() {
             setBool({ ...bool, year: false })
         }
 
+        console.log(bool.one);
+        console.log(bool.two);
+        console.log(bool.four);
+        console.log(bool.six);
+        console.log(input.gender);
+        console.log(bool.course);
+        console.log(input.college);
+        console.log(bool.year);
         if (bool.one && bool.two && bool.four && bool.six && input.gender && bool.course && input.college && bool.year) {
-            setLoad(true)
-            setCount(true)
+            setLoad(true);
+            if (valuee != '') {
+                var data;
+                if (input.branch) {
+                    if (input.course == "others") {
+                        data = {
+                            "name": input.name,
+                            "email": input.email,
+                            "password": input.pass,
+                            "gender": input.gender,
+                            "mobile": input.mobile,
+                            "course": input.otherCourse,
+                            "college": input.college,
+                            "year_of_study": input.year,
+                            "g-recaptcha-response": valuee,
+                            "branch": input.branch
+                        }
+                    }
+                    else {
+                        data = {
+                            "name": input.name,
+                            "email": input.email,
+                            "password": input.pass,
+                            "gender": input.gender,
+                            "mobile": input.mobile,
+                            "course": input.course,
+                            "college": input.college,
+                            "year_of_study": input.year,
+                            "g-recaptcha-response": valuee,
+                            "branch": input.branch
+                        }
+                    }
+                }
+                else {
+                    if (input.course == "others") {
+                        data = {
+                            "name": input.name,
+                            "email": input.email,
+                            "password": input.pass,
+                            "gender": input.gender,
+                            "mobile": input.mobile,
+                            "course": input.otherCourse,
+                            "college": input.college,
+                            "year_of_study": input.year,
+                            "g-recaptcha-response": valuee
+                        }
+                    }
+                    else {
+                        data = {
+                            "name": input.name,
+                            "email": input.email,
+                            "password": input.pass,
+                            "gender": input.gender,
+                            "mobile": input.mobile,
+                            "course": input.course,
+                            "college": input.college,
+                            "year_of_study": input.year,
+                            "g-recaptcha-response": valuee
+                        }
+                    }
+                }
+    
+                dispatch(RegMemberThunk(data)).
+                    then((res) => {
+                        var y = res.payload.data.msg.replace(
+                            /\w\S*/g,
+                            function (txt) {
+                                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                            }
+                        );
+    
+                        if (res.payload.status === 201) {
+                            dispatch(dialog0())
+                            toast.success(y, {
+                                position: "top-right",
+                                theme: "light",
+                                autoClose: 5000,
+                            });
+                        }
+                        else if (res.payload.status === 429) {
+                            toast.error("You have attempted too many times Today, please try again tomorrow", {
+                                position: "top-right",
+                                theme: "light",
+                                autoClose: 5000,
+                            });
+                        }
+                        else {
+                            toast.error(y, {
+                                position: "top-right",
+                                theme: "light",
+                                autoClose: 5000,
+                            });
+                        }
+                    })
+                    .catch((err) => {
+                    })
+            }
         }
         else {
             toast.error("Please fill the details correctly", {
@@ -241,106 +350,6 @@ function Member() {
             });
         }
     }
-
-    useEffect(() => {
-        if (valu != '') {
-            var data;
-            if (input.branch) {
-                if (input.course == "others") {
-                    data = {
-                        "name": input.name,
-                        "email": input.email,
-                        "password": input.pass,
-                        "gender": input.gender,
-                        "mobile": input.mobile,
-                        "course": input.otherCourse,
-                        "college": input.college,
-                        "year_of_study": input.year,
-                        "g-recaptcha-response": valu,
-                        "branch": input.branch
-                    }
-                }
-                else {
-                    data = {
-                        "name": input.name,
-                        "email": input.email,
-                        "password": input.pass,
-                        "gender": input.gender,
-                        "mobile": input.mobile,
-                        "course": input.course,
-                        "college": input.college,
-                        "year_of_study": input.year,
-                        "g-recaptcha-response": valu,
-                        "branch": input.branch
-                    }
-                }
-            }
-            else {
-                if (input.course == "others") {
-                    data = {
-                        "name": input.name,
-                        "email": input.email,
-                        "password": input.pass,
-                        "gender": input.gender,
-                        "mobile": input.mobile,
-                        "course": input.otherCourse,
-                        "college": input.college,
-                        "year_of_study": input.year,
-                        "g-recaptcha-response": valu
-                    }
-                }
-                else {
-                    data = {
-                        "name": input.name,
-                        "email": input.email,
-                        "password": input.pass,
-                        "gender": input.gender,
-                        "mobile": input.mobile,
-                        "course": input.course,
-                        "college": input.college,
-                        "year_of_study": input.year,
-                        "g-recaptcha-response": valu
-                    }
-                }
-            }
-
-            dispatch(RegMemberThunk(data)).
-                then((res) => {
-                    setLoad(false)
-                    var y = res.payload.data.msg.replace(
-                        /\w\S*/g,
-                        function (txt) {
-                            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-                        }
-                    );
-
-                    if (res.payload.status === 201) {
-                        dispatch(dialog0())
-                        toast.success(y, {
-                            position: "top-right",
-                            theme: "light",
-                            autoClose: 5000,
-                        });
-                    }
-                    else if (res.payload.status === 429) {
-                        toast.error("You have attempted too many times Today, please try again tomorrow", {
-                            position: "top-right",
-                            theme: "light",
-                            autoClose: 5000,
-                        });
-                    }
-                    else {
-                        toast.error(y, {
-                            position: "top-right",
-                            theme: "light",
-                            autoClose: 5000,
-                        });
-                    }
-                })
-                .catch((err) => {
-                })
-        }
-    }, [valu])
 
     const [timer, setTimer] = useState(10)
     useEffect(() => {
@@ -379,7 +388,7 @@ function Member() {
                 <p className="heading">Register as <span id="member">Member</span></p>
                 <img className="cross" src={cross} onClick={() => { dispatch(dialog0()) }} />
             </div>
-            <form className="allForm" onSubmit={RegAsMember}>
+            <form className="allForm" onSubmit={handleSubmit}>
                 <p className="regName">Name</p>
                 <input required type="text" className="regInputname" id="input" placeholder="Enter your name" value={input.name} onChange={(e) => setInput({ ...input, name: e.target.value })} />
                 <p id="wrongName">Name must contain only alphabetic characters.</p>
@@ -443,19 +452,12 @@ function Member() {
                     </>}
                 </select>
                 <p className="teamError">{msg4}</p>
-                <div>
-                    {count ?
-                        < GoogleReCaptchaProvider reCaptchaKey={key}>
-                            <GoogleReCaptcha onVerify={onVerify} />
-                        </GoogleReCaptchaProvider>
-                        : null
-                    }
+                <button className="regButton" type="submit">Register</button>
+                     
                     {/* <ReCAPTCHA size="normal"
                         sitekey={key}
                         onChange={onChange}
                     /> */}
-                </div>
-                <button className="regButton" type="submit">Register</button>
             </form >
 
         </div >

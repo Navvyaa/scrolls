@@ -7,11 +7,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from "react-redux"
 import { dialog7, dialog0, dialog9 } from "../../../Redux/step";
 import { FgtCAThunk } from "../../../Redux/loginSlice";
-import ReCAPTCHA from "react-google-recaptcha";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 
 function Forgot() {
 
+    const {executeRecaptcha} = useGoogleReCaptcha();
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.login)
     const [email, setEmail] = useState("")
@@ -29,34 +30,28 @@ function Forgot() {
         }
     }, [email]);
 
-    //captcha
+    const handleSubmit = 
+    (e) => {
+      e.preventDefault();
+      if (!executeRecaptcha) {
+        console.log("recaptcha not loaded");
+        return;
+      }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
+        console.log(gReCaptcha, "recaptcha");
+        ForgotPassword(gReCaptcha);
 
-    const [valu, setValu] = useState('')
-    const [token, setToken] = useState(false);
-    const key = "6LeZ8CElAAAAAPmAryGCBt-Y1bvEGF4VsITNJrAS"
-    function onChange(value) {
-        setValu(value)
-        setToken(true)
+      });
     }
+   
 
-    function ForgotPassword(e) {
-        e.preventDefault();
-        if (bool) {
-            if (!token) {
-                toast.error("Please verify the captcha", {
-                    position: "top-right",
-                    theme: "light",
-                    autoClose: 5000,
-                });
-            }
-        }
-        localStorage.setItem("login_email", email)
-
+    function ForgotPassword(valu) {
         const data = {
             email,
             "g-recaptcha-response": valu
         }
-        if (token && email && bool) {
+        if (bool) {
+            localStorage.setItem("login_email", email);
             dispatch(FgtCAThunk(data)).
                 then((res) => {
 
@@ -111,17 +106,11 @@ function Forgot() {
                 <p className="heading">Forgot Password?</p>
                 <img className="cross" src={cross} onClick={() => { dispatch(dialog0()) }} />
             </div>
-            <form className='allForm' onSubmit={ForgotPassword}>
+            <form className='allForm' onSubmit={handleSubmit}>
                 <p className="forgotText">We’ll send you a One Time Password on this email.</p>
                 <p className="regName">Email ID</p>
                 <input type="text" required className="regInputname" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <p id="wrongEmailLog1">Please enter a valid Email address</p>
-                <div id="recaptcha">
-                    {/* <ReCAPTCHA
-                        sitekey={key}
-                        onChange={onChange}
-                    /> */}
-                </div>
                 <button className="regButton" type="submit">Continue</button>
             </form>
         </div>

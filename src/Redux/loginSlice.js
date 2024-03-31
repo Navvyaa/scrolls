@@ -18,6 +18,7 @@ const LoginTeamThunk = createAsyncThunk("login/team", async (data) => {
 })
 
 const FgtTeamThunk = createAsyncThunk("fgt/team", async (data) => {
+    console.log(data);
     return await Baseurl.post("participants/forgot_password/1", data)
         .then((res) => {
             return res
