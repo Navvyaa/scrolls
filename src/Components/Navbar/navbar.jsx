@@ -601,7 +601,7 @@ function Navbar() {
         PaperProps={{
           sx: {
             maxHeight: 1200,
-            marginTop: 64,
+            marginTop: 84,
             maxWidth: 1000,
           },
         }}
@@ -614,7 +614,7 @@ function Navbar() {
         PaperProps={{
           sx: {
             maxHeight: 1300,
-            marginTop: 46,
+            marginTop: 66,
             maxWidth: 1000,
           },
         }}
