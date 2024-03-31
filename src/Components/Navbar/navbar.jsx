@@ -434,7 +434,7 @@ function Navbar() {
       </div>
 
       <div className="navbar" onMouseLeave={closeDropdown}>
-        <div style={{display:"flex",alignItems:'center',gap:'2rem'}}>
+        <div style={{display:"flex",alignItems:'center',justifyContent:'start' ,gap:'2rem'}}>
         <NavLink to="/">
           <p className="navScroll">
             SCROLLS<span className="navDot">.</span>
@@ -521,12 +521,12 @@ function Navbar() {
               Rules
             </p>
           </NavLink>
-          <NavLink to="/process">
+          {/* <NavLink to="/process">
             {" "}
             <p id="navCA" className="navHead">
               How To Register
             </p>
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/result">
             {" "}
             <p className="navHead" id="navCA">

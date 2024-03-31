@@ -54,12 +54,12 @@
     }
 
     .Domain {
-        margin-bottom: 280px;
+        /* margin-bottom: 280px; */
     }
 }
 
 @media (max-width: 600px) {
     .Domain {
-        padding: 116px 6vw 320px 5vw; /* Adjusting padding */
+        padding: 116px 6vw 40px 5vw; /* Adjusting padding */
     }
 }
