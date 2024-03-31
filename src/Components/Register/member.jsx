@@ -11,14 +11,12 @@ import { dialog0, dialog1 } from "../../Redux/step";
 import { RegMemberThunk } from "../../Redux/registerSlice";
 import { Spinner } from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
-import {
-    GoogleReCaptchaProvider,
-    GoogleReCaptcha
-} from 'react-google-recaptcha-v3';
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useCallback } from "react";
 
 function Member() {
 
+    const { executeRecaptcha } = useGoogleReCaptcha();
     const [loading, setLoading] = useState(false)
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.register)
@@ -177,11 +175,11 @@ function Member() {
     const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
     const [valu, setValu] = useState('')
     const [token, setToken] = useState(false);
-    const key = "6Lc40yElAAAAAJuSuZ8MhKA4ZSB_gXoVmTWu6KWP"
-    const onVerify = useCallback((token) => {
+    const key = "6Lf7i6gpAAAAACYEnXjxMVcz6Hqu2No6daGGVUpb"
+    const onVerify = (token) => {
         setValu(token)
         console.log(token);
-    });
+    }
 
     const [count, setCount] = useState(false)
 
@@ -207,8 +205,21 @@ function Member() {
     // })
     const [load, setLoad] = useState(false)
 
-    const RegAsMember = async(e)=> {
-        e.preventDefault();
+const handleSubmit = 
+    (e) => {
+      e.preventDefault();
+      if (!executeRecaptcha) {
+        console.log("recaptcha not loaded");
+        return;
+      }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
+        console.log(gReCaptcha, "recaptcha");
+        RegAsMember(gReCaptcha);
+
+      });
+    }
+
+    const RegAsMember = (valuee)=> {
         if (!input.gender) {
             setMsg1("Chhose a gender")
         }
@@ -224,9 +235,17 @@ function Member() {
             setBool({ ...bool, year: false })
         }
 
-            setLoad(true)
-            setCount(true);
-            if (valu != '') {
+        console.log(bool.one);
+        console.log(bool.two);
+        console.log(bool.four);
+        console.log(bool.six);
+        console.log(input.gender);
+        console.log(bool.course);
+        console.log(input.college);
+        console.log(bool.year);
+        if (bool.one && bool.two && bool.four && bool.six && input.gender && bool.course && input.college && bool.year) {
+            setLoad(true);
+            if (valuee != '') {
                 var data;
                 if (input.branch) {
                     if (input.course == "others") {
@@ -239,7 +258,7 @@ function Member() {
                             "course": input.otherCourse,
                             "college": input.college,
                             "year_of_study": input.year,
-                            "g-recaptcha-response": valu,
+                            "g-recaptcha-response": valuee,
                             "branch": input.branch
                         }
                     }
@@ -253,7 +272,7 @@ function Member() {
                             "course": input.course,
                             "college": input.college,
                             "year_of_study": input.year,
-                            "g-recaptcha-response": valu,
+                            "g-recaptcha-response": valuee,
                             "branch": input.branch
                         }
                     }
@@ -269,7 +288,7 @@ function Member() {
                             "course": input.otherCourse,
                             "college": input.college,
                             "year_of_study": input.year,
-                            "g-recaptcha-response": valu
+                            "g-recaptcha-response": valuee
                         }
                     }
                     else {
@@ -282,13 +301,13 @@ function Member() {
                             "course": input.course,
                             "college": input.college,
                             "year_of_study": input.year,
-                            "g-recaptcha-response": valu
+                            "g-recaptcha-response": valuee
                         }
                     }
                 }
+    
                 dispatch(RegMemberThunk(data)).
                     then((res) => {
-                        setLoad(false)
                         var y = res.payload.data.msg.replace(
                             /\w\S*/g,
                             function (txt) {
@@ -297,7 +316,6 @@ function Member() {
                         );
     
                         if (res.payload.status === 201) {
-                            setCount(false);
                             dispatch(dialog0())
                             toast.success(y, {
                                 position: "top-right",
@@ -306,7 +324,6 @@ function Member() {
                             });
                         }
                         else if (res.payload.status === 429) {
-                            setCount(false);
                             toast.error("You have attempted too many times Today, please try again tomorrow", {
                                 position: "top-right",
                                 theme: "light",
@@ -314,7 +331,6 @@ function Member() {
                             });
                         }
                         else {
-                            setCount(false);
                             toast.error(y, {
                                 position: "top-right",
                                 theme: "light",
@@ -325,12 +341,14 @@ function Member() {
                     .catch((err) => {
                     })
             }
-            // setCount(false);
+        }
+        else {
             toast.error("Please fill the details correctly", {
                 position: "top-right",
                 theme: "light",
                 autoClose: 5000,
             });
+        }
     }
 
     const [timer, setTimer] = useState(10)
@@ -370,7 +388,7 @@ function Member() {
                 <p className="heading">Register as <span id="member">Member</span></p>
                 <img className="cross" src={cross} onClick={() => { dispatch(dialog0()) }} />
             </div>
-            <form className="allForm" onSubmit={RegAsMember}>
+            <form className="allForm" onSubmit={handleSubmit}>
                 <p className="regName">Name</p>
                 <input required type="text" className="regInputname" id="input" placeholder="Enter your name" value={input.name} onChange={(e) => setInput({ ...input, name: e.target.value })} />
                 <p id="wrongName">Name must contain only alphabetic characters.</p>
@@ -435,12 +453,6 @@ function Member() {
                 </select>
                 <p className="teamError">{msg4}</p>
                 <button className="regButton" type="submit">Register</button>
-                { count &&
-                        < GoogleReCaptchaProvider reCaptchaKey={key}>
-                            <GoogleReCaptcha
-                             onVerify={onVerify}
-                            refreshReCaptcha={setRefreshReCaptcha} />
-                        </GoogleReCaptchaProvider>}
                      
                     {/* <ReCAPTCHA size="normal"
                         sitekey={key}

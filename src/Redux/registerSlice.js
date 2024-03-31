@@ -51,6 +51,7 @@ const RegCACheck = createAsyncThunk("register/check", async (caEmail) => {
 
 
 const RegCAThunk = createAsyncThunk("register/ca", async (data) => {
+    console.log(data);
     return await Baseurl.post("participants/register/1", data)
         .then((res) => {
             return res
