@@ -37,7 +37,7 @@ function ForgotTeam() {
     const [valu, setValu] = useState('')
     const [token, setToken] = useState(false);
     const [load, setLoad] = useState(false)
-    const key = "6Lc40yElAAAAAJuSuZ8MhKA4ZSB_gXoVmTWu6KWP"
+    const key = "6Lf7i6gpAAAAACYEnXjxMVcz6Hqu2No6daGGVUpb"
 
     const onVerify = useCallback((token) => {
      

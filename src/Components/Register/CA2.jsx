@@ -10,11 +10,12 @@ import { useDispatch, useSelector } from "react-redux"
 import { RegCAThunk } from "../../Redux/registerSlice";
 import { Spinner } from 'react-bootstrap';
 import { dialog0, dialog1, dialog4 } from "../../Redux/step";
-import ReCAPTCHA from "react-google-recaptcha";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 function CA2() {
 
     // register 5
+    const {executeRecaptcha} = useGoogleReCaptcha();
     const [loading, setLoading] = useState(false)
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.register)
@@ -153,20 +154,24 @@ function CA2() {
         }
     }, [ca.course, ca.gender, ca.college, ca.year])
 
-    //captcha
+  //captcha
 
-    const [valu, setValu] = useState('')
-    const [token, setToken] = useState(false);
-    const key = "6LeZ8CElAAAAAPmAryGCBt-Y1bvEGF4VsITNJrAS"
-    function onChange(value) {
-        setValu(value)
-        setToken(true)
+    const handleSubmit = 
+    (e) => {
+      e.preventDefault();
+      if (!executeRecaptcha) {
+        console.log("recaptcha not loaded");
+        return;
+      }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
+        console.log(gReCaptcha, "recaptcha");
+        RegAsCA(gReCaptcha);
+
+      });
     }
 
-    function RegAsCA(e) {
-        e.preventDefault();
 
-
+    function RegAsCA(valu) {
         if (!ca.gender) {
             setMsg1("Chhose a gender")
         }
@@ -208,16 +213,6 @@ function CA2() {
             }
         }
         if (bool.one && bool.two && bool.three && bool.four && ca.gender && ca.course && ca.college && ca.year) {
-
-            if (!token) {
-                toast.error("Please verify the captcha", {
-                    position: "top-right",
-                    theme: "light",
-                    autoClose: 5000,
-                });
-            }
-
-            if (token) {
                 dispatch(RegCAThunk(data)).
                     then((res) => {
                         var y = res.payload.data.msg.replace(
@@ -254,7 +249,6 @@ function CA2() {
                     })
             }
         }
-    }
 
     useEffect(() => {
         if (reducer.loading) {
@@ -274,7 +268,7 @@ function CA2() {
                 <p className="heading" id="registerCA">Register as <span id="member">Campus Ambassador</span></p>
                 <img className="cross" id="back" src={cross} onClick={() => { dispatch(dialog0()) }} />
             </div>
-            <form className="allForm" onSubmit={RegAsCA}>
+            <form className="allForm" onSubmit={handleSubmit}>
                 <p className="regName">Name</p>
                 <input required type="text" className="regInputname" id="input" placeholder="Enter your name" value={ca.name} onChange={(e) => setCA({ ...ca, name: e.target.value })} />
                 <div id="wrongNameCA">Name must contain only alphabetic characters.</div>
@@ -335,12 +329,6 @@ function CA2() {
                     </>}
                 </select>
                 <p className="teamError">{msg4}</p>
-                <div>
-                    {/* <ReCAPTCHA
-                        sitekey={key}
-                        onChange={onChange}
-                    /> */}
-                </div>
                 <button className="regButton" type="submit">Register</button>
             </form>
         </div>
