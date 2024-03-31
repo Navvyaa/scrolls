@@ -9,9 +9,10 @@ import { dialog8, dialog0, dialog10 } from "../../../Redux/step";
 import { FgtCAThunk, OtpCAThunk } from "../../../Redux/loginSlice";
 import OtpField from "react-otp-field"
 import { faYinYang } from "@fortawesome/free-solid-svg-icons";
-
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 function Otp() {
 
+    const {executeRecaptcha} = useGoogleReCaptcha();
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.login)
     const [loader, setLoader] = useState(false)
@@ -33,6 +34,28 @@ function Otp() {
         else
             document.getElementById("resendOtp").style.opacity = "1";
     }, [seconds])
+
+    const handleSubmit = 
+    () => {
+      if (!executeRecaptcha) {
+        console.log("recaptcha not loaded");
+        return;
+      }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
+        console.log(gReCaptcha, "recaptcha");
+        const data = {
+            email,
+            "g-recaptcha-response": gReCaptcha
+        }
+        dispatch(FgtCAThunk(data), setSeconds(59));
+        toast.success("Check your mail for OTP", {
+            position: "top-right",
+            theme: "light",
+            autoClose: 5000,
+        });
+      });
+    }
+
 
     function Otp() {
         localStorage.setItem("login_otp", value)
@@ -109,7 +132,7 @@ function Otp() {
                 />
             </div>
             <div className="resend">
-                <p id='resendOtp' disabled={seconds !== 0 ? true : false} onClick={() => { dispatch(FgtCAThunk(email), setSeconds(59)) }}>Resend Otp</p>
+                <p id='resendOtp' disabled={seconds !== 0 ? true : false} onClick={ handleSubmit }>Resend Otp</p>
                 <span id="timer">00:{seconds}</span>
             </div>
             <button className="regButton" onClick={Otp}>Continue</button>
