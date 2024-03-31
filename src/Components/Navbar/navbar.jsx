@@ -267,8 +267,10 @@ function Navbar() {
           <NavLink to="/">
             <li>Home</li>
           </NavLink>
-          <li onClick={() => setMobShow((prev) => !prev)}>
+          <li  onClick={() => setMobShow((prev) => !prev)}>
+            <div className="flex items-center gap-[0.125rem]">
             Domains <img src={dropdown} id="domainIcon" />
+            </div>
           </li>
           {mobShow && (
             <div id="liDropdown">
@@ -330,6 +332,7 @@ function Navbar() {
           </li>
           <li>
             {" "}
+<div className="mt-3">
             <button
               className="liRegister"
               onClick={() => {
@@ -338,8 +341,11 @@ function Navbar() {
             >
               Register
             </button>
+            </div>
           </li>
           <li>
+<div className="mt-1">
+
             <button
               className="liLogin"
               onClick={() => {
@@ -349,6 +355,7 @@ function Navbar() {
             >
               Login
             </button>
+            </div>
           </li>
         </ul>
       </div>

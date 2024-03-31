@@ -2,15 +2,12 @@
     display: flex;
     flex-direction: column;
     padding: 116px 8vw 40px 6vw;
-    margin-bottom: 240px;
 }
 
 .domainHead {
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 2rem;
-    /* line-height: 37px; */
     color: #FAC949;
     margin-bottom: 20px;
     text-transform: capitalize;
@@ -21,64 +18,35 @@
 }
 
 .Domain ul li {
-    list-style-position: inside;
-    /* padding-left: 24px; */
-    /* bac[
-        diskground-color: aliceblue; */
-}
-
-li::marker {
-    display: block;
+    list-style: none;
+    margin-bottom: 32px;
 }
 
 .domainHeading {
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
-    /* line-height: 20px; */
     color: rgba(0, 0, 0, 0.9);
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
-    /* display: inline; */
-    text-transform: capitalize;
-    margin-bottom: 0;
+    margin-bottom: 8px;
 }
 
 .domainText {
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 20px;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
+    line-height: 1.6;
     color: #000000;
-    margin-bottom: 24px;
-    margin-top: 8px;
-    /* margin-left: 24px; */
-    /* background-color: #FAC949; */
+    /* margin-bottom: 24px; */
 }
 
-#liItem {
-    margin-left: 24px;
-    margin-top: -26px;
-}
-
-@media(max-width:2500px) and (min-width:1500px) {
+@media (min-width: 1500px) and (max-width: 2500px) {
     .domainHeading {
         font-size: 1.6rem;
     }
 
     .domainText {
         font-size: 1.4rem;
-        line-height: 28px;
+        line-height: 1.8;
     }
 
     .domainHead {
@@ -90,10 +58,8 @@ li::marker {
     }
 }
 
-@media(max-width:600px) {
+@media (max-width: 600px) {
     .Domain {
-        padding-left: 6vw;
-        padding-right: 5vw;
-        padding-bottom: 320px;
+        padding: 116px 6vw 320px 5vw; /* Adjusting padding */
     }
 }

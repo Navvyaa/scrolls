@@ -284,7 +284,7 @@
     color: #191919 !important;
     position: fixed;
     top: 50px;
-    left: 33vw;
+    left: 44vw;
     flex-direction: column;
     font-weight: 600;
     z-index: 8;
@@ -338,7 +338,7 @@
     font-size: 0.8rem;
     line-height: 18px;
     padding: 4px 8px;
-    width: 10vw;
+    width: 8rem;
     cursor: pointer;
     color: #191919;
 }
@@ -547,7 +547,7 @@
     }
 
     #moreDD {
-        left: 43vw;
+        left: 42.8vw;
     }
 
     #moreDD2 {
@@ -571,9 +571,15 @@
     }
 }
 
+@media(max-width:970px) {
+    #moreDD {
+        left: 45vw;
+    }
+
+}
 @media(max-width:870px) {
     #moreDD {
-        left: 52vw;
+        left: 50vw;
     }
     #moreDD2 {
         left: 64vw;
@@ -649,7 +655,7 @@
 
     #moreDD ul li,
     #moreDD2 ul li {
-        width: 12vw;
+        width: 8rem;
     }
 
 }
