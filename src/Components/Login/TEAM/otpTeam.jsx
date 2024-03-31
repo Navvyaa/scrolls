@@ -8,9 +8,11 @@ import { useDispatch, useSelector } from "react-redux"
 import OtpField from "react-otp-field"
 import { dialog13, dialog0, dialog14, dialog12 } from "../../../Redux/step";
 import { FgtTeamThunk, OtpTeamThunk } from "../../../Redux/loginSlice";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 function OtpTeam() {
 
+    const {executeRecaptcha} = useGoogleReCaptcha();
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.login)
     const [loader, setLoader] = useState(false)
@@ -103,10 +105,26 @@ function OtpTeam() {
         }
     }, [reducer.loading, timerr])
 
-    function ResendOtp() {
+    const handleSubmit = 
+    () => {
+      if (!executeRecaptcha) {
+        console.log("recaptcha not loaded");
+        return;
+      }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
+        console.log(gReCaptcha, "recaptcha");
+        const data = {
+            email,
+            "g-recaptcha-response": gReCaptcha
+        }
+ResendOtp(data);
+      });
+    }
+    
+    function ResendOtp(value) {
 
-        dispatch(FgtTeamThunk(email));
-        setSeconds(59)
+        dispatch(FgtTeamThunk(value));
+        setSeconds(59);
         toast.success("Check your mail for OTP", {
             position: "top-right",
             theme: "light",
