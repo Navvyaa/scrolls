@@ -441,7 +441,6 @@ function LandingPage() {
 
 
 
-      <div className="Dialogue1">
         <Dialog
           open={stepDialog.one}
           PaperProps={{
@@ -455,7 +454,6 @@ function LandingPage() {
           {/* <Team /> */}
           <Register />
         </Dialog>
-      </div>
       <Dialog
         open={stepDialog.two}
         PaperProps={{

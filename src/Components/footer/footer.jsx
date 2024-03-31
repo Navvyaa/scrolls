@@ -39,7 +39,7 @@ function Footer() {
                 <div id="footFlex3">
                     <p id="telephone">Quick links</p>
                     <div className="footFlexRow">
-                        <Link to="/faq"><p id="link">FAQs</p></Link>
+                        <Link to="/accommodations"><p id="link">Accommodations</p></Link>
                     </div>
                 </div>
 
@@ -55,7 +55,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <p className="footText">Powered by <a href="https://www.instagram.com/software.incubator/" target="_blank"  >
+            <div className="flex items-center justify-center flex-wrap gap-2" id="footText">Powered by <a href="https://www.instagram.com/software.incubator/" target="_blank"  >
             <div className="flex items-center gap-2 justify-center">
                     <img src={SI} />
                     <span id="software">SOFTWARE</span><span id="incubator">INCUBATOR </span></div>
@@ -65,7 +65,7 @@ function Footer() {
                     <img src={horizon} id="horizon" />
                     <span id="incubator"> TEAM </span>
                     <span id="horizonText"> HORIZON</span>
-                    </div></a></p>
+                    </div></a></div>
 
         </div>
     </>
