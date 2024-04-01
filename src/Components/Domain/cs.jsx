@@ -28,13 +28,13 @@ function DomainCs() {
                 </li>
                 <li>
                     <div id="liItem">
-                        <p className="domainHeading">Machine learning</p>
+                        <p className="domainHeading">Machine Learning</p>
                         <p className="domainText">Machine learning is a branch of artificial intelligence (AI) and computer science in which algorithms are trained using a training data set to create a model. Its  learning system has three main parts– Decision Process, Error Function and Model Optimization Process. When new input data is introduced to the ML algorithm, it makes a prediction on the basis of the model. The prediction is evaluated for accuracy and if the accuracy is acceptable, the Machine Learning algorithm is deployed. Classical, or ‘non-deep’, machine learning is more dependent on human intervention to learn. Human experts determine the set of features to understand the differences between data inputs, usually requiring more structured data to learn. How does ML provide a layout on the growing Data trends in India? Enunciate on the upcoming future trends in this field.</p>
                     </div>
                 </li>
                 <li>
                     <div id="liItem">
-                        <p className="domainHeading">Image processing</p>
+                        <p className="domainHeading">Image Processing</p>
                         <p className="domainText">Image processing is a way to convert an image to a digital aspect and perform certain functions on it, in order to get an enhanced image or extract other useful information from it. Image processing basically involves the following three steps. First, importing an image with an optical scanner or digital photography. Second, analysis and image management including data compression and image enhancement and visual detection patterns such as satellite imagery. Third, it produces the final stage where the result can be changed to an image or report based on image analysis . Enunciate on this technology and also throw light on the drawbacks in the field of privacy and security.</p>
                     </div>
                 </li>
@@ -58,7 +58,7 @@ function DomainCs() {
                 </li>
                 <li>
                     <div id="liItem">
-                        <p className="domainHeading">Big data analytics</p>
+                        <p className="domainHeading">Big Data and Analytics</p>
                         <p className="domainText">Big data analytics is the use of advanced analytic techniques against very large, diverse big data sets that include structured, semi-structured and unstructured data, from different sources, and in different sizes. With big data analytics, you can ultimately fuel better and faster decision-making, modeling and predicting of future outcomes and enhanced business intelligence. Can this technology prove effective and solely reliable in the share market, stock predictions and businesses? Share your views.</p>
                     </div>
                 </li>
@@ -76,15 +76,27 @@ function DomainCs() {
                 </li>
                 <li>
                     <div id="liItem">
-                        <p className="domainHeading">Semantic Web: Sentiment Analysis of Twitter / Facebook / Instagram</p>
+                        <p className="domainHeading">Semantic Web: Sentiment Analysis of Twitter/Facebook/Instagram</p>
                         <p className="domainText">The Web is a huge virtual space where one can express and share individual opinions, influencing any aspect of life, with implications for marketing and communication alike. Social Media is influencing consumers' preferences by shaping their attitudes and behaviors. Monitoring Social Media activities is a good way to measure customers' loyalty, keeping a track on their sentiment towards brands or products. Social Media is the next logical marketing arena. Currently, Twitter dominates the digital marketing space, followed closely by Instagram and Facebook. Articulate your thoughts on Semantic Web–Sentiment Analysis of Twitter/Facebook/Instagram. How do you think it affects the real-world market arena? What are the drawbacks from its usage?</p>
                     </div>
                 </li>
                 <li>
                     <div id="liItem">
-                        <p className="domainHeading">Quantum computing</p>
+                        <p className="domainHeading">Quantum Computing</p>
                         <p className="domainText">Quantum computing is the area of study focused on developing computer technology based on the principles of quantum theory which explains the nature and behavior of energy and matter on the quantum (atomic and subatomic) level. However, not everybody is convinced that quantum computers are worth the effort. Some mathematicians believe there are obstacles that are practically impossible to overcome, putting quantum computing forever out of reach. What do you think will it prove equitable in future? Share your thoughts on the topic.
                         </p>
+                    </div>
+                </li>
+                <li>
+                    <div id="liItem">
+                        <p className="domainHeading">Explainable Artificial Intelligence (XAI)</p>
+                        <p className="domainText">Explainable artificial intelligence (XAI) is a set of techniques and tools that allow humans to understand and interpret the results of machine learning algorithms. XAI is important because it helps build trust and transparency in AI systems by providing insights into how decisions are made. This is particularly crucial in sensitive areas such as healthcare, finance, and criminal justice where the consequences of AI decisions can have significant impacts on individuals and society as a whole. How can XAI be integrated into existing AI systems, and what challenges need to be addressed for widespread adoption?</p>
+                    </div>
+                </li>
+                <li>
+                    <div id="liItem">
+                        <p className="domainHeading">Autonomous Vehicle</p>
+                        <p className="domainText">An autonomous vehicle, also known as a self-driving car, is a vehicle that is capable of navigating and operating without human input. Autonomous vehicles use a combination of sensors, cameras, radar, and artificial intelligence to perceive their environment and make decisions about how to navigate safely. The development of autonomous vehicles has the potential to revolutionize transportation by improving safety, reducing traffic congestion, and increasing accessibility for people who are unable to drive. What are the current challenges facing the widespread adoption of autonomous vehicles, and what are the potential societal impacts of this technology?</p>
                     </div>
                 </li>
             </ul>
