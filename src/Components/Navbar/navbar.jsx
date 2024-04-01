@@ -308,6 +308,9 @@ function Navbar() {
           <NavLink to="/rules">
             <li>Rules</li>
           </NavLink>
+          <NavLink to="/ca">
+            <li>CA</li>
+          </NavLink>
           {/* <NavLink to="/faq">
             <li>FAQs</li>
           </NavLink> */}
@@ -396,6 +399,9 @@ function Navbar() {
           <NavLink to="/rules">
             <li>Rules</li>
           </NavLink>
+          <NavLink to="/ca">
+            <li>CA</li>
+          </NavLink>
           <NavLink to="/result">
             <li>Results</li>
           </NavLink>
@@ -420,10 +426,10 @@ function Navbar() {
           <NavLink to="/result">
             <li>Results</li>
           </NavLink>
-          <NavLink to="/process">
+          {/* <NavLink to="/process">
             {" "}
             <li>How To Register</li>
-          </NavLink>
+          </NavLink> */}
           {/* <NavLink to="/faq">
             <li>FAQs</li>
           </NavLink> */}
@@ -460,6 +466,11 @@ function Navbar() {
             {" "}
             <p id="navRule" className="navHead">
               Rules
+            </p>
+          </NavLink>
+          <NavLink to="/ca">
+            <p id="navCA" className="navHead">
+              CA
             </p>
           </NavLink>
           <NavLink to="/process">
@@ -538,6 +549,7 @@ function Navbar() {
               FAQs
             </p>
           </NavLink> */}
+
           <NavLink to="/accommodations">
             <p id="navCA" className="navHead">
               Accommodations

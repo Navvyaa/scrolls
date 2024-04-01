@@ -66,6 +66,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<LandingPage />} />
+        <Route path="/ca" element={<CA />} />
         <Route path="/ca_db" element={<CaDB />} />
         <Route path="/team_db" exact element={<TeamDB />} />
         {/* {ca && <Route path="/ca_db" element={<CaDB />} />} */}

@@ -11,15 +11,28 @@ function CA() {
     return <>
         <Navbar />
         <div className="FAQ">
-            <p className="dashboard" id="Faqs">Campus Ambassador</p>
-            <p className="answer">Campus ambassadors are the students who have the main and direct contact with the Scrolls Team and are the representation of our voice on their campus.
-                As a campus ambassador, your main objective would be to raise awareness about the organization and to get students on board for the event. You will have the opportunity to represent our event on your campus and within your community, promoting our events, and engaging with the  students and faculty.
-                It is a great learning juncture for you as it provides a glimpse of the corporate world and you'll learn about the working of organizations.
-
-                Campus Ambassador with the maximum number of registrations will receive a letter of appreciation and other benefits.
-
-                Grab the opportunity and avail the chance to become the campus ambassador and unlock the benefits that awaits you. Hurry Up and register now!!</p>
+            <p className="domainHead" id="Faqs">Campus Ambassador</p>
+            <p className="answer">An exciting opportunity awaits as we launch the new edition of Scrolls, a National-level technical paper presentation competition on May 8, 2024. We're seeking dynamic students with networking skills and a strong social media presence to join as Campus Ambassadors and align with the legacy of Scrolls.</p>
             <hr className="faqLine" />
+            <p className="domainHeading">Rules and Regulations</p>
+            <p className="answer">Campus Ambassadors will be rewarded for achieving at least 5 team registrations, including their own.</p>
+            <hr className="faqLine" />
+            <p className="domainHeading">Perks for Campus Ambassador</p>
+            <p className="answer">1. Letter of appreciation and other prizes for all Campus Ambassadors.</p>
+            <hr className="faqLine" />
+            <p className="answer">2. Cash reward for the Campus Ambassador with the highest number of team registrations (only 1).</p>
+            <hr className="faqLine" />
+            <div className="answer">3. Discounts on registration fees based on the number of teams registered by the Campus Ambassador's efforts.
+            <ul className="list-disc mt-2">
+                <li className="">If Team Registrations by Campus Ambassador ≥ 4, then 200 Rs off on registration charges of Campus Ambassador's team.</li>
+                <li>If Team Registrations by Campus Ambassador ≥ 6, then 300 Rs off on registration charges of Campus Ambassador's team.</li>
+                <li>If Team Registrations by Campus Ambassador ≥ 10, then 100% off on registration charges of Campus Ambassador's team.</li>
+            </ul>
+            </div>
+
+            <hr className="faqLine" />
+
+
         </div>
         <Footer />
     </>
