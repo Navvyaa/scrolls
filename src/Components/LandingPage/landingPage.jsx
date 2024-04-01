@@ -227,11 +227,11 @@ function LandingPage() {
     },
     {
         question: "What are the steps?",
-        answer: `Step 1- Registration \n
-        Step 2- Disclosure of topics from every domain. \n
-        Step 3- Submission of the synopsis on any one of the topics. \n
-        Step 4- Based on the synopsis submitted, selected participants will present the technical paper on the day of the event( 5th May, 2023).\n
-        Step 5- Announcement of winners.`
+            answer: `Step 1- Registration<br />
+            Step 2- Disclosure of topics from every domain.<br />
+            Step 3- Submission of the synopsis on any one of the topics.<br />
+            Step 4- Based on the synopsis submitted, selected participants will present the technical paper on the day of the event (8th May, 2023).<br />
+            Step 5- Announcement of winners.`
             }
 ];
 
@@ -433,7 +433,7 @@ function LandingPage() {
           </div>
           <div className="faqContainer">
                 {faqData.map((faq, index) => (
-                  <Question key={index} question={faq.question} ans={faq.answer} />
+                  <Question key={index} question={faq.question} ans={<div dangerouslySetInnerHTML={{ __html: faq.answer }} />} />
                 ))}
               </div>
 
