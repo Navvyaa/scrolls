@@ -38,6 +38,10 @@ import "slick-carousel/slick/slick-theme.css";
 import imageCar1 from "../Assets/imageP1.JPG";
 import Question from "./question";
 import winnersImg from "../Assets/scrolls23Winner.svg";
+import imgs1 from "../Assets/image-1.png";
+import imgs2 from "../Assets/image-2.png"
+import imgs3 from "../Assets/image-3.png"
+
 function LandingPage() {
   const reducer = useSelector((s) => s.login);
   const reducerReg = useSelector((s) => s.register);
@@ -388,17 +392,17 @@ function LandingPage() {
           <div style={{width:'100%',marginTop:'4rem'}}>
           <Slider {...settings}>
         <div className="">
-          <img className="sliderItem" src={imageCar1} />
+          <img className="sliderItem" src={imgs1} />
         </div>
         <div className="">
-          <img className="sliderItem" src={imageCar1} />
+          <img className="sliderItem" src={imgs2} />
         </div>
         <div className="">
-          <img className="sliderItem" src={imageCar1} />
+          <img className="sliderItem" src={imgs3} />
         </div>
-        <div className="">
+        {/* <div className="">
           <img className="sliderItem" src={imageCar1} />
-        </div>
+        </div> */}
       </Slider>
       </div>
         </div>
