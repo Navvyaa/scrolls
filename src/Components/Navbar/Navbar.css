@@ -511,7 +511,7 @@
     }
 }
 
-@media(max-width:1100px) {
+@media(max-width:1168px) {
     .navRegister,.navLogin {
         width: 10vw;
     }
@@ -528,7 +528,7 @@
         color: #FFFFFF;
         cursor: pointer;
         z-index: 10;
-        margin-left: -8vw;
+        margin-left: -10vw;
     }
 
     #navMore2 {
