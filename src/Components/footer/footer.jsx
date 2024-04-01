@@ -16,25 +16,34 @@ function Footer() {
                     <p id="formLink"><a target="_blank" href="https://forms.gle/B35DF1KuWqkqocSKA">Query Form</a></p>
                 </div>
                 <div id="footFlex2">
-                    {/* <div id="footFlex2Row"> */}
-                    <p id="telephone">Contact</p>
-                    {/* </div> */}
-                    <div className="footFlexRow">
-                        <a href={`tel:${8433416286}`}>
-                            <p>8433416286</p></a>
-                        <p>(Rajat Agarwal)</p>
-                    </div>
-                    <div className="footFlexRow">
-                        <a href={`tel:${7985670120}`}>
-                            <p>7985670120</p></a>
-                        <p>(Abhishek Pratap Singh)</p>
-                    </div>
-                    <div className="footFlexRow">
-                        <a href={`tel:${7351407997}`}>
-                            <p>7351407997</p></a>
-                        <p>(Anushka Gautam)</p>
-                    </div>
-                </div>
+    <p id="telephone">Contact</p>
+    <div className="footFlexRow">
+        <a href="tel:7037236902">
+            <p>7037236902</p>
+        </a>
+        <p>(Radhika Aggarwal)</p>
+    </div>
+    <div className="footFlexRow">
+        <a href="tel:6394785007">
+            <p>6394785007</p>
+        </a>
+        <p>(Mohd. Omar Siddiqui)</p>
+    </div>
+    <div className="footFlexRow">
+        <a href="tel:7300559100">
+            <p>7300559100</p>
+        </a>
+        <p>(Varun Varshney)</p>
+    </div>
+    <div className="footFlexRow">
+        <a href="tel:9140745541">
+            <p>9140745541</p>
+        </a>
+        <p>(Gauri Tripathi)</p>
+    </div>
+   
+</div>
+
 
                 <div id="footFlex3">
                     <p id="telephone">Quick links</p>
