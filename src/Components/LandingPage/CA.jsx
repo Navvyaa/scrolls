@@ -16,6 +16,7 @@ function CA() {
             <hr className="faqLine" />
             <p className="domainHeading">Rules and Regulations</p>
             <p className="answer">Campus Ambassadors will be rewarded for achieving at least 5 team registrations, including their own.</p>
+            
             <hr className="faqLine" />
             <p className="domainHeading">Perks for Campus Ambassador</p>
             <p className="answer">1. Letter of appreciation and other prizes for all Campus Ambassadors.</p>
