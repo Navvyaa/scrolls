@@ -108,7 +108,7 @@
 
 .teamID_box {
     width: 24vw;
-    height: 40px;
+    /* height: 40px; */
     border: 1px solid #D9D9D9;
     border-radius: 4px;
     font-family: 'Montserrat';
@@ -127,7 +127,7 @@
 .synopsis {
     text-transform: none;
     width: 24vw;
-    height: 40px;
+    /* height: 40px; */
     border: 1px solid #D9D9D9;
     border-radius: 4px;
     font-family: 'Montserrat';
