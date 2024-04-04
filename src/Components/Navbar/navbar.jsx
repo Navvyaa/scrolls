@@ -413,9 +413,9 @@ function Navbar() {
           {/* <NavLink to="/faq">
             <li>FAQs</li>
           </NavLink> */}
-          <NavLink to="/accommodations">
+          {/* <NavLink to="/accommodations">
             <li>Accommodation</li>
-          </NavLink>
+          </NavLink> */}
         </ul>
       </div>
 
@@ -493,11 +493,11 @@ function Navbar() {
               FAQs
             </p>
           </NavLink> */}
-          <NavLink to="/accommodations">
+          {/* <NavLink to="/accommodations">
             <p id="navCA" className="navHead">
               Accommodation
             </p>
-          </NavLink>
+          </NavLink> */}
           <p
             className="navHead"
             id="navMore"
