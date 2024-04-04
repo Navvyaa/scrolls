@@ -13,7 +13,7 @@ function Footer() {
                 <div id="footFlex1">
                     <p className="footHead">Scrolls<span className="navDot">.</span></p>
                     <p className="footHead2">Any questions or remarks? Just write us a message.</p>
-                    <p id="formLink"><a target="_blank" href="https://forms.gle/B35DF1KuWqkqocSKA">Query Form</a></p>
+                    <p id="formLink"><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSe8k570vDVMd-W0VgvwtU2hKJxSCakEi2HNhW1xlLn1xl4dvA/viewform">Query Form</a></p>
                 </div>
                 <div id="footFlex2">
     <p id="telephone">Contact</p>
@@ -48,7 +48,7 @@ function Footer() {
                 <div id="footFlex3">
                     <p id="telephone">Quick links</p>
                     <div style={{margin:"0.4rem 0"}} className="footFlexRow">
-                        <Link to="/accommodations"><p id="link">Accommodations</p></Link>
+                        <Link to="/accommodations"><p id="link">Accommodation</p></Link>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@ function Footer() {
                     <p id="telephone">Find us</p>
                     <div style={{margin:"0.4rem 0"}} className="footFlexRow">
                         <img src={instagram} id="instagram" />
-                        <p id="link"><a href="https://instagram.com/scrolls_23?igshid=ZDdkNTZiNTM=" target="_blank"  >scrolls_akgec</a></p>
+                        <p id="link"><a href="https://www.instagram.com/scrolls.akgec?igsh=eHBid3liazkwdXB4" target="_blank"  >scrolls.akgec</a></p>
                     </div>
                     <div className="footFlexRow">
                         <img src={horizon} id="horizon" />

@@ -227,11 +227,11 @@ function LandingPage() {
     },
     {
         question: "Where can participants find the latest updates regarding Scrolls ‘24?",
-        answer: "For the latest updates, follow the official Instagram page of Scrolls (<a style='text-decoration:underline; color:#FAC949' href='https://www.instagram.com/scrolls.akgec/'>Scrolls Instagram</a>) OR Team Horizon (<a style='text-decoration:underline; color:#FAC949;' href='https://www.instagram.com/horizon.akgec/'>Team Horizon Instagram</a>)."
+        answer: "For the latest updates, follow the official Instagram page of Scrolls (<a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://www.instagram.com/scrolls.akgec/'>Scrolls Instagram</a>) OR Team Horizon (<a target='_blank' style='text-decoration:underline; color:#FAC949;' href='https://www.instagram.com/horizon.akgec/'>Team Horizon Instagram</a>)."
     },
     {
         question: "Fill the given below form in case of any queries:",
-        answer: "<a style='text-decoration:underline; color:#FAC949' href='https://docs.google.com/forms/d/e/1FAIpQLSe8k570vDVMd-W0VgvwtU2hKJxSCakEi2HNhW1xlLn1xl4dvA/viewform'>Click here to access the query form</a>"
+        answer: "<a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://docs.google.com/forms/d/e/1FAIpQLSe8k570vDVMd-W0VgvwtU2hKJxSCakEi2HNhW1xlLn1xl4dvA/viewform'>Click here to access the query form</a>"
     }
 ];
 
@@ -407,7 +407,7 @@ function LandingPage() {
       </div>
         </div>
 
-        <div className="winner23">
+        {/* <div className="winner23">
           <div className="winImg">
         <img className="winnerImg" src={imageCar1} />
         <img className="winnerImg1" src={winnersImg} />
@@ -423,7 +423,7 @@ function LandingPage() {
             futuristic approach.
           </div>
 
-        </div>
+        </div> */}
 
 <div className="landFAQ">
 <div id="text1Border">
