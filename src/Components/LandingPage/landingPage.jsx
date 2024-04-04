@@ -445,7 +445,7 @@ function LandingPage() {
 
 
 
-        <Dialog
+        {/* <Dialog
           open={stepDialog.one}
           PaperProps={{
             sx: {
@@ -454,9 +454,9 @@ function LandingPage() {
               maxWidth: 1000,
             },
           }}
-        >
+        > */}
           {/* <Team /> */}
-          <Register />
+          {/* <Register />
         </Dialog>
       <Dialog
         open={stepDialog.two}
@@ -506,7 +506,7 @@ function LandingPage() {
         }}
       >
         <CA2 />
-      </Dialog>
+      </Dialog> */}
 
       {/* <Dialog
         open={soon}
