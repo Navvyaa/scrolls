@@ -6,7 +6,7 @@
     width: 40vw;
     height: 320px;
     background-color: #FFFFFF;
-    padding-left: 1.5vw;
+    padding-left: 2rem;
     padding-top: 40px;
     box-shadow: 0px 50px 80px #1A1C1E;
     z-index: 110;
@@ -150,6 +150,10 @@
     .logoutbtn2 {
         width: 16vw;
     }
+    .logoutDiv {
+    padding-left: 1.5rem;
+
+    }
 }
 
 @media (max-width:1200px) {
@@ -177,18 +181,20 @@
 
 @media (max-width:900px) {
     .lOut2 {
-        margin-left: -10vw;
+        margin-left: -12vw;
     }
 }
 
 
 @media (max-width:800px) {
     .lOut2 {
-        margin-left: -12vw;
+        margin-left: -14vw;
     }
 
     .logoutDiv {
         width: 48vw;
+    padding-left: 1.5rem;
+
     }
 
     .logoutbtn1,
@@ -199,7 +205,7 @@
 
 @media (max-width:700px) {
     .lOut2 {
-        margin-left: -14vw;
+        margin-left: -16vw;
     }
 
     .logoutDiv {
@@ -214,7 +220,7 @@
 
 @media (max-width:600px) {
     .lOut2 {
-        margin-left: -16vw;
+        margin-left: -18vw;
     }
 
     .logoutDiv {
@@ -225,11 +231,15 @@
     .logoutbtn2 {
         width: 24vw;
     }
+    .logoutDiv {
+        padding-left: 1rem;
+    
+        }
 }
 
 @media (max-width:500px) {
     .lOut2 {
-        margin-left: -24vw;
+        margin-left: -28vw;
     }
 
     .logoutDiv {
@@ -260,7 +270,7 @@
     }
 
     .lOut2 {
-        margin-left: -28vw;
+        margin-left: -35vw;
     }
 }
 
@@ -272,6 +282,6 @@
     }
 
     .lOut2 {
-        margin-left: -34vw;
+        margin-left: -40vw;
     }
 }
