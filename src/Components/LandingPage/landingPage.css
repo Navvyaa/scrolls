@@ -1284,7 +1284,7 @@ body {
     }
 
     .landFooter {
-        height: 610px;
+        height: 510px;
         padding-top: 36px;
         padding-left: 8vw;
     }
@@ -1535,7 +1535,7 @@ body {
     }
 
     .landFooter {
-        height: 620px;
+        height: 520px;
     }
 
     #footText {
@@ -1644,7 +1644,7 @@ body {
     }
 
     .landFooter {
-        height: 620px;
+        height: 520px;
     }
 
     #footText {
@@ -1654,7 +1654,7 @@ body {
 
 @media(max-width:300px) {
     .landFooter {
-        height: 650px;
+        height: 580px;
     }
 
     #text1Border,

@@ -44,13 +44,13 @@ function Footer() {
    
 </div>
 
-
+{/* 
                 <div id="footFlex3">
                     <p id="telephone">Quick links</p>
                     <div style={{margin:"0.4rem 0"}} className="footFlexRow">
                         <Link to="/accommodations"><p id="link">Accommodation</p></Link>
                     </div>
-                </div>
+                </div> */}
 
                 <div id="footFlex4">
                     <p id="telephone">Find us</p>

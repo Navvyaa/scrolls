@@ -61,10 +61,11 @@ function CaDB() {
 
     return <>
         <Navbar />
-        <div className="dbOuterDiv">
+        <div className="dbOuterDiv" style={{alignItems:"center"}}>
+            <div className="w-[84vw]">
             <p className="dashboard">Hi, {name}</p>
             <p className="dbHead1">Details regarding Campus Ambassador</p>
-
+            </div>
             <hr className="dbHR1" />
             <div className="dbFlex1">
 
