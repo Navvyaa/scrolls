@@ -82,50 +82,68 @@ function Result() {
   return (
     <>
       <Navbar />
-      <div id="RESULT">
-        <div id="resultHead">Result Declaration</div>
+      <div className="sm:px-[2rem]" id="RESULT">
+        <div id="resultHead">Winners-2023</div>
         <TableComp
           name="Computer Science and Information Technology"
           data={selected.CS_team}
           wait={wait.CS_team}
           bool="true"
+          team1="Ananta"
+          team2="Udi Baba"
+          team3="The Recyclers"
         />
         <TableComp
           name="Civil Engineering"
           data={selected.CE_team}
           wait={wait.CE_team}
           bool="false"
+          team1="Bro-Gang"
+          team2="Innovators"
+          team3="CRYstals"
         />
         <TableComp
           name="Electrical and Electronics Engineering"
           data={selected.EN_team}
           wait={wait.EN_team}
           bool="false"
+          team1="Explorers"
+          team2="Unbeaten"
+          team3="Innovators"
         />
         <TableComp
           name="Electronics and Communication Engineering"
           data={selected.EC_team}
           wait={wait.EC_team}
           bool="true"
+          team1="AUGN"
+          team2="Research Rockets"
+          team3="Captivators"
         />
         <TableComp
           name="Mechanical Engineering"
           data={selected.ME_team}
           wait={wait.ME_team}
           bool="false"
+          team1="Mischief Managed"
+          team2="Shubham Bahuguna"
+          team3="Alpha"
         />
         <TableComp
           name="Management Sciences"
           data={selected.MS_team}
           wait={wait.MS_team}
           bool="true"
+          team1="Meta Mavericks"
+          team2="Sahasra"
+          team3="Vanquishers"
         />
       </div>
       <Footer />
-
+{/* 
       {loading ? (
         <Spinner animation="border" variant="dark" id="loadSpinner" />
-      ) : null}
+      ) : null} */}
     </>
   );
 }

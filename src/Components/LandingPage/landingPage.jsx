@@ -227,12 +227,8 @@ function LandingPage() {
     },
     {
         question: "Where can participants find the latest updates regarding Scrolls ‘24?",
-        answer: "For the latest updates, follow the official Instagram page of Scrolls (<a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://www.instagram.com/scrolls.akgec/'>Scrolls Instagram</a>) OR Team Horizon (<a target='_blank' style='text-decoration:underline; color:#FAC949;' href='https://www.instagram.com/horizon.akgec/'>Team Horizon Instagram</a>)."
+        answer: "For the latest updates, follow the official Instagram page of Scrolls (<a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://www.instagram.com/scrolls.akgec/'>Scrolls Instagram</a>) OR Team Horizon (<a target='_blank' style='text-decoration:underline; color:#FAC949;' href='https://www.instagram.com/horizon.akgec/'>Team Horizon Instagram</a>).<br/><br/>Fill the given below form in case of any queries:<br/><a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://docs.google.com/forms/d/e/1FAIpQLSe8k570vDVMd-W0VgvwtU2hKJxSCakEi2HNhW1xlLn1xl4dvA/viewform'>Click here to access the query form</a>"
     },
-    {
-        question: "Fill the given below form in case of any queries:",
-        answer: "<a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://docs.google.com/forms/d/e/1FAIpQLSe8k570vDVMd-W0VgvwtU2hKJxSCakEi2HNhW1xlLn1xl4dvA/viewform'>Click here to access the query form</a>"
-    }
 ];
 
   return (
@@ -283,13 +279,7 @@ function LandingPage() {
             <br />- Albert Einstein
           </p>
           <p className="aboutText">
-            ‘SCROLLS’ is a platform for the innovative minds to exchange their
-            ideas, inventiveness and enterprise and administer their erudition
-            in various flourishing sectors. It encompasses various aspects and
-            trends relating to computing, telecommunication and information
-            technologies along with advancements in management thus aiming to
-            discover the best possible ingenuity to solve problems with a
-            futuristic approach.
+          Welcome to SCROLLS, a sanctuary for imaginative souls to weave their dreams, share their passions, and embark on a journey of boundless creativity. Here, amidst the ever-evolving realms of computing, telecommunications, and information technologies, alongside the artistry of modern management, we embrace the beauty of innovation. Our aim? To curate a tapestry of ingenuity where every idea, every spark, ignites a beacon of hope for the future. Join us in sculpting tomorrow's wonders with the warmth of human touch and the brilliance of visionary minds.
           </p>
         </div>
         <div className="landDomain">
