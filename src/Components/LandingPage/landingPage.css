@@ -448,7 +448,7 @@ body {
 .footFlexRow {
     display: flex;
     padding: 0px;
-    gap: 8px;
+    gap: 5px;
     /* margin-top: 8px; */
     /* width: 20vw; */
 }
