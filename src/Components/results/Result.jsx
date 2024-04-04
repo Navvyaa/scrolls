@@ -58,26 +58,26 @@ function Result() {
   }, [reducer]);
 
   const [timer, setTimer] = useState(10);
-  useEffect(() => {
-    if (reducer.loading) {
-      const time =
-        timer > 0 &&
-        setInterval(() => {
-          setTimer(timer - 1);
-        }, 1000);
-      return () => clearInterval(time);
-    }
-  }, [timer, reducer.loading]);
+  // useEffect(() => {
+  //   if (reducer.loading) {
+  //     const time =
+  //       timer > 0 &&
+  //       setInterval(() => {
+  //         setTimer(timer - 1);
+  //       }, 1000);
+  //     return () => clearInterval(time);
+  //   }
+  // }, [timer, reducer.loading]);
 
-  useEffect(() => {
-    if (timer > 0 && reducer.loading) {
-      setLoading(true);
-      document.body.style.opacity = 0.5;
-    } else {
-      setLoading(false);
-      document.body.style.opacity = 1;
-    }
-  }, [reducer.loading, timer]);
+  // useEffect(() => {
+  //   if (timer > 0 && reducer.loading) {
+  //     setLoading(true);
+  //     document.body.style.opacity = 0.5;
+  //   } else {
+  //     setLoading(false);
+  //     document.body.style.opacity = 1;
+  //   }
+  // }, [reducer.loading, timer]);
 
   return (
     <>

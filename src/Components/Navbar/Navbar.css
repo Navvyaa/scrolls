@@ -154,10 +154,11 @@
 .navFlex3 {
     display: flex;
     display: none;
-    margin-top: 6px;
+    /* margin-top: 6px; */
 }
 .navRegister{
     margin-bottom: 0px !important;
+    color: #191919 !important;
 
 }
 
@@ -185,7 +186,7 @@
 
 .navLogin{
     margin-bottom: 0px !important;
-
+    color: #FAC949 !important;
 }
 .navLogin,
 .liLogin {

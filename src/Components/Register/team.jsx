@@ -8,9 +8,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from "react-redux"
 import { RegTeamThunk } from "../../Redux/registerSlice";
 import { Spinner } from 'react-bootstrap';
-import { dialog0, dialog1 } from "../../Redux/step";
+import { dialog0, dialog1,dialog16 } from "../../Redux/step";
 
-function Team() {
+function Team(props) {
 
     // team registration
     const [loading, setLoading] = useState(false)
@@ -212,7 +212,7 @@ function Team() {
     return <>
         <div className="register" id="registerTeam" style={{height:team.size==2?"920px":"1000px"}}>
             <div className="regFlex" id="teamReg">
-                <img className="arrow" src={arrow} onClick={() => { dispatch(dialog1()) }} />
+                <img className="arrow" src={arrow} onClick={() => { !props.home?dispatch(dialog1()):dispatch(dialog16()) }} />
                 <p className="heading">Register as <span id="member">Team</span></p>
                 <img className="cross" src={cross} onClick={() => { dispatch(dialog0()) }} />
             </div>

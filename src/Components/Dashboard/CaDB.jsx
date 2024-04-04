@@ -65,8 +65,9 @@ function CaDB() {
             <div className="w-[84vw]">
             <p className="dashboard">Hi, {name}</p>
             <p className="dbHead1">Details regarding Campus Ambassador</p>
-            </div>
             <hr className="dbHR1" />
+
+            </div>
             <div className="dbFlex1">
 
                 <p className="dbHead">Name</p>
@@ -94,7 +95,7 @@ function CaDB() {
 
             <hr className="dbHR2" />
 
-            <p className="dbHead">List of teams</p>
+            <p id="dbHHead" className="dbHead">List of teams</p>
             <table >
                 <tr className="member_box" >
                     <td>Team Name</td>
@@ -122,7 +123,7 @@ function CaDB() {
 
             <hr className="dbHR2" />
 
-            <p className="dbHead">Leaderboard</p>
+            <p id="dbHHead" className="dbHead">Leaderboard</p>
             <table id="caTable">
                 <tr className="member_box">
                     <td>CA Name</td>
