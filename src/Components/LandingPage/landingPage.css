@@ -1284,7 +1284,7 @@ body {
     }
 
     .landFooter {
-        height: 510px;
+        height: 490px;
         padding-top: 36px;
         padding-left: 8vw;
     }
@@ -1340,6 +1340,11 @@ body {
 }
 
 @media(max-width:580px) {
+    .landFooter {
+        height: 515px;
+        padding-top: 36px;
+        padding-left: 8vw;
+    }
     #footText {
         top: 32px;
     }
@@ -1535,7 +1540,7 @@ body {
     }
 
     .landFooter {
-        height: 520px;
+        height: 515px;
     }
 
     #footText {
@@ -1644,7 +1649,7 @@ body {
     }
 
     .landFooter {
-        height: 520px;
+        height: 515px;
     }
 
     #footText {
