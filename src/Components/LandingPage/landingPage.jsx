@@ -198,41 +198,41 @@ function LandingPage() {
 
   const faqData = [
     {
-        question: "What is Scrolls?",
-        answer: "SCROLLS ( Student's Creative and Oratory Learning Skills) is an annually held National level technical paper presentation competition, inviting students to elaborate on the most thriving and progressive fields of technology and management."
+        question: "How many rounds are there in SCROLLS'24?",
+        answer: "Scrolls comprises of two rounds - <br/> i) The initial round entails the synopsis submission. <br/> ii) Selected teams will advance to the subsequent round, wherein they will submit and present their technical paper."
     },
     {
-        question: "Who all can participate?",
-        answer: "As this is an Inter college competition anyone pursuing an Under Graduate or Post Graduate program in any technical or management domain from any college can participate in this competition."
+        question: "What criteria are employed to evaluate submissions in this competition?",
+        answer: "Submissions are assessed based on the Originality, Clarity of thoughts, Innovation, Critical thinking and Presentation Skills of the teams."
     },
     {
-        question: "How many members can participate in a team ?",
-        answer: " A minimum of 2(two) and maximum of 3(three) members can participate in a team."
+        question: "What are the principal areas of focus for Scrolls 2024?",
+        answer: "The primary objectives of Scrolls 2024 include nurturing the problem-solving skills, enhancing presentation abilities and fostering inventiveness of the participants."
     },
     {
-        question: "What are the prerequisite skills for this event?",
-        answer: "The event doesn't require any pre-requisite skill. It will be solely based upon your creativity and ingenuity to analyse the topic and write the technical paper on the same."
+        question: "Is this an individual or group competition?",
+        answer: "SCROLLS'24 is a team-based competition. Each team must consist of a minimum of 2 and a maximum of 3 members."
     },
     {
-        question: "What are the benefits of this event?",
-        answer: "This event provides rostrum to the evolving professionals who can channelize their talent, creativity and give their imagination a cutting edge."
+        question: "Are the team members required to be from the same academic year?",
+        answer: "No, the team members are not required to be from the same academic year. Students from any academic year or institution (Engineering or Management) are encouraged to form teams and participate together."
     },
     {
-        question: "What is the purpose of this event ?",
-        answer: "The sole purpose of this event is to provide an opportunity for the students to gain an experience to widen the vision of creativity and innovation. This experience will be an aid for the participants who want to publish research papers in the near future."
+        question: "What is the registration fee for participating in the event?",
+        answer: "Registration is free for stage 1 i.e. Synopsis Submission Round. Shortlisted teams after the synopsis submission round are required to submit a registration fee of 350 Rs. per head (cash only) on the day of the main event."
     },
     {
-        question: "What will be the rewards and recognitions for the emerging winners?",
-        answer: "Total cash prizes worth 72K would be distributed for the winners and along with the certificate of participation for every participant in addition to many more perks."
+        question: "Are accommodations provided for participants, and if so, what are the associated charges?",
+        answer: "Yes, free accommodation (including food) will be provided to the participants traveling from far-off stations after verification."
     },
     {
-        question: "What are the steps?",
-            answer: `Step 1- Registration<br />
-            Step 2- Disclosure of topics from every domain.<br />
-            Step 3- Submission of the synopsis on any one of the topics.<br />
-            Step 4- Based on the synopsis submitted, selected participants will present the technical paper on the day of the event (8th May, 2023).<br />
-            Step 5- Announcement of winners.`
-            }
+        question: "Where can participants find the latest updates regarding Scrolls ‘24?",
+        answer: "For the latest updates, follow the official Instagram page of Scrolls (<a style='text-decoration:underline; color:#FAC949' href='https://www.instagram.com/scrolls.akgec/'>Scrolls Instagram</a>) OR Team Horizon (<a style='text-decoration:underline; color:#FAC949;' href='https://www.instagram.com/horizon.akgec/'>Team Horizon Instagram</a>)."
+    },
+    {
+        question: "Fill the given below form in case of any queries:",
+        answer: "<a style='text-decoration:underline; color:#FAC949' href='https://docs.google.com/forms/d/e/1FAIpQLSe8k570vDVMd-W0VgvwtU2hKJxSCakEi2HNhW1xlLn1xl4dvA/viewform'>Click here to access the query form</a>"
+    }
 ];
 
   return (

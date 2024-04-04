@@ -315,7 +315,7 @@ function Navbar() {
             <li>FAQs</li>
           </NavLink> */}
           <NavLink to="/accommodations">
-            <li>Accommodations</li> 
+            <li>Accommodation</li> 
           </NavLink>
           <NavLink to="/team_db">
             <li id="team">Dashboard</li>
@@ -413,7 +413,7 @@ function Navbar() {
             <li>FAQs</li>
           </NavLink> */}
           <NavLink to="/accommodations">
-            <li>Accommodations</li>
+            <li>Accommodation</li>
           </NavLink>
         </ul>
       </div>
@@ -434,7 +434,7 @@ function Navbar() {
             <li>FAQs</li>
           </NavLink> */}
           <NavLink to="/accommodations">
-            <li>Accommodations</li>
+            <li>Accommodation</li>
           </NavLink>
         </ul>
       </div>
@@ -492,7 +492,7 @@ function Navbar() {
           </NavLink> */}
           <NavLink to="/accommodations">
             <p id="navCA" className="navHead">
-              Accommodations
+              Accommodation
             </p>
           </NavLink>
           <p
@@ -552,7 +552,7 @@ function Navbar() {
 
           <NavLink to="/accommodations">
             <p id="navCA" className="navHead">
-              Accommodations
+              Accommodation
             </p>
           </NavLink>
           <p
