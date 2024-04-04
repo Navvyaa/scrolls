@@ -14,8 +14,7 @@ function Update() {
         <Navbar />
         <div className="updates">
             <p className="dashboard" id="update">Updates</p>
-            <UpdCard text="Due to multiple requests with authentic reasons, the Last date for registration and synopsis submission have been extended till 21st April.
-Please be quick and in case of any issue contact us immediately." head="Registrations" />
+            <UpdCard text="Registrations will begin soon." head="Registrations" />
 
             {/* <div className="updText">
                 <ul>

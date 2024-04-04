@@ -104,30 +104,30 @@ function Team() {
         }
 
         var data;
-        // if (team.referral) {
-        //     if (team.size == 2) {
-        //         data = {
-        //             "name": team.name,
-        //             "size": parseInt(team.size),
-        //             "leader_id": parseInt(team.leaderId),
-        //             "member_2": parseInt(team.member2),
-        //             // "referral_used": team.referral,
-        //             "password": team.pass
-        //         }
-        //     }
-        //     if (team.size == 3) {
-        //         data = {
-        //             "name": team.name,
-        //             "size": parseInt(team.size),
-        //             "leader_id": parseInt(team.leaderId),
-        //             "member_2": parseInt(team.member2),
-        //             "member_3": parseInt(team.member3),
-        //             // "referral_used": team.referral,
-        //             "password": team.pass
-        //         }
-        //     }
-        // }
-        // else {
+        if (team.referral) {
+            if (team.size == 2) {
+                data = {
+                    "name": team.name,
+                    "size": parseInt(team.size),
+                    "leader_id": parseInt(team.leaderId),
+                    "member_2": parseInt(team.member2),
+                    "referral_used": team.referral,
+                    "password": team.pass
+                }
+            }
+            if (team.size == 3) {
+                data = {
+                    "name": team.name,
+                    "size": parseInt(team.size),
+                    "leader_id": parseInt(team.leaderId),
+                    "member_2": parseInt(team.member2),
+                    "member_3": parseInt(team.member3),
+                    "referral_used": team.referral,
+                    "password": team.pass
+                }
+            }
+        }
+        else {
         if (team.size == 2) {
             data = {
                 "name": team.name,
@@ -147,7 +147,7 @@ function Team() {
                 "password": team.pass
             }
         }
-        // }
+        }
         if (bool && bool1 && bool2) {
             dispatch(RegTeamThunk(data)).
                 then((res) => {

@@ -26,6 +26,7 @@ import LogOut from "../logOut/logOut";
 import { RegOpenThunk } from "../../Redux/registerSlice";
 import { Spinner } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
+import imglogo from '../Assets/logo1.png'
 import "react-toastify/dist/ReactToastify.css";
 function Navbar() {
   const [dialogg, setDialogg] = useState(false);
@@ -442,9 +443,11 @@ function Navbar() {
       <div className="navbar" onMouseLeave={closeDropdown}>
         <div style={{display:"flex",alignItems:'center',justifyContent:'start' ,gap:'2rem'}}>
         <NavLink to="/">
+          <div className="flex ">
           <p className="navScroll">
             SCROLLS<span className="navDot">.</span>
           </p>
+          </div>
         </NavLink>
         <div className="navFlex1">
           <NavLink to="/">

@@ -48,7 +48,7 @@ function DomainEn() {
           <li>
             <div id="liItem">
               <p className="domainHeading">
-                Modeling, Control, and Integration of Multiple Energy Sources
+                Integrating Multiple Energy Sources
               </p>
               <p className="domainText">
                 With the increasing adoption of renewable energy sources and
@@ -79,7 +79,7 @@ function DomainEn() {
           <li>
             <div id="liItem">
               <p className="domainHeading">
-                IoT Applications in Power System
+                IoT in Power Systems
               </p>
               <p className="domainText">
                 The Internet of Things (IoT) is revolutionizing power systems
@@ -120,7 +120,7 @@ function DomainEn() {
           <li>
             <div id="liItem">
               <p className="domainHeading">
-                E-Mobility: Opportunities, Challenges, and Applications
+                E-Mobility: Opportunities & Challenges
               </p>
               <p className="domainText">
                 Electric mobility (e-mobility) is rapidly transforming the
@@ -164,7 +164,7 @@ function DomainEn() {
           <li>
             <div id="liItem">
               <p className="domainHeading">
-                Modeling and Control of AC/DC Converters
+                Modeling Control of AC/DC converters
               </p>
               <p className="domainText">
                 AC/DC converters play a crucial role in power electronics
@@ -179,7 +179,7 @@ function DomainEn() {
           <li>
             <div id="liItem">
               <p className="domainHeading">
-                Power Electronics and Energy-Efficient Drives
+                Energy-Efficient Power Electronics
               </p>
               <p className="domainText">
                 Power electronics and energy-efficient drives are essential
