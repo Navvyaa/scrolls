@@ -5,8 +5,14 @@ import Table from 'react-bootstrap/Table';
 function TableComp(props) {
     return <>
         <div className="resDiv">
+            <div>
             <p className="resHead">{props.name}</p>
-            <p className="resHead2">Shortlisted Teams</p>
+            <div className="flex font-semibold mb-1 gap-[2rem] md:flex-nowrap flex-wrap sm:flex-row flex-col lg:gap-[6rem] md:gap-[4rem] mt-3 justify-center ">
+<div>Team {props.team1}{"("}1st{")"}</div>
+<div>Team {props.team2}{"("}2nd{")"}</div>
+<div>Team {props.team3}{"("}3rd{")"}</div>    
+            </div>
+            {/* <p className="resHead2">Shortlisted Teams</p>
             <div id="tableScroll" style={{ overflowX: "auto" }}>
                 <Table striped bordered hover className="resTablee">
                     <thead>
@@ -25,9 +31,9 @@ function TableComp(props) {
                                     <td>{d.team_id}</td>
                                     <td>{d.name}</td>
                                     <td className="namee" >{d.college}</td>
-                                    {/* {(d.domain === '' || d.domain === null || d.domain === undefined) && (d.topic === '' || d.topic === null || d.topic === undefined) ? null : */}
+                                    {(d.domain === '' || d.domain === null || d.domain === undefined) && (d.topic === '' || d.topic === null || d.topic === undefined) ? null :
                                     <td>{d.domain} ({d.topic})</td>
-                                    {/* } */}
+                                     } 
                                     <td ><ul>
                                         <li><p>{d.leader_name}</p></li>
                                         <li><p>{d.member_2_name}</p></li>
@@ -79,7 +85,8 @@ function TableComp(props) {
                         </Table>
                     </div>
                 </> : null
-            }
+            } */}
+        </div>
         </div>
     </>
 }
