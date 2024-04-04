@@ -62,7 +62,7 @@ function CaDB() {
     return <>
         <Navbar />
         <div className="dbOuterDiv">
-            <p className="dashboard">Dashboard</p>
+            <p className="dashboard">Hi, {name}</p>
             <p className="dbHead1">Details regarding Campus Ambassador</p>
 
             <hr className="dbHR1" />

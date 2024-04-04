@@ -14,7 +14,7 @@ function Register() {
                 <p className="heading" id="registerAs">Register as</p>
                 <img className="cross" src={cross} onClick={() => { dispatch(dialog0()) }} />
             </div>
-            <button className="asRegister" id="regMember" onClick={() => { dispatch(dialog2()) }} >Member</button>
+            <button className="asRegister" id="regMember" onClick={() => {dispatch(dialog2()) }} >Member</button>
             <button className="asRegister" onClick={() => { dispatch(dialog3()) }} >Team</button>
             <button className="asRegister" id="CA" onClick={() => { dispatch(dialog4()) }} >Campus Ambassador</button>
         </div>

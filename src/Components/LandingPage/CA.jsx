@@ -30,9 +30,6 @@ function CA() {
             </ul>
             </div>
 
-            <hr className="faqLine" />
-
-
         </div>
         <Footer />
     </>

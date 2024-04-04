@@ -42,6 +42,7 @@ function TeamDB() {
 
     // const [teamState, setTeamState] = useState(team)
     const [teamId, setTeamId] = useState('')
+    const [teamName, setTeamName] = useState('');
     const [teamSize, setTeamSize] = useState('')
     const [leader, setLeader] = useState('')
     const [member2, setMember2] = useState('')
@@ -88,6 +89,7 @@ function TeamDB() {
     }, [])
     useEffect(() => {
         setTeamId(reducer.dataTeam.team_id)
+        setTeamName(reducer.dataTeam.name)
         setTeamSize(reducer.dataTeam.size)
         setTopic(reducer.dataTeam.topic)
         setDomain(reducer.dataTeam.domain)
@@ -308,7 +310,7 @@ function TeamDB() {
             <p id="dialText3">{text3}</p>
         </div>
         <div className="dbOuterDiv">
-            <p className="dashboard">Dashboard</p>
+            <p className="dashboard">Hi, {teamName}</p>
             <p className="dbHead1">Details regarding Team and Members</p>
 
             <hr className="dbHR1" />
