@@ -3,9 +3,9 @@
 import React from 'react'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import image1 from "../Assets/c101.png"
-import image2 from "../Assets/p102.png"
-import image3 from "../Assets/p103.png"
+import image1 from "../Assets/registration1.png"
+import image2 from "../Assets/registration2.png"
+import image3 from "../Assets/registration 3.png"
 import Footer from '../footer/footer';
 import Navbar from '../Navbar/navbar';
 import "./reg.css"
