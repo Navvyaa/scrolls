@@ -9,9 +9,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from "react-redux"
 import { RegCACheck } from "../../Redux/registerSlice";
 import { Spinner } from 'react-bootstrap';
-import { dialog0, dialog1, dialog5 } from "../../Redux/step";
+import { dialog0, dialog1, dialog5, dialog16, dialog20 } from "../../Redux/step";
 
-function CA1() {
+function CA1(props) {
 
     // ca registration
     const [loading, setLoading] = useState(false)
@@ -68,7 +68,7 @@ function CA1() {
                             theme: "light",
                             autoClose: 5000,
                         });
-                        dispatch(dialog5())
+                        !props.home?dispatch(dialog5()):dispatch(dialog20());
                     }
                     else if (res.payload.status === 429) {
                         toast.error("You have attempted too many times Today, please try again tomorrow", {
@@ -98,7 +98,7 @@ function CA1() {
     return <>
         <div className="register" id="regDiv">
             <div className="regFlex" id="regCA">
-                <img className="arrow" id="back" src={arrow} onClick={() => { dispatch(dialog1()) }} />
+                <img className="arrow" id="back" src={arrow} onClick={() => { !props.home?dispatch(dialog1()):dispatch(dialog16()) }} />
                 <p className="heading" id="registerCA">Register as <span id="member">Campus Ambassador</span></p>
                 <img className="cross" id="back" src={cross} onClick={() => { dispatch(dialog0()) }} />
             </div>

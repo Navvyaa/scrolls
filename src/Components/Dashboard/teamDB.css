@@ -9,6 +9,10 @@
     width: 46vw;
 }
 
+#dbHHead{
+width: auto;
+}
+
 .dashboard {
     font-family: 'Montserrat';
     font-style: normal;

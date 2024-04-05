@@ -9,10 +9,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from "react-redux"
 import { RegCAThunk } from "../../Redux/registerSlice";
 import { Spinner } from 'react-bootstrap';
-import { dialog0, dialog1, dialog4 } from "../../Redux/step";
+import { dialog0, dialog1, dialog4, dialog19 } from "../../Redux/step";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
-function CA2() {
+function CA2(props) {
 
     // register 5
     const {executeRecaptcha} = useGoogleReCaptcha();
@@ -264,7 +264,7 @@ function CA2() {
     return <>
         <div className="register">
             <div className="regFlex" id="memberReg">
-                <img className="arrow" id="back" src={arrow} onClick={() => { dispatch(dialog4()) }} />
+                <img className="arrow" id="back" src={arrow} onClick={() => { !props.home?dispatch(dialog4()):dispatch(dialog19()) }}  />
                 <p className="heading" id="registerCA">Register as <span id="member">Campus Ambassador</span></p>
                 <img className="cross" id="back" src={cross} onClick={() => { dispatch(dialog0()) }} />
             </div>

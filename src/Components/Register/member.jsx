@@ -7,14 +7,14 @@ import "./register.css"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from "react-redux"
-import { dialog0, dialog1 } from "../../Redux/step";
+import { dialog0, dialog1, dialog16 } from "../../Redux/step";
 import { RegMemberThunk } from "../../Redux/registerSlice";
 import { Spinner } from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useCallback } from "react";
 
-function Member() {
+function Member(props) {
 
     const { executeRecaptcha } = useGoogleReCaptcha();
     const [loading, setLoading] = useState(false)
@@ -384,7 +384,7 @@ const handleSubmit =
     return <>
         <div className="register">
             <div className="regFlex" id="memberReg">
-                <img className="arrow" src={arrow} onClick={() => { dispatch(dialog1()) }} />
+                <img className="arrow" src={arrow} onClick={() => {!props.home?dispatch(dialog1()):dispatch(dialog16()) }} />
                 <p className="heading">Register as <span id="member">Member</span></p>
                 <img className="cross" src={cross} onClick={() => { dispatch(dialog0()) }} />
             </div>

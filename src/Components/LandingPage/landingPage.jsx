@@ -1,6 +1,8 @@
 import landImage from "../Assets/scroll_bg.svg";
 import UpdateImage from "../Assets/updateImage.jpeg";
 import domainLogo from "../Assets/domainLogo.svg";
+import cross from "../Assets/cross.svg"
+import arrow from "../Assets/arrow.svg"
 import { forwardRef, useEffect, useState } from "react";
 import {
   Alert,
@@ -10,7 +12,7 @@ import {
   Slide,
   Typography,
 } from "@mui/material";
-import { dialog0, dialog1, dialog6 } from "../../Redux/step";
+import { dialog0, dialog16, dialog17, dialog18, dialog19, dialog20 } from "../../Redux/step";
 import Register from "../Register/Register";
 import Member from "../Register/member";
 import Team from "../Register/team";
@@ -41,6 +43,10 @@ import winnersImg from "../Assets/scrolls23Winner.svg";
 import imgs1 from "../Assets/image-1.png";
 import imgs2 from "../Assets/image-2.png"
 import imgs3 from "../Assets/image-3.png"
+import imgs4 from "../Assets/image-4.jpg"
+import imgs5 from "../Assets/image-5.jpg"
+import imgs6 from "../Assets/image-6.jpg"
+
 
 function LandingPage() {
   const reducer = useSelector((s) => s.login);
@@ -76,6 +82,11 @@ function LandingPage() {
     twelve: false,
     thirteen: false,
     fourteen: false,
+    sixteen: false,
+    seventeen: false,
+    eighteen: false,
+    nineteen: false,
+    twenty: false,
   });
 
   useEffect(() => {
@@ -85,27 +96,27 @@ function LandingPage() {
   useEffect(() => {
     if (step.step == 0) {
       setStepDialog({
-        one: false,
-        two: false,
-        three: false,
-        four: false,
-        five: false,
+        sixteen: false,
+        seventeen: false,
+        eighteen: false,
+        nineteen: false,
+        twenty: false,
       });
     }
-    if (step.step == 1 && dialogg) {
-      setStepDialog({ one: true });
+    if (step.step == 16 && dialogg) {
+      setStepDialog({ sixteen: true });
     }
-    if (step.step == 2 && dialogg) {
-      setStepDialog({ two: true });
+    if (step.step == 17 && dialogg) {
+      setStepDialog({ seventeen: true });
     }
-    if (step.step == 3 && dialogg) {
-      setStepDialog({ three: true });
+    if (step.step == 18 && dialogg) {
+      setStepDialog({ eighteen: true });
     }
-    if (step.step == 4 && dialogg) {
-      setStepDialog({ four: true });
+    if (step.step == 19 && dialogg) {
+      setStepDialog({ nineteen: true });
     }
-    if (step.step == 5 && dialogg) {
-      setStepDialog({ five: true });
+    if (step.step == 20 && dialogg) {
+      setStepDialog({ twenty: true });
     }
   }, [step, dialogg]);
 
@@ -136,7 +147,7 @@ function LandingPage() {
       .then((res) => {
         if (res?.payload?.status === 200) {
           setDialogg(true);
-          dispatch(dialog1());
+          dispatch(dialog16());
         }
         if (res?.payload?.status === 400) {
           setDialogg(true);
@@ -390,9 +401,15 @@ function LandingPage() {
         <div className="">
           <img className="sliderItem" src={imgs3} />
         </div>
-        {/* <div className="">
-          <img className="sliderItem" src={imageCar1} />
-        </div> */}
+         <div className="">
+          <img className="sliderItem" src={imgs4} />
+        </div>
+        <div className="">
+          <img className="sliderItem" src={imgs5} />
+        </div>
+        <div className="">
+          <img className="sliderItem" src={imgs6} />
+        </div>
       </Slider>
       </div>
         </div>
@@ -435,8 +452,8 @@ function LandingPage() {
 
 
 
-        {/* <Dialog
-          open={stepDialog.one}
+        <Dialog
+          open={stepDialog.sixteen}
           PaperProps={{
             sx: {
               maxHeight: 1300,
@@ -444,12 +461,20 @@ function LandingPage() {
               maxWidth: 1000,
             },
           }}
-        > */}
-          {/* <Team /> */}
-          {/* <Register />
+        >
+             <div className="register" id="regDiv">
+            <div className="regFlex">
+                <img className="arrow" src={arrow} onClick={() => { dispatch(dialog0()) }}/>
+                <p className="heading" id="registerAs">Register as</p>
+                <img className="cross" src={cross} onClick={() => { dispatch(dialog0()) }} />
+            </div>
+            <button className="asRegister" id="regMember" onClick={() => {dispatch(dialog17()) }} >Member</button>
+            <button className="asRegister" onClick={() => { dispatch(dialog18()) }} >Team</button>
+            <button className="asRegister" id="CA" onClick={() => { dispatch(dialog19()) }} >Campus Ambassador</button>
+        </div>
         </Dialog>
       <Dialog
-        open={stepDialog.two}
+        open={stepDialog.seventeen}
         PaperProps={{
           sx: {
             maxHeight: 1300,
@@ -458,11 +483,11 @@ function LandingPage() {
           },
         }}
       >
-        <Member />
+   <Member home={true}/>
       </Dialog>
 
       <Dialog
-        open={stepDialog.three}
+        open={stepDialog.eighteen}
         PaperProps={{
           sx: {
             maxHeight: 1100,
@@ -471,22 +496,22 @@ function LandingPage() {
           },
         }}
       >
-        <Team />
+        <Team home={true}/>
       </Dialog>
 
       <Dialog
-        open={stepDialog.four}
+        open={stepDialog.nineteen}
         PaperProps={{
           sx: {
             maxWidth: 1000,
           },
         }}
       >
-        <CA1 />
+        <CA1 home={true}/>
       </Dialog>
 
       <Dialog
-        open={stepDialog.five}
+        open={stepDialog.twenty}
         PaperProps={{
           sx: {
             maxHeight: 1240,
@@ -495,10 +520,10 @@ function LandingPage() {
           },
         }}
       >
-        <CA2 />
-      </Dialog> */}
+        <CA2 home={true}/>
+      </Dialog>
 
-      {/* <Dialog
+     {/* <Dialog
         open={soon}
         onClose={handleSoonClose}
         PaperProps={{
@@ -510,7 +535,7 @@ function LandingPage() {
         }}
         keepMounted
       >
-        <div id="processDialog">
+         <div id="processDialog">
           <DialogTitle
             sx={{ textAlign: "center", marginBottom: 0, paddingBottom: "8px" }}
           >
