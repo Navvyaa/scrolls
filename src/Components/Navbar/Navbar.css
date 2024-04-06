@@ -29,6 +29,7 @@
     padding-left: 3.8vw;
     padding-right: 2vw;
     overflow: hidden;
+    
 }
 
 .navFlex1,
@@ -712,7 +713,7 @@
         width: 24px;
         height: 24px;
         position: absolute;
-        top: 18px;
+        top: 16px;
         right: 5vw;
         cursor: pointer;
     }
