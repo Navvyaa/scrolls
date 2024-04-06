@@ -367,8 +367,8 @@ function Navbar() {
       <div className="navbar" onMouseLeave={closeDropdown}>
         {/* <div style={{display:"flex",alignItems:'center',justifyContent:'start' ,gap:'2rem'}}> */}
         <NavLink to="/">
-          <div className="flex gap-2 items-center">
-            <img src={imglogo} className="md:w-[1.4rem] h-[2.42rem] w-[1.2rem] min-w-[1.2rem] min-h-[2rem] md:h-[2.82rem]"/>
+          <div className="flex gap-[0.4rem] items-center">
+            <img src={imglogo} className="md:w-[2.2rem] h-[2.2rem] w-[2rem] min-w-[2rem] min-h-[2.2rem] md:h-[2.4rem]"/>
           <p className="navScroll">
             SCROLLS<span className="navDot">.</span>
           </p>

@@ -521,7 +521,11 @@
     #otherCA,
     .regContinue {
         width: 21vw;
-        height: 54px;
+        /* height: 54px; */
+    }
+    #registerTeam{
+        padding-top: 5.8rem;
+        /* height: 1100px !important; */
     }
 
     .allForm {

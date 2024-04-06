@@ -83,7 +83,7 @@ function Result() {
     <>
       <Navbar />
       <div className="sm:px-[2rem]" id="RESULT">
-        <div id="resultHead">Winners-2023</div>
+        <div id="resultHead">Scrolls Winners-2023</div>
         <TableComp
           name="Computer Science and Information Technology"
           data={selected.CS_team}

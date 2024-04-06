@@ -5,13 +5,20 @@ import Table from 'react-bootstrap/Table';
 function TableComp(props) {
     return <>
         <div className="resDiv">
-            <div>
-            <p className="resHead">{props.name}</p>
-            <div className="flex font-semibold mb-1 gap-[2rem] md:flex-nowrap flex-wrap sm:flex-col flex-col mt-3 ">
-<div>Team {props.team1}{"("}1st{")"}</div>
-<div>Team {props.team2}{"("}2nd{")"}</div>
-<div>Team {props.team3}{"("}3rd{")"}</div>    
-            </div>
+        <div>
+    <p className="resHead">{props.name}</p>
+    <div className="flex text-[0.9rem] sm:text-[1.2rem] font-semibold mb-1 sm:gap-[1.8rem] gap-[1rem] md:flex-nowrap flex-wrap sm:flex-col flex-col mt-3">
+        <div>
+             1st Position - Team {props.team1} <span>🥇</span>
+        </div>
+        <div>
+             2nd Position - Team {props.team2} <span>🥈</span>
+        </div>
+        <div>
+            3rd Position - Team {props.team3} <span>🥉</span>
+        </div>    
+    </div>
+{/* </div> */}
             {/* <p className="resHead2">Shortlisted Teams</p>
             <div id="tableScroll" style={{ overflowX: "auto" }}>
                 <Table striped bordered hover className="resTablee">
