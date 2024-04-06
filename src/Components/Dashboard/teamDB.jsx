@@ -312,8 +312,16 @@ function TeamDB() {
         <div className="dbOuterDiv">
             <p className="dashboard">Hi, {teamName}</p>
             <p className="dbHead1">Details regarding Team and Members</p>
-
             <hr className="dbHR1" />
+
+<div className="flex justify-center">
+<div id="dbdial" className="flex flex-col rounded-lg items-center p-[1.5rem] text-center w-[80%] mb-[2rem] mob1:hidden">
+<img className="w-[3rem]" src={image} />
+<p id="dialText1">{text1}</p>
+<p id="dialtt">{text2}</p>
+</div>
+
+</div>
             <div className="dbFlex1">
                 <p className="dbHead">Team ID</p>
                 <div className="teamID_box">{teamId}</div>
