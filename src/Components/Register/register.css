@@ -171,8 +171,9 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 48px;
+     /* padding-top: 4px; */
     text-align: center;
     letter-spacing: 0.08em;
     color: #252525;
@@ -392,15 +393,53 @@
     line-height: 17px;
     color: #252525;
     text-decoration: underline;
-    margin-top: 8px;
+    padding-top: 14px;
     cursor: pointer;
     position: absolute;
     right: 6vw;
     top: 300px;
 }
+@media(max-width: 900px) {
+    .forgotPass {
+    padding-top: 12px;
+        
+    }}
+@media(max-width: 495px) {
+    .forgotPass {
+    padding-top: 8px;
+        
+    }}
+    @media(max-width: 450px) {
+        .forgotPass {
+        padding-top: 15px;
+            
+        }
+    
+}
 
 #caFgtpass {
     top: 328px;
+}
+@media(max-width: 450px) {
+    #caFgtpass {
+    padding-top: 8px;
+        
+    }
+
+}
+@media(max-width: 378px) {
+    #caFgtpass {
+    padding-top: 26px;
+        
+    }
+
+}
+@media(max-width: 360px) {
+    #caFgtpass {
+    padding-top: 8px;
+        
+    }
+
 }
 
 .forgotText {

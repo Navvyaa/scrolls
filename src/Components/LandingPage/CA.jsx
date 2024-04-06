@@ -15,8 +15,9 @@ function CA() {
             <p className="answer">An exciting opportunity awaits as we launch the new edition of Scrolls, a National-level technical paper presentation competition on May 8, 2024. We're seeking dynamic students with networking skills and a strong social media presence to join as Campus Ambassadors and align with the legacy of Scrolls.</p>
             <hr className="faqLine" />
             <p className="domainHeading">Rules and Regulations</p>
-            <p className="answer">Campus Ambassadors will be rewarded for achieving at least 5 team registrations, including their own.</p>
-            
+            <p className="answer">1. Campus Ambassadors will be rewarded for achieving at least 5 team registrations, including their own.</p>
+            <hr className="faqLine" />
+            <p className="answer">2. Registration for Campus Ambassador closes on 13th April.</p>
             <hr className="faqLine" />
             <p className="domainHeading">Perks for Campus Ambassador</p>
             <p className="answer">1. Certificate and token of appreciation for all Campus Ambassadors.</p>
