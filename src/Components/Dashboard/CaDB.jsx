@@ -19,7 +19,7 @@ function CaDB() {
     const [college, setCollege] = useState('')
     const [teams, setTeams] = useState([])
     const [leaderboard, setLeaderboard] = useState([])
-
+  const [scrollsID, setScrollsID] = useState()
     useEffect(() => {
         window.scroll(0, 0)
     }, [])
@@ -40,6 +40,7 @@ function CaDB() {
     }, [])
 
     useEffect(() => {
+        setScrollsID(reducer.dataCA.scrolls_id)
         setName(reducer.dataCA.name)
         setRefferalCode(reducer.dataCA.referral_code)
         setNumRef(reducer.dataCA.referral_count)
@@ -48,6 +49,7 @@ function CaDB() {
         setLeaderboard(reducer.dataCA.leaderboard)
     }, [reducer])
 
+    console.log(scrollsID)
     useEffect(() => {
         if (reducer.loading) {
             setLoading(true)
@@ -85,6 +87,15 @@ function CaDB() {
             </div>
 
             <hr className="dbHR2" />
+
+            <div className="dbFlex1">
+
+<p className="dbHead">Scrolls ID</p>
+
+<div className="teamID_box">{scrollsID}</div>
+</div>
+
+<hr className="dbHR2" />
 
             <div className="dbFlex1">
 

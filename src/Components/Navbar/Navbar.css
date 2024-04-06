@@ -35,12 +35,13 @@
 .navFlexLogin {
     display: flex;
     gap: 2vw;
+
     /* margin-top: 6px; */
     /* z-index:5; */
 }
 
 .navFlexLogin {
-    /* margin-left: 7vw; */
+    margin-left: 7vw;
 }
 
 #navFaq {
@@ -79,6 +80,8 @@
     line-height: 24px;
     /* margin-right: 4vw; */
     cursor: pointer;
+    color: #FFFFFF !important;
+    display: block;
 }
 
 .navDbT,
@@ -272,9 +275,9 @@
     display: none;
     background-color: white;
     color: #191919 !important;
-    position: fixed;
-    top: 50px;
-    left: 20vw;
+    /* position: fixed; */
+    /* top: 50px; */
+    /* left: 20vw; */
     flex-direction: column;
     font-weight: 600;
     z-index: 8;
@@ -283,12 +286,12 @@
 }
 
 #moreDD {
-    left: 40vw;
+    /* left: 40vw; */
     background-color: white;
     color: #191919 !important;
     position: fixed;
-    top: 50px;
-    left: 44vw;
+    /* top: 50px; */
+    /* left: 44vw; */
     flex-direction: column;
     font-weight: 600;
     z-index: 8;
@@ -302,7 +305,7 @@
     background-color: white;
     color: #191919 !important;
     position: fixed;
-    top: 50px;
+    /* top: 50px; */
     flex-direction: column;
     font-weight: 600;
     z-index: 8;
@@ -442,7 +445,7 @@
     }
 
     #dropdown {
-        left: 28vw;
+        /* left: 28vw; */
     }
 
     #dropdown ul li {
@@ -456,7 +459,7 @@
 
 @media(max-width:2000px) and (min-width:1500px) {
     #dropdown {
-        left: 24vw;
+        /* left: 24vw; */
     }
     .navScroll {
         /* margin-top: 4px; */
@@ -484,7 +487,7 @@
     }
 
     #dropdown {
-        left: 24vw;
+        /* left: 24vw; */
     }
 }
 
@@ -503,7 +506,7 @@
 
 @media(max-width:1010px) {
     #dropdown {
-        left: 27.4vw;
+        /* left: 27.4vw; */
     }
 
     #dropdown ul li {
@@ -539,7 +542,7 @@
         color: #FFFFFF;
         cursor: pointer;
         z-index: 10;
-        margin-left: -8vw;
+        /* margin-left: -8vw; */
     }
 
     #navMore2 {
@@ -547,7 +550,7 @@
         color: #FFFFFF;
         cursor: pointer;
         z-index: 10;
-        margin-left: -5vw;
+        /* margin-left: -5vw; */
     }
 
     #moreDD ul,
@@ -559,11 +562,11 @@
     }
 
     #moreDD {
-        left: 42.8vw;
+        /* left: 42.8vw; */
     }
 
     #moreDD2 {
-        left: 55vw;
+        /* left: 55vw; */
     }
 
     /* .navLogin {
@@ -571,7 +574,7 @@
     } */
 
     #dropdown {
-        left: 27vw;
+        /* left: 27vw; */
     }
 
     #dropdown ul li {
@@ -585,28 +588,31 @@
 
 @media(max-width:970px) {
     #moreDD {
-        left: 45vw;
+        /* left: 45vw; */
     }
 
 }
 @media(max-width:870px) {
     #moreDD {
-        left: 50vw;
+        /* left: 50vw; */
     }
     #moreDD2 {
-        left: 64vw;
+        /* left: 64vw; */
+    }
+    .navFlexLogin {
+        margin-left: 4vw;
     }
 }
 
 @media(max-width:800px) {
     #moreDD2 {
-        left: 67vw;
+        /* left: 67vw; */
     }
 }
 
 @media(max-width:760px) {
     #moreDD {
-        left: 58vw;
+        /* left: 58vw; */
     }
 
     .navRegister,
@@ -616,23 +622,23 @@
     }
 
     .navFlexLogin {
-        margin-left: -0.5vw;
+        margin-left: 3vw;
     }
 
 }
 
 @media(max-width:725px) {
     .navFlexLogin {
-        /* margin-left: 1vw; */
+        margin-left: 1vw;
         gap: 1.7vw;
     }
 
     #navMore2 {
-        margin-left: -5vw;
+        /* margin-left: -5vw; */
     }
 
     #moreDD2 {
-        left: 68vw;
+        /* left: 68vw; */
     }
 }
 
@@ -652,7 +658,7 @@
     }
 
     #moreDD {
-        left: 60vw;
+        /* left: 60vw; */
     }
 
     .navFlexLogin p,

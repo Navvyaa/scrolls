@@ -364,7 +364,31 @@ function Navbar() {
         </ul>
       </div>
 
-      <div
+      <div className="navbar" onMouseLeave={closeDropdown}>
+        {/* <div style={{display:"flex",alignItems:'center',justifyContent:'start' ,gap:'2rem'}}> */}
+        <NavLink to="/">
+          <div className="flex gap-2 items-center">
+            <img src={imglogo} className="md:w-[1.4rem] h-[2.42rem] w-[1.2rem] min-w-[1.2rem] min-h-[2rem] md:h-[2.82rem]"/>
+          <p className="navScroll">
+            SCROLLS<span className="navDot">.</span>
+          </p>
+          </div>
+        </NavLink>
+        <div className="navFlex1">
+          <NavLink to="/">
+            <p className="navHead">Home</p>
+          </NavLink>
+         {title===""&& <div className="relative flex flex-col">
+          <p
+            className="navHead"
+            onClick={handleDropdown}
+            onMouseOver={handleDropdown}
+            id="navdomain"
+          >
+            Domains
+          </p>
+          <div
+          className="fixed top-[3rem]"
         id="dropdown"
         onMouseOver={handleDropdown}
         onMouseLeave={closeDropdown}
@@ -394,73 +418,7 @@ function Navbar() {
           </NavLink>
         </ul>
       </div>
-
-      <div id="moreDD" onMouseOver={handleMore} onMouseLeave={closeDropdown}>
-        <ul>
-          <NavLink to="/rules">
-            <li>Rules</li>
-          </NavLink>
-          <NavLink to="/ca">
-            <li>CA</li>
-          </NavLink>
-          <NavLink to="/result">
-            <li>Results</li>
-          </NavLink>
-          <NavLink to="/process">
-            {" "}
-            <li>How To Register</li>
-          </NavLink>
-          {/* <NavLink to="/faq">
-            <li>FAQs</li>
-          </NavLink> */}
-          {/* <NavLink to="/accommodations">
-            <li>Accommodation</li>
-          </NavLink> */}
-        </ul>
-      </div>
-
-      <div id="moreDD2" onMouseOver={handleMore2} onMouseLeave={closeDropdown}>
-        <ul>
-          <NavLink to="/rules">
-            <li>Rules</li>
-          </NavLink>
-          <NavLink to="/result">
-            <li>Results</li>
-          </NavLink>
-          {/* <NavLink to="/process">
-            {" "}
-            <li>How To Register</li>
-          </NavLink> */}
-          {/* <NavLink to="/faq">
-            <li>FAQs</li>
-          </NavLink> */}
-          <NavLink to="/accommodations">
-            <li>Accommodation</li>
-          </NavLink>
-        </ul>
-      </div>
-
-      <div className="navbar" onMouseLeave={closeDropdown}>
-        <div style={{display:"flex",alignItems:'center',justifyContent:'start' ,gap:'2rem'}}>
-        <NavLink to="/">
-          <div className="flex ">
-          <p className="navScroll">
-            SCROLLS<span className="navDot">.</span>
-          </p>
-          </div>
-        </NavLink>
-        <div className="navFlex1">
-          <NavLink to="/">
-            <p className="navHead">Home</p>
-          </NavLink>
-          <p
-            className="navHead"
-            onClick={handleDropdown}
-            onMouseOver={handleDropdown}
-            id="navdomain"
-          >
-            Domains
-          </p>
+          </div>}
           <NavLink to="/updates">
             {" "}
             <p className="navHead">Updates</p>
@@ -498,6 +456,8 @@ function Navbar() {
               Accommodation
             </p>
           </NavLink> */}
+          
+          <div className="relative ml-[-8vw] lg1:ml-[-2vw] flex flex-col">
           <p
             className="navHead"
             id="navMore"
@@ -506,11 +466,36 @@ function Navbar() {
           >
             More
           </p>
+          <div className="fixed top-[3rem]" id="moreDD" onMouseOver={handleMore} onMouseLeave={closeDropdown}>
+        <ul>
+          <NavLink to="/rules">
+            <li>Rules</li>
+          </NavLink>
+          <NavLink to="/ca">
+            <li>CA</li>
+          </NavLink>
+          <NavLink to="/result">
+            <li>Results</li>
+          </NavLink>
+          <NavLink to="/process">
+            {" "}
+            <li>How To Register</li>
+          </NavLink>
+          {/* <NavLink to="/faq">
+            <li>FAQs</li>
+          </NavLink> */}
+          {/* <NavLink to="/accommodations">
+            <li>Accommodation</li>
+          </NavLink> */}
+        </ul>
+      </div>
+      </div>
         </div>
         <div className="navFlexLogin">
           <NavLink to="/">
             <p className="navHead">Home</p>
           </NavLink>
+           <div className="relative flex flex-col">
           <p
             className="navHead"
             onClick={handleDropdown}
@@ -519,6 +504,38 @@ function Navbar() {
           >
             Domains
           </p>
+          <div
+          className="fixed top-[3rem]"
+        id="dropdown"
+        onMouseOver={handleDropdown}
+        onMouseLeave={closeDropdown}
+      >
+        <ul>
+          <NavLink to="/domain_management">
+            <li>Management Sciences</li>
+          </NavLink>
+          <NavLink to="/domain_ece">
+            {" "}
+            <li>Electronics and Communication Engineering</li>
+          </NavLink>
+          <NavLink to="/domain_civil">
+            <li>Civil Engineering</li>
+          </NavLink>
+          <NavLink to="/domain_en">
+            {" "}
+            <li>Electrical and Electronics Engineering</li>
+          </NavLink>
+          <NavLink to="/domain_cs">
+            {" "}
+            <li>Computer Science and Information Technology</li>
+          </NavLink>
+          <NavLink to="/domain_me">
+            {" "}
+            <li>Mechanical Engineering</li>
+          </NavLink>
+        </ul>
+      </div>
+          </div>
           <NavLink to="/updates">
             {" "}
             <p className="navHead" id="navUpdate">
@@ -558,16 +575,39 @@ function Navbar() {
               Accommodation
             </p>
           </NavLink>
+          <div className="relative lg1:ml-[-2vw] ml-[-5vw] flex flex-col">
           <p
             className="navHead"
-            id="navMore2"
+            id="navMore"
             onClick={handleMore2}
             onMouseOver={handleMore2}
           >
             More
           </p>
+          <div className="fixed top-[3rem]" id="moreDD2" onMouseOver={handleMore2} onMouseLeave={closeDropdown}>
+        <ul>
+          <NavLink to="/rules">
+            <li>Rules</li>
+          </NavLink>
+          <NavLink to="/result">
+            <li>Results</li>
+          </NavLink>
+          {/* <NavLink to="/process">
+            {" "}
+            <li>How To Register</li>
+          </NavLink> */}
+          {/* <NavLink to="/faq">
+            <li>FAQs</li>
+          </NavLink> */}
+          <NavLink to="/accommodations">
+            <li>Accommodation</li>
+          </NavLink>
+        </ul>
+      </div>
+      </div>
         </div>
-        </div>
+        
+        {/* </div> */}
 
 
         <div className="navFlex2">
