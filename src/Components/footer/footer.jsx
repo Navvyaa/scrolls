@@ -19,25 +19,25 @@ function Footer() {
     <p id="telephone">Contact</p>
     <div className="footFlexRow">
         <a href="tel:7037236902">
-            <p className="w-[4.7rem]">7037236902</p>
+            <p className="w-[4.7rem] xl1:w-[7.2rem]">7037236902</p>
         </a>
         <p>(Radhika Aggarwal)</p>
     </div>
     <div className="footFlexRow">
         <a href="tel:6394785007">
-            <p className="w-[4.7rem]">6394785007</p>
+            <p className="w-[4.7rem] xl1:w-[7.2rem]">6394785007</p>
         </a>
         <p>(Omar Siddiqui)</p>
     </div>
     <div className="footFlexRow">
         <a href="tel:7300559100">
-            <p className="w-[4.7rem]">7300559100</p>
+            <p className="w-[4.7rem] xl1:w-[7.2rem]">7300559100</p>
         </a>
         <p>(Varun Varshney)</p>
     </div>
     <div className="footFlexRow">
         <a href="tel:9140745541">
-            <p className="w-[4.7rem]">9140745541</p>
+            <p className="w-[4.7rem] xl1:w-[7.2rem]">9140745541</p>
         </a>
         <p>(Gauri Tripathi)</p>
     </div>
