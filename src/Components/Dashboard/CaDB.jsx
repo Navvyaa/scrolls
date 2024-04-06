@@ -40,7 +40,7 @@ function CaDB() {
     }, [])
 
     useEffect(() => {
-        setScrollsID(reducer.dataCA.scrolls_id)
+        setScrollsID(reducer.dataCA.member_id)
         setName(reducer.dataCA.name)
         setRefferalCode(reducer.dataCA.referral_code)
         setNumRef(reducer.dataCA.referral_count)
@@ -49,7 +49,6 @@ function CaDB() {
         setLeaderboard(reducer.dataCA.leaderboard)
     }, [reducer])
 
-    console.log(scrollsID)
     useEffect(() => {
         if (reducer.loading) {
             setLoading(true)

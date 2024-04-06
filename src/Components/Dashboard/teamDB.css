@@ -331,6 +331,10 @@ table {
     padding: 24px 1vw;
     z-index: 5;
 }
+#dbdial{
+    background: #F3F5F6;
+
+}
 
 #dialImg {
     width: 48px;
@@ -346,6 +350,10 @@ table {
     line-height: 17px;
     color: #31DCA9;
     margin-bottom: 4px;
+}
+#dialtt{
+    font-family: 'Montserrat';
+
 }
 
 #dialText2 {
@@ -756,7 +764,10 @@ table {
 
     #dbDialog {
         top: 70px;
+
         right: 2vw;
         width: 34vw;
+        position: static;
+        display: none;
     }
 }
