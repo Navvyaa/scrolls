@@ -404,7 +404,7 @@ table {
     .teamID_box,
     .synopsis {
         width: 20vw;
-        height: 52px;
+        /* height: 52px; */
         font-size: 1.2rem;
     }
 
