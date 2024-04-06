@@ -27,7 +27,7 @@ function Footer() {
         <a href="tel:6394785007">
             <p className="w-[4.7rem]">6394785007</p>
         </a>
-        <p>(Mohn. Omar Siddiqui)</p>
+        <p>(Omar Siddiqui)</p>
     </div>
     <div className="footFlexRow">
         <a href="tel:7300559100">

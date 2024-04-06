@@ -7,7 +7,7 @@ function TableComp(props) {
         <div className="resDiv">
             <div>
             <p className="resHead">{props.name}</p>
-            <div className="flex font-semibold mb-1 gap-[2rem] md:flex-nowrap flex-wrap sm:flex-row flex-col lg:gap-[6rem] md:gap-[4rem] mt-3 justify-center ">
+            <div className="flex font-semibold mb-1 gap-[2rem] md:flex-nowrap flex-wrap sm:flex-col flex-col mt-3 ">
 <div>Team {props.team1}{"("}1st{")"}</div>
 <div>Team {props.team2}{"("}2nd{")"}</div>
 <div>Team {props.team3}{"("}3rd{")"}</div>    

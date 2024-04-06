@@ -121,7 +121,7 @@ function TeamDB() {
             setImage(pending)
             setText1("Pending")
             setText3("Synopsis is submitted")
-            setText2("You cannot submit Paper until you are selected.")
+            setText2("You cannot submit the technical paper until your synopsis is selected.")
             document.getElementById('Paper').style.display = "none"
         }
         // if (!selected) {
