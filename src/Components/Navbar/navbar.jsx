@@ -28,7 +28,7 @@ import { Spinner } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import imglogo from '../Assets/logo1.png'
 import "react-toastify/dist/ReactToastify.css";
-function Navbar() {
+function Navbar(props) {
   const [dialogg, setDialogg] = useState(false);
   const [login, setLogin] = useState(false);
   const reducer = useSelector((s) => s.register);
@@ -376,7 +376,7 @@ function Navbar() {
         </NavLink>
         <div className="navFlex1">
           <NavLink to="/">
-            <p className="navHead">Home</p>
+            <p style={{color:props.pg==="home"?"#fac949":""}} className="navHead">Home</p>
           </NavLink>
          {title===""&& <div className="relative flex flex-col">
           <p
@@ -421,28 +421,28 @@ function Navbar() {
           </div>}
           <NavLink to="/updates">
             {" "}
-            <p className="navHead">Updates</p>
+            <p style={{color:props.pg==="update"?"#fac949":""}} className="navHead">Updates</p>
           </NavLink>
           <NavLink to="/rules">
             {" "}
-            <p id="navRule" className="navHead">
+            <p style={{color:props.pg==="rules"?"#fac949":""}} id="navRule" className="navHead">
               Rules
             </p>
           </NavLink>
           <NavLink to="/ca">
-            <p id="navCA" className="navHead">
+            <p style={{color:props.pg==="ca"?"#fac949":""}}  id="navCA" className="navHead">
               CA
             </p>
           </NavLink>
           <NavLink to="/process">
             {" "}
-            <p id="navCA" className="navHead">
+            <p style={{color:props.pg==="process"?"#fac949":""}} id="navCA" className="navHead">
               How To Register
             </p>
           </NavLink>
           <NavLink to="/result">
             {" "}
-            <p className="navHead" id="navCA">
+            <p style={{color:props.pg==="res"?"#fac949":""}}  className="navHead" id="navCA">
               Results
             </p>
           </NavLink>
@@ -493,7 +493,7 @@ function Navbar() {
         </div>
         <div className="navFlexLogin">
           <NavLink to="/">
-            <p className="navHead">Home</p>
+            <p style={{color:props.pg==="home"?"#fac949":""}} className="navHead">Home</p>
           </NavLink>
            <div className="relative flex flex-col">
           <p
@@ -536,19 +536,19 @@ function Navbar() {
         </ul>
       </div>
           </div>
-          <NavLink to="/updates">
+          <NavLink style={{color:props.pg==="update"?"#fac949":""}}  to="/updates">
             {" "}
             <p className="navHead" id="navUpdate">
               Updates
             </p>
           </NavLink>
           <NavLink to={path}>
-            <p className="navDbT">Dashboard</p>
+            <p style={{color:props.pg==="db"?"#fac949":""}}  className="navDbT">Dashboard</p>
           </NavLink>
           {/* <NavLink to="/ca_db"><p className="navDbC" id="ca_db">Dashboard</p></NavLink> */}
           <NavLink to="/rules">
             {" "}
-            <p id="navRule2" className="navHead">
+            <p style={{color:props.pg==="rules"?"#fac949":""}}  id="navRule2" className="navHead">
               Rules
             </p>
           </NavLink>
@@ -558,7 +558,7 @@ function Navbar() {
               How To Register
             </p>
           </NavLink> */}
-          <NavLink to="/result">
+          <NavLink style={{color:props.pg==="res"?"#fac949":""}}  to="/result">
             {" "}
             <p className="navHead" id="navCA">
               Results
@@ -571,7 +571,7 @@ function Navbar() {
           </NavLink> */}
 
           <NavLink to="/accommodations">
-            <p id="navCA" className="navHead">
+            <p style={{color:props.pg==="acc"?"#fac949":""}}  id="navCA" className="navHead">
               Accommodation
             </p>
           </NavLink>

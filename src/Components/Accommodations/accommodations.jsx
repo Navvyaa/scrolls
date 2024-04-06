@@ -7,7 +7,7 @@ import { ToastContainer } from 'react-toastify'
 function Accommodations() {
   return (
     <div>
-        <Navbar/>
+        <Navbar pg="acc"/>
         <div className='accommodations'>
             <p className="dashboard" style={{color:"#fac949"}} id="update">Accommodation</p>
             <div className='font-bold'>

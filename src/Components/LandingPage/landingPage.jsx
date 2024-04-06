@@ -244,7 +244,7 @@ function LandingPage() {
 
   return (
     <>
-      <Navbar />
+      <Navbar pg="home"/>
       <div className="landingPage">
         <div className="landBlock1">
           <div id="loginBg" style={{ backgroundImage: `url(${landImage})` }}>

@@ -302,7 +302,7 @@ function TeamDB() {
     let condition = (prevDomain != uplDom || prevSyn != uplSyn || prevTop != uplTop || prevPap != uplPaper) ? false : true
 
     return <>
-        <Navbar />
+        <Navbar pg="db"/>
         <div id="dbDialog">
             <img id="dialImg" src={image} />
             <p id="dialText1">{text1}</p>

@@ -11,7 +11,7 @@ function Update() {
     }, [])
 
     return <>
-        <Navbar />
+        <Navbar pg="update"/>
         <div className="updates">
             <p className="dashboard" id="update">Updates</p>
             <UpdCard text="Registrations will begin soon." head="Registrations" />
