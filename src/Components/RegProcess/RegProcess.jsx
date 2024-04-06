@@ -12,7 +12,7 @@ import "./reg.css"
 
 const RegProcess = () => {
     return <>
-        <Navbar />
+        <Navbar pg="process"/>
         <div className="regProcess">
             <p id="process">Registration Process</p>
             <img src={image1} className="carouselImg" />

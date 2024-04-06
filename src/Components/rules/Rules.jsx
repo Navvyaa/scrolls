@@ -10,7 +10,7 @@ function Rules() {
     }, [])
 
     return <>
-        <Navbar />
+        <Navbar pg="rules"/>
         <div className="FAQ">
             <p className="dashboard" id="Faqs">Rules and Regulations</p>
             <p className="answer">1. The competition will be open to all the bonafide students of Engineering and Management Colleges with a minimum of 2 and a maximum of 3 authors per paper.</p>

@@ -49,6 +49,7 @@ function CaDB() {
         setLeaderboard(reducer.dataCA.leaderboard)
     }, [reducer])
 
+    console.log(reducer.dataCA)
     useEffect(() => {
         if (reducer.loading) {
             setLoading(true)
@@ -61,7 +62,7 @@ function CaDB() {
     }, [reducer.loading])
 
     return <>
-        <Navbar />
+        <Navbar pg="db"/>
         <div className="dbOuterDiv" style={{alignItems:"center"}}>
             <div className="w-[84vw]">
             <p className="dashboard">Hi, {name}</p>
@@ -115,7 +116,7 @@ function CaDB() {
                 {(teams != undefined && teams.length > 0) ? teams.map((t) => {
                     return <>
                         <tr className="team_box_data" cellSpacing="5">
-                            <td>{t.name}</td>
+                            <td>{t.team_name}</td>
                             <td>{t.leader}</td>
                         </tr>
                     </>
