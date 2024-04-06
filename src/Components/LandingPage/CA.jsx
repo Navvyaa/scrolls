@@ -39,18 +39,18 @@ function CA() {
                     <div className="flex flex-col items-center mb-[1rem]">
                     <p style={{fontSize:"1.6rem"}} className="domainHeading">Responsibilities</p>
                     <div style={{fontFamily:"Montserrat"}} className="flex text-[1.2rem] gap-4 flex-wrap items-center justify-center my-4">
-                        <div className="w-[10rem] border-[3px] border-[#fac949] h-[10rem] font-semibold bg-[#191919] text-[#fac949] flex items-center justify-center rounded-lg">
+                        <div className="w-[12rem] border-[3px] border-[#fac949] h-[10rem] font-semibold bg-[#191919] text-[#fac949] flex items-center justify-center rounded-lg">
                             <p>Communicate</p>
                         </div>
-                        <div className="w-[10rem] border-[3px] border-[#fac949] h-[10rem] font-semibold bg-[#191919] text-[#fac949] flex items-center justify-center rounded-lg">
+                        <div className="w-[12rem] border-[3px] border-[#fac949] h-[10rem] font-semibold bg-[#191919] text-[#fac949] flex items-center justify-center rounded-lg">
 
                             <p>Promote</p>
                         </div>
-                        <div className="w-[10rem] border-[3px] border-[#fac949] h-[10rem] font-semibold bg-[#191919] text-[#fac949] flex items-center justify-center rounded-lg">
+                        <div className="w-[12rem] border-[3px] border-[#fac949] h-[10rem] font-semibold bg-[#191919] text-[#fac949] flex items-center justify-center rounded-lg">
 
                             <p>Orchestrate</p>
                         </div>
-                        <div className="w-[10rem] border-[3px] border-[#fac949] h-[10rem] font-semibold bg-[#191919] text-[#fac949] flex items-center justify-center rounded-lg">
+                        <div className="w-[12rem] border-[3px] border-[#fac949] h-[10rem] font-semibold bg-[#191919] text-[#fac949] flex items-center justify-center rounded-lg">
 
                             <p>Connect</p>
                         </div>
