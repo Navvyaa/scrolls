@@ -58,19 +58,22 @@ function CA() {
                     </div>
                     <hr className="faqLine" />
                     <p className="domainHeading">Incentives:</p>
-                    <p className="answer">1. Certificate and token of appreciation for all the campus ambassadors.</p>
+                    <div id="bullets" className="flex justify-between items-start gap-[0.34rem]"><span className="">1.</span><p className="answer">Certificate and token of appreciation for all the campus ambassadors.</p>
+            </div>
             <hr className="faqLine" />
-            <p className="answer">2. Exciting cash rewards to the top 3 performing Campus Ambassadors.</p>
+            <div id="bullets" className="flex justify-between items-start gap-[0.34rem]"><span className="">2.</span><p className="answer">Exciting cash rewards to the top 3 performing Campus Ambassadors.</p>
+            </div>
             <hr className="faqLine" />
-            <p className="answer">3. Goodies and hampers to the campus ambassadors(performance based).
-</p>
+            <div id="bullets" className="flex justify-between items-start gap-[0.34rem]"><span className="">3.</span><p className="answer">Goodies and hampers to the campus ambassadors(performance based).
+</p></div>
             <hr className="faqLine" />
-            <div className="answer">4. Discounts on registration fees based on the number of teams registered by the referrals of the CA :
+            <div id="bullets" className="flex justify-between items-start gap-[0.34rem]"><span className="">4.</span><div className="answer">Discounts on registration fees based on the number of teams registered by the referrals of the CA :
             <ul className="list-disc mt-2">
-                <li className="">If Team Registrations by Campus Ambassador ≥ 4, then 200 Rs off on registration charges of Campus Ambassador's team.</li>
-                <li>If Team Registrations by Campus Ambassador ≥ 6, then 300 Rs off on registration charges of Campus Ambassador's team.</li>
-                <li>If Team Registrations by Campus Ambassador ≥ 10, then 100% off on registration charges of Campus Ambassador's team.</li>
+                <li className="">If Team Registrations by Campus Ambassador ≥ 4, then 20% off on registration charges of Campus Ambassador's team.</li>
+                <li>If Team Registrations by Campus Ambassador ≥ 6, then 40% off on registration charges of Campus Ambassador's team.</li>
+                <li>If Team Registrations by Campus Ambassador ≥ 10, then 60% off on registration charges of Campus Ambassador's team.</li>
             </ul>
+            </div>
             </div>
             </div>
         </div>

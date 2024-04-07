@@ -31,6 +31,7 @@ import "react-toastify/dist/ReactToastify.css";
 function Navbar(props) {
   const [dialogg, setDialogg] = useState(false);
   const [login, setLogin] = useState(false);
+  const [register, setRegister] = useState(false);
   const reducer = useSelector((s) => s.register);
   const [loading, setLoading] = useState(false);
   const [out, setOut] = useState(false);
@@ -226,6 +227,7 @@ function Navbar(props) {
   //open registration
   function RegOpen() {
     // setSoon(true)
+    setRegister(true);
     dispatch(RegOpenThunk())
       .then((res) => {
         if (res.payload.status === 200) {
@@ -537,9 +539,9 @@ function Navbar(props) {
         </ul>
       </div>
           </div>
-          <NavLink style={{color:props.pg==="update"?"#fac949":""}}  to="/updates">
+          <NavLink to="/updates">
             {" "}
-            <p className="navHead" id="navUpdate">
+            <p style={{color:props.pg==="update"?"#fac949":""}} className="navHead" id="navUpdate">
               Updates
             </p>
           </NavLink>
@@ -553,15 +555,14 @@ function Navbar(props) {
               Rules
             </p>
           </NavLink>
-          {/* <NavLink to="/process">
+          <NavLink to="/ca">
             {" "}
-            <p id="navCA" className="navHead">
-              How To Register
+            <p style={{color:props.pg==="ca"?"#fac949":""}} id="navCA" className="navHead">
+              CA
             </p>
-          </NavLink> */}
-          <NavLink style={{color:props.pg==="res"?"#fac949":""}}  to="/result">
-            {" "}
-            <p className="navHead" id="navCA">
+          </NavLink>
+          <NavLink  to="/result">
+            <p style={{color:props.pg==="res"?"#fac949":""}} className="navHead" id="navCA">
               Results
             </p>
           </NavLink>
@@ -576,7 +577,7 @@ function Navbar(props) {
               Accommodation
             </p>
           </NavLink>
-          <div className="relative lg1:ml-[-2vw] ml-[-5vw] flex flex-col">
+          <div className="relative lg1:ml-[-2vw] ml-[-7vw] flex flex-col">
           <p
             className="navHead"
             id="navMore"
@@ -589,6 +590,9 @@ function Navbar(props) {
         <ul>
           <NavLink to="/rules">
             <li>Rules</li>
+          </NavLink>
+          <NavLink to="/ca">
+            <li>CA</li>
           </NavLink>
           <NavLink to="/result">
             <li>Results</li>
@@ -645,7 +649,7 @@ function Navbar(props) {
         </div>
       </div>
 
-      <Dialog
+      {/* <Dialog
         open={stepDialog.one}
         PaperProps={{
           sx: {
@@ -655,7 +659,6 @@ function Navbar(props) {
           },
         }}
       >
-        {/* <Team /> */}
         <Register />
       </Dialog>
 
@@ -713,7 +716,6 @@ function Navbar(props) {
           sx: { maxHeight: 450, maxWidth: 1000 },
         }}
       >
-        {/* <LoginTeam /> */}
         <Login1 />
       </Dialog>
 
@@ -792,10 +794,10 @@ function Navbar(props) {
         }}
       >
         <LogOut />
-      </Dialog>
+      </Dialog> */}
 
       <Dialog
-        open={soon}
+        open={register||login}
         onClose={handleSoonClose}
         PaperProps={{
           sx: {
@@ -811,20 +813,21 @@ function Navbar(props) {
           <DialogTitle
             sx={{ textAlign: "center", marginBottom: 0, paddingBottom: "8px" }}
           >
-            Registrations are closed now.
+            Registrations will start soon.
           </DialogTitle>
-          <DialogTitle
+          {/* <DialogTitle
             sx={{ textAlign: "center", marginTop: 0, paddingTop: 0 }}
           >
-            Click here to view the results of Synopsis submission
-          </DialogTitle>
+            Click here to view the results of Synopsis
+          </DialogTitle> */}
           <Button
             onClick={() => {
-              navigate("/result");
-              setSoon(false);
+              navigate("/process");
+              setRegister(false);
+              setLogin(false);
             }}
           >
-            Results
+            How to Register
           </Button>
         </div>
       </Dialog>

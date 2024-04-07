@@ -8,6 +8,9 @@
 #Faqs {
     margin-bottom: 24px;
 }
+#bullets{
+    font-family: 'Montserrat';
+}
 
 .FAQ ul {
     padding-left: 1vw;
@@ -49,6 +52,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
+    width: 99%;
     /* line-height: 20px; */
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
