@@ -183,6 +183,7 @@ function LandingPage() {
   }
 
   useEffect(() => {
+    if (!processBool) {
     dispatch(RegOpenThunk())
     .then((res) => {
       console.log(res);
@@ -193,7 +194,7 @@ function LandingPage() {
     }
       }
       })
-  }, []);
+  }}, []);
 
   const [timer, setTimer] = useState(10);
   useEffect(() => {

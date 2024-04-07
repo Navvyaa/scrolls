@@ -15,9 +15,12 @@ const titleSlice = createSlice({
         },
         setProcess: function (state, action) {
             state.processBool = true
+        },
+        unsetProcess: function (state, action) {
+            state.processBool = false
         }
     }
 })
 
 export default titleSlice
-export const { setTitle, setProcess } = titleSlice.actions
+export const { setTitle, setProcess, unsetProcess } = titleSlice.actions
