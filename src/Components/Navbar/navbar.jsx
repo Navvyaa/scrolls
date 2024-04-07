@@ -19,6 +19,7 @@ import Team from "../Register/team";
 import CA1 from "../Register/CA1";
 import CA2 from "../Register/CA2";
 import Login1 from "../Login/login1";
+import { setProcess } from "../../Redux/heading";
 import { useDispatch, useSelector } from "react-redux";
 import { dialog1, dialog6, logout } from "../../Redux/step";
 import "./Navbar.css";
@@ -28,6 +29,7 @@ import { Spinner } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import imglogo from '../Assets/logo1.png'
 import "react-toastify/dist/ReactToastify.css";
+
 function Navbar(props) {
   const [dialogg, setDialogg] = useState(false);
   const [login, setLogin] = useState(false);
@@ -39,7 +41,7 @@ function Navbar(props) {
   const [soon, setSoon] = useState(false);
   const dispatch = useDispatch();
   const step = useSelector((s) => s.step);
-  const { title } = useSelector((s) => s.heading);
+  const { title, processBool } = useSelector((s) => s.heading);
   const navigate = useNavigate();
 
   const [stepDialog, setStepDialog] = useState({
@@ -227,7 +229,7 @@ function Navbar(props) {
   //open registration
   function RegOpen() {
     // setSoon(true)
-    setRegister(true);
+    // setRegister(true);
     dispatch(RegOpenThunk())
       .then((res) => {
         if (res.payload.status === 200) {
@@ -236,7 +238,8 @@ function Navbar(props) {
         }
         if (res.payload.status === 400) {
           setDialogg(true);
-          setSoon(true);
+          setProcessStop(true);
+          // setSoon(true);
         }
         if (res.payload.status === 429) {
           toast.error(
@@ -251,6 +254,24 @@ function Navbar(props) {
       })
       .catch((err) => {});
   }
+
+  const [process, setProces] = useState(false);
+  const [processStop, setProcessStop] = useState(false);
+
+  function handleProcessStop() {
+    setProcessStop(false);
+  }
+
+  useEffect(() => {
+    dispatch(RegOpenThunk())
+    .then((res) => {
+      console.log(res);
+      if (res?.payload?.status === 400) {
+        dispatch(setProcess());
+        setProces(true);
+      }
+      })
+  }, []);
 
   useEffect(() => {
     if (reducer.loading) {
@@ -356,8 +377,10 @@ function Navbar(props) {
             <button
               className="liLogin"
               onClick={() => {
-                setLogin(true);
+                if(!process)
                 dispatch(dialog6());
+              else
+              setProcessStop(true)
               }}
             >
               Login
@@ -627,8 +650,10 @@ function Navbar(props) {
           <button
             className="navLogin"
             onClick={() => {
-              setLogin(true);
+              if(!process)
               dispatch(dialog6());
+            else
+            setProcessStop(true)
             }}
           >
             Login
@@ -649,7 +674,7 @@ function Navbar(props) {
         </div>
       </div>
 
-      {/* <Dialog
+      <Dialog
         open={stepDialog.one}
         PaperProps={{
           sx: {
@@ -794,43 +819,48 @@ function Navbar(props) {
         }}
       >
         <LogOut />
-      </Dialog> */}
-
-      <Dialog
-        open={register||login}
-        onClose={handleSoonClose}
-        PaperProps={{
-          sx: {
-            maxWidth: 400,
-            maxHeight: 500,
-            marginTop: 0,
-          },
-        }}
-        keepMounted
-      >
-        <div id="processDialog">
-          {/* <img src={UpdateImage} /> */}
-          <DialogTitle
-            sx={{ textAlign: "center", marginBottom: 0, paddingBottom: "8px" }}
-          >
-            Registrations will start soon.
-          </DialogTitle>
-          {/* <DialogTitle
-            sx={{ textAlign: "center", marginTop: 0, paddingTop: 0 }}
-          >
-            Click here to view the results of Synopsis
-          </DialogTitle> */}
-          <Button
-            onClick={() => {
-              navigate("/process");
-              setRegister(false);
-              setLogin(false);
-            }}
-          >
-            How to Register
-          </Button>
-        </div>
       </Dialog>
+
+<div style={{ position: "absolute", top: "40px", right: "20px" }}>
+        <Dialog
+          open={processStop}
+          onClose={handleProcessStop}
+          PaperProps={{
+            sx: {
+              maxWidth: 400,
+              marginTop: 0,
+              maxHeight: 500,
+            },
+          }}
+          keepMounted
+        >
+                <img id="crs" className="cross" src={cross} onClick={() => handleProcessStop()} />
+          <div id="processDialog">
+            <DialogTitle
+              sx={{
+                textAlign: "center",
+                marginBottom: 0,
+                paddingBottom: "8px",
+              }}
+            >
+              Registrations will start soon.
+            </DialogTitle>
+            {/* <DialogTitle
+              sx={{ textAlign: "center", marginTop: 0, paddingTop: 0 }}
+            >
+              Click here to view the results of S
+            </DialogTitle> */}
+            <Button
+              onClick={() => {
+                navigate("/process");
+                // setRegister(false)
+              }}
+            >
+              How to Register
+            </Button>
+          </div>
+        </Dialog>
+      </div>
       {loading ? (
         <Spinner animation="border" variant="dark" id="loadSpinner" />
       ) : null}

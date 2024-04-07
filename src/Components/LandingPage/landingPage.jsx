@@ -2,6 +2,7 @@ import landImage from "../Assets/scroll_bg.svg";
 import UpdateImage from "../Assets/updateImage.jpeg";
 import domainLogo from "../Assets/domainLogo.svg";
 import cross from "../Assets/cross.svg"
+import cross1 from "../Assets/navCross.svg";
 import arrow from "../Assets/arrow.svg"
 import { forwardRef, useEffect, useState } from "react";
 import {
@@ -144,7 +145,6 @@ function LandingPage() {
 
   function RegOpen() {
     // setSoon(true)
-    setRegister(true)
     dispatch(RegOpenThunk())
       .then((res) => {
         if (res?.payload?.status === 200) {
@@ -153,7 +153,8 @@ function LandingPage() {
         }
         if (res?.payload?.status === 400) {
           setDialogg(true);
-          setSoon(true);
+          setProces(true);
+          // setSoon(true);
         }
         if (res?.payload?.status === 429) {
           toast.error(
@@ -180,11 +181,18 @@ function LandingPage() {
   function handleProcess() {
     setProces(false);
   }
+
   useEffect(() => {
-    dispatch(setProcess());
+    dispatch(RegOpenThunk())
+    .then((res) => {
+      console.log(res);
+      if (res?.payload?.status === 400) {
+        dispatch(setProcess());
     if (!processBool) {
       setProces(true);
     }
+      }
+      })
   }, []);
 
   const [timer, setTimer] = useState(10);
@@ -454,7 +462,7 @@ function LandingPage() {
 
 
 
-        {/* <Dialog
+    {!process &&  <>  <Dialog
           open={stepDialog.sixteen}
           PaperProps={{
             sx: {
@@ -523,7 +531,7 @@ function LandingPage() {
         }}
       >
         <CA2 home={true}/>
-      </Dialog> */}
+      </Dialog> </>}
 
      {/* <Dialog
         open={soon}
@@ -560,7 +568,7 @@ function LandingPage() {
 
       <div style={{ position: "absolute", top: "40px", right: "20px" }}>
         <Dialog
-          open={process||register}
+          open={process}
           onClose={handleProcess}
           PaperProps={{
             sx: {
@@ -571,6 +579,7 @@ function LandingPage() {
           }}
           keepMounted
         >
+                <img id="crs" className="cross" src={cross1} onClick={() => handleProcess()} />
           <div id="processDialog">
             <DialogTitle
               sx={{
@@ -589,7 +598,7 @@ function LandingPage() {
             <Button
               onClick={() => {
                 navigate("/process");
-                setRegister(false)
+                // setRegister(false)
               }}
             >
               How to Register
