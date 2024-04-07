@@ -599,7 +599,7 @@ function LandingPage() {
             <Button
               onClick={() => {
                 navigate("/process");
-                // setRegister(false)
+                handleProcess();
               }}
             >
               How to Register
