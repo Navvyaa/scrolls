@@ -861,7 +861,7 @@ function Navbar(props) {
             <Button
               onClick={() => {
                 navigate("/process");
-                // setRegister(false)
+                handleProcessStop();
               }}
             >
               How to Register
