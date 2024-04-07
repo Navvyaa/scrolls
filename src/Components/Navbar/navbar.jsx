@@ -19,7 +19,7 @@ import Team from "../Register/team";
 import CA1 from "../Register/CA1";
 import CA2 from "../Register/CA2";
 import Login1 from "../Login/login1";
-import { setProcess } from "../../Redux/heading";
+import { setProcess, unsetProcess } from "../../Redux/heading";
 import { useDispatch, useSelector } from "react-redux";
 import { dialog1, dialog6, logout } from "../../Redux/step";
 import "./Navbar.css";
@@ -255,23 +255,37 @@ function Navbar(props) {
       .catch((err) => {});
   }
 
-  const [process, setProces] = useState(false);
   const [processStop, setProcessStop] = useState(false);
 
   function handleProcessStop() {
     setProcessStop(false);
   }
 
-  useEffect(() => {
+
+  function logopen(){
     dispatch(RegOpenThunk())
     .then((res) => {
-      console.log(res);
-      if (res?.payload?.status === 400) {
-        dispatch(setProcess());
-        setProces(true);
+      if (res.payload.status === 200) {
+        setDialogg(true);
+        dispatch(dialog6());
       }
-      })
-  }, []);
+      if (res.payload.status === 400) {
+        setDialogg(true);
+        setProcessStop(true);
+      }
+      if (res.payload.status === 429) {
+        toast.error(
+          "You have attempted too many times Today, please try again tomorrow",
+          {
+            position: "top-right",
+            theme: "light",
+            autoClose: 5000,
+          }
+        );
+      }
+    })
+    .catch((err) => {});
+}
 
   useEffect(() => {
     if (reducer.loading) {
@@ -377,11 +391,8 @@ function Navbar(props) {
             <button
               className="liLogin"
               onClick={() => {
-                if(!process)
-                dispatch(dialog6());
-              else
-              setProcessStop(true)
-              }}
+                logopen();
+              } }
             >
               Login
             </button>
@@ -650,10 +661,7 @@ function Navbar(props) {
           <button
             className="navLogin"
             onClick={() => {
-              if(!process)
-              dispatch(dialog6());
-            else
-            setProcessStop(true)
+              logopen();
             }}
           >
             Login
