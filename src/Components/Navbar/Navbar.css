@@ -42,7 +42,7 @@
 }
 
 .navFlexLogin {
-    margin-left: 7vw;
+    margin-left: 5vw;
 }
 
 #navFaq {
@@ -543,7 +543,7 @@
         color: #FFFFFF;
         cursor: pointer;
         z-index: 10;
-        /* margin-left: -8vw; */
+        margin-left: -0vw;
     }
 
     #navMore2 {
@@ -601,7 +601,7 @@
         /* left: 64vw; */
     }
     .navFlexLogin {
-        margin-left: 4vw;
+        margin-left: 3.5vw;
     }
 }
 

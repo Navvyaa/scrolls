@@ -52,6 +52,7 @@ function LandingPage() {
   const reducer = useSelector((s) => s.login);
   const reducerReg = useSelector((s) => s.register);
   const [path, setPath] = useState("");
+  const [register,setRegister]= useState(false);
   const [dialogg, setDialogg] = useState(false);
   const [loading, setLoading] = useState(false);
   const [soon, setSoon] = useState(false);
@@ -143,6 +144,7 @@ function LandingPage() {
 
   function RegOpen() {
     // setSoon(true)
+    setRegister(true)
     dispatch(RegOpenThunk())
       .then((res) => {
         if (res?.payload?.status === 200) {
@@ -452,7 +454,7 @@ function LandingPage() {
 
 
 
-        <Dialog
+        {/* <Dialog
           open={stepDialog.sixteen}
           PaperProps={{
             sx: {
@@ -521,7 +523,7 @@ function LandingPage() {
         }}
       >
         <CA2 home={true}/>
-      </Dialog>
+      </Dialog> */}
 
      {/* <Dialog
         open={soon}
@@ -556,9 +558,9 @@ function LandingPage() {
         </div>
       </Dialog> */}
 
-      {/* <div style={{ position: "absolute", top: "40px", right: "20px" }}>
+      <div style={{ position: "absolute", top: "40px", right: "20px" }}>
         <Dialog
-          open={process}
+          open={process||register}
           onClose={handleProcess}
           PaperProps={{
             sx: {
@@ -577,23 +579,24 @@ function LandingPage() {
                 paddingBottom: "8px",
               }}
             >
-              Registrations are closed now.
+              Registrations will start soon.
             </DialogTitle>
-            <DialogTitle
+            {/* <DialogTitle
               sx={{ textAlign: "center", marginTop: 0, paddingTop: 0 }}
             >
-              Click here to view the results of Synopsis submission
-            </DialogTitle>
+              Click here to view the results of S
+            </DialogTitle> */}
             <Button
               onClick={() => {
-                navigate("/result");
+                navigate("/process");
+                setRegister(false)
               }}
             >
-              Results
+              How to Register
             </Button>
           </div>
         </Dialog>
-      </div> */}
+      </div>
 
       {loading ? (
         <Spinner animation="border" variant="dark" id="loadSpinner" />
