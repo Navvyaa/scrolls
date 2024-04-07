@@ -172,6 +172,7 @@ function Navbar(props) {
       document.getElementsByClassName("navLogin")[0].style.display = "block";
       document.getElementsByClassName("navDbT")[0].style.display = "none";
       document.getElementsByClassName("navFlex3")[0].style.display = "none";
+      document.getElementById("acc").style.display = "none";
     }
   }, [title]);
 
@@ -315,7 +316,7 @@ function Navbar(props) {
           {/* <NavLink to="/faq">
             <li>FAQs</li>
           </NavLink> */}
-          <NavLink to="/accommodations">
+          <NavLink id="acc" to="/accommodations">
             <li>Accommodation</li> 
           </NavLink>
           <NavLink to="/team_db">
