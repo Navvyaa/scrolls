@@ -263,7 +263,7 @@ function LandingPage() {
           </div>
           <div className="landFlex">
             <p className="landText1">
-              Students Creative & Oratory Learning Skills 2024
+              Students' Creative & Oratory Learning Skills 2024
             </p>
             <p className="landText2">
               Prestigious National Level Technical Paper Presentation organized
