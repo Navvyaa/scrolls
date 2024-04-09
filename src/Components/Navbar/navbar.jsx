@@ -267,7 +267,8 @@ function Navbar(props) {
     .then((res) => {
       if (res.payload.status === 200) {
         setDialogg(true);
-        dispatch(dialog6());
+    setLogin(true);
+       dispatch(dialog6());
       }
       if (res.payload.status === 400) {
         setDialogg(true);
