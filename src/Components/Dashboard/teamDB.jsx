@@ -382,93 +382,126 @@ function TeamDB() {
                     <p className="dbHead">Topic</p>
                     <p className="dbText">Select Topic</p>
                 </div>
-                {topic === '' ? <>
-                    <select className="teamID_box" onChange={(e) => { setUplTop(e.target.value) }}  >
-                        {uplDom === "Management Science" ? <>
-                            <option id="option">--select--</option>
-                            <option value="Effect of Ukraine-Russia war on World Economy">Effect of Ukraine-Russia war on World Economy</option>
-                            <option value="Budget 2023: Populism vs Tough Decisions">Budget 2023: Populism vs Tough Decisions</option>
-                            <option value="Effect of Hindenburg Report: Financial terror in India">Effect of Hindenburg Report: Financial terror in India</option>
-                            <option value="Social media has eclipsed the real news">Social media has eclipsed the real news</option>
-                            <option value="Importance of learning from history for the growth of nation">Importance of learning from history for the growth of nation</option>
-                            <option value="Money laundering has lead to parallel economy">Money laundering has lead to parallel economy</option>
-                            <option value="Artificial Intelligence taking over the creative field: A glimpse of a grim future?">Artificial Intelligence taking over the creative field: A glimpse of a grim future?</option>
-                            <option value="Business Intelligence: Alignment of IT and Business">Business Intelligence: Alignment of IT and Business</option>
-                            <option value="India emerging as an economic power in the new world order">India emerging as an economic power in the new world order</option>
-                            <option value="Banking policies to develop microfinance capabilities to support MSMEs and underpriviliged">Banking policies to develop microfinance capabilities to support MSMEs and underpriviliged</option>
-                        </> : null}
-                        {uplDom === "Electronics and Communication Engineering" ? <>
-                            <option id="option">--select--</option>
-                            <option value="OLED" >OLEDs(Organic Light Emitting Diodes)</option>
-                            <option value="Flexible Electronics and Display">Flexible Electronics and Display</option>
-                            <option value="Fuel Cell Technology">Fuel Cell Technology</option>
-                            <option value="Revolution in Semiconductor Industries">Revolution in Semiconductor Industries</option>
-                            <option value="IOT-Home/ Industry">IOT-Home/ Industry</option>
-                            <option value="Optical Wireless and 5G">Optical Wireless and 5G</option>
-                            <option value="Visible Light Communication">Visible Light Communication</option>
-                            <option value="Smart Antenna">Smart Antenna</option>
-                            <option value="Hybrid Cars">Hybrid Cars</option>
-                            <option value="Virtual Reality and Augmented Reality">Virtual Reality and Augmented Reality</option>
-                            <option value="Nanotechnology in Electronics">Nanotechnology in Electronics</option>
-                        </> : null}
-                        {uplDom === "Civil Engineering" ? <>
-                            <option id="option">--select--</option>
-                            <option value="Stressed Ribbon bridge">Stressed Ribbon bridge</option>
-                            <option value="Green building">Green building</option>
-                            <option value="Self Consolidating concrete">Self Consolidating concrete</option>
-                            <option value="Fiber reinforced concrete">Fiber reinforced concrete</option>
-                            <option value="Advance Earthquake and Resistant Techniques">Advance Earthquake and Resistant Techniques</option>
-                            <option value="Base Isolation Building">Base Isolation Building</option>
-                            <option value="Use of AI in Civil Engineering">Use of AI in Civil Engineering</option>
-                            <option value="Intelligent Transport Systems">Intelligent Transport Systems</option>
-                            <option value="Mixed traffic controls">Mixed traffic controls</option>
-                            <option value="Advanced Payment Design">Advanced Payment Design</option>
-                        </> : null}
-                        {uplDom === "Electrical and Electronics Engineering" ? <>
-                            <option id="option">--select--</option>
-                            <option value="Wireless Power Transmission">Wireless Power Transmission</option>
-                            <option value="Hybrid Electric Vehicles">Hybrid Electric Vehicles</option>
-                            <option value="Renewable Energy and Environment Protection">Renewable Energy and Environment Protection</option>
-                            <option value="Smart grid Technology">Smart grid Technology</option>
-                            <option value="Artificial Intelligence in Power stations">Artificial Intelligence in Power stations</option>
-                            <option value="Cloud computing in Power Systems">Cloud computing in Power Systems</option>
-                            <option value="Role of power Electronics">Role of power Electronics</option>
-                            <option value="Cyber Security in Power Systems">Cyber Security in Power Systems</option>
-                            <option value="Special Electrical Machines">Special Electrical Machines</option>
-                            <option value="Power convertors for Renewable energy">Power convertors for Renewable energy</option>
-                            <option value="Sustainable developement">Sustainable developement</option>
-                        </> : null}
-                        {uplDom === "Computer Science and Information Technology" ? <>
-                            <option id="option">--select--</option>
-                            <option value="Cloud Computing">Cloud Computing</option>
-                            <option value="Deep Learning">Deep Learning</option>
-                            <option value="Cryptocurrency (Blockchain)">Cryptocurrency (Blockchain)</option>
-                            <option value="Machine Learning">Machine Learning</option>
-                            <option value="Image Processing">Image Processing</option>
-                            <option value="Neural Network">Neural Network</option>
-                            <option value="Cyber Security">Cyber Security</option>
-                            <option value="Augumented Reality, Virtual Reality, Metaverse Technology">Augumented Reality, Virtual Reality, Metaverse Technology</option>
-                            <option value="Big Data and Analytics">Big Data and Analytics</option>
-                            <option value="Wireless Sensor Network">Wireless Sensor Network</option>
-                            <option value="Semantic Web: Sentiment analysis of Twitter/Facebook/Instagram">Semantic Web: Sentiment analysis of Twitter/Facebook/Instagram</option>
-                            <option value="Quantum Computing">Quantum Computing</option>
-                        </> : null}
-                        {uplDom === "Mechanical Engineering" ? <>
-                            <option id="option">--select--</option>
-                            <option value="Computer Aided Engineering/ Computer Aided Design">Computer Aided Engineering/ Computer Aided Design</option>
-                            <option value="Smart Materials">Smart Materials</option>
-                            <option value="Supply Chain Management">Supply Chain Management</option>
-                            <option value="Green Manufacturing">Green Manufacturing</option>
-                            <option value="Additive Manufacturing">Additive Manufacturing</option>
-                            <option value="MEMS- Micro Electro Mechanical systems">MEMS- Micro Electro Mechanical systems</option>
-                            <option value="Automatic Transmissions in Automobiles">Automatic Transmissions in Automobiles</option>
-                            <option value="Friction stir welding">Friction stir welding</option>
-                            <option value="Industry 4.0">Industry 4.0</option>
-                            <option value="Nanotechnology">Nanotechnology</option>
-                        </> : null}
-                    </select>
-                </> : <div className="teamID_box">{topic}</div>}
-            </div>
+                <div>
+    {topic === '' ? (
+        <select className="teamID_box" onChange={(e) => { setUplTop(e.target.value) }}>
+            {uplDom === "Management Science" ? (
+                <>
+                    <option id="option">--select--</option>
+                    <option value="Work-Life Integration">Work-Life Integration</option>
+                    <option value="India's Youth Dividend">India's Youth Dividend</option>
+                    <option value="Global Connectivity">Global Connectivity</option>
+                    <option value="Sustainability in India">Sustainability in India</option>
+                    <option value="Democratizing News">Democratizing News</option>
+                    <option value="Human-AI Collaboration">Human-AI Collaboration</option>
+                    <option value="IRL vs. URL">IRL vs. URL</option>
+                    <option value="Universal Basic Income (UBI)">Universal Basic Income (UBI)</option>
+                    <option value="The Creator Hustle">The Creator Hustle</option>
+                    <option value="Ethical Gene Editing">Ethical Gene Editing</option>
+                    <option value="AI and Creativity">AI and Creativity</option>
+                    <option value="India's Fintech Boom">India's Fintech Boom</option>
+                    <option value="Algorithmic Society">Algorithmic Society</option>
+                    <option value="Climate Change Action">Climate Change Action</option>
+                    <option value="India's Electric Revolution">India's Electric Revolution</option>
+                </>
+            ) : null}
+            {uplDom === "Electronics and Communication Engineering" ? (
+                <>
+                    <option id="option">--select--</option>
+                    <option value="Organic LEDs: Lighting Innovation">Organic LEDs: Lighting Innovation</option>
+                    <option value="Fuel Cell Technology">Fuel Cell Technology</option>
+                    <option value="Hybrid Cars">Hybrid Cars</option>
+                    <option value="Optical Wireless and 5G">Optical Wireless and 5G</option>
+                    <option value="Smart Antenna">Smart Antenna</option>
+                    <option value="Semiconductor Industry Revolution">Semiconductor Industry Revolution</option>
+                    <option value="Industrial IoT and Automation">Industrial IoT and Automation</option>
+                    <option value="4D Printing Revolution in Electronics">4D Printing Revolution in Electronics</option>
+                    <option value="Bio-Circuits">Bio-Circuits</option>
+                    <option value="AI Vision and Image Processing">AI Vision and Image Processing</option>
+                    <option value="Energy Harvesting Sensors for Sustainable Smart Homes">Energy Harvesting Sensors for Sustainable Smart Homes</option>
+                    <option value="Beyond Silicon: Future Trends">Beyond Silicon: Future Trends</option>
+                    <option value="Quantum Computing in Electronics">Quantum Computing in Electronics</option>
+                    <option value="Bioelectronics in Biomedicine">Bioelectronics in Biomedicine</option>
+                </>
+            ) : null}
+            {uplDom === "Civil Engineering" ? (
+                <>
+                    <option id="option">--select--</option>
+                    <option value="Stressed Ribbon Bridge">Stressed Ribbon Bridge</option>
+                    <option value="Green Building">Green Building</option>
+                    <option value="Self-Healing Concrete">Self-Healing Concrete</option>
+                    <option value="Fiber-Reinforced Concrete">Fiber-Reinforced Concrete</option>
+                    <option value="Advanced Earthquake Techniques">Advanced Earthquake Techniques</option>
+                    <option value="Base Isolation Building">Base Isolation Building</option>
+                    <option value="AI in Civil Engineering">AI in Civil Engineering</option>
+                    <option value="Intelligent Transport System">Intelligent Transport System</option>
+                    <option value="Mixed Traffic Control">Mixed Traffic Control</option>
+                    <option value="Advanced Pavement Design">Advanced Pavement Design</option>
+                    <option value="Augmented Reality for Construction">Augmented Reality for Construction</option>
+                    <option value="Water Management in Changing Climate">Water Management in Changing Climate</option>
+                </>
+            ) : null}
+            {uplDom === "Electrical and Electronics Engineering" ? (
+                <>
+                    <option id="option">--select--</option>
+                    <option value="Vehicular Power Electronic Circuits and Charging Systems">Vehicular Power Electronic Circuits and Charging Systems</option>
+                    <option value="Robot Design, Development, and Control">Robot Design, Development, and Control</option>
+                    <option value="Integrating Multiple Energy Sources">Integrating Multiple Energy Sources</option>
+                    <option value="Smart Grids and Sustainable Systems">Smart Grids and Sustainable Systems</option>
+                    <option value="IoT in Power Systems">IoT in Power Systems</option>
+                    <option value="Energy Policies & Standards">Energy Policies & Standards</option>
+                    <option value="Battery Energy Management System">Battery Energy Management System</option>
+                    <option value="E-Mobility: Opportunities & Challenges">E-Mobility: Opportunities & Challenges</option>
+                    <option value="Application of AI & ML in Power Stations">Application of AI & ML in Power Stations</option>
+                    <option value="Solar Photovoltaic Systems">Solar Photovoltaic Systems</option>
+                    <option value="Modeling Control of AC/DC Converters">Modeling Control of AC/DC Converters</option>
+                    <option value="Energy-Efficient Power Electronics">Energy-Efficient Power Electronics</option>
+                </>
+            ) : null}
+            {uplDom === "Mechanical Engineering" ? (
+                <>
+                    <option id="option">--select--</option>
+                    <option value="CAD/CAE: Design Innovation">CAD/CAE: Design Innovation</option>
+                    <option value="Self-Healing and Smart Materials: Future of Engineering">Self-Healing and Smart Materials: Future of Engineering</option>
+                    <option value="Optimizing Supply Chains: Blockchain for Transparency">Optimizing Supply Chains: Blockchain for Transparency</option>
+                    <option value="Sustainable Manufacturing Solutions">Sustainable Manufacturing Solutions</option>
+                    <option value="3D Printing Revolution: Printing Electronics On-Demand">3D Printing Revolution: Printing Electronics On-Demand</option>
+                    <option value="MEMS – Micro Electro Mechanical Systems">MEMS – Micro Electro Mechanical Systems</option>
+                    <option value="Automated Driving: EV & Self-Driving Tech">Automated Driving: EV & Self-Driving Tech</option>
+                    <option value="Friction Stir Welding: Innovation">Friction Stir Welding: Innovation</option>
+                    <option value="Industry 4.0: Smart Factory">Industry 4.0: Smart Factory</option>
+                    <option value="Nanotechnology">Nanotechnology</option>
+                    <option value="Cobots: Collaborative Robots">Cobots: Collaborative Robots</option>
+                    <option value="Bioprinting: Organs on Demand">Bioprinting: Organs on Demand</option>
+                </>
+            ) : null}
+            {uplDom === "Computer Science and Information Technology" ? (
+                <>
+                    <option id="option">--select--</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                    <option value="AI & Cognitive Science">AI & Cognitive Science</option>
+                    <option value="Image Processing (Computer Vision)">Image Processing (Computer Vision)</option>
+                    <option value="Deep Learning">Deep Learning</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Augmented Reality(AR), Virtual Reality(VR) & Metaverse Technology">Augmented Reality(AR), Virtual Reality(VR) & Metaverse Technology</option>
+                    <option value="Big Data and Analytics">Big Data and Analytics</option>
+                    <option value="Web 3.0">Web 3.0</option>
+                    <option value="Semantic Analysis of Social Media or E-commerce Data.">Semantic Analysis of Social Media or E-commerce Data.</option>
+                    <option value="Explainable artificial intelligence (XAI)">Explainable artificial intelligence (XAI)</option>
+                    <option value="EV's and Self Driving Revolution">EV's and Self Driving Revolution</option>
+                    <option value="Bio-Inspired Security for IOT & Edge Computing">Bio-Inspired Security for IOT & Edge Computing</option>
+                    <option value="Quantum computing">Quantum computing</option>
+                    <option value="Space Exploration">Space Exploration</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                </>
+            ) : null}
+        </select>
+    ) : (
+        <div className="teamID_box">{topic}</div>
+    )}
+</div>
+
+</div>
 
             <hr className="dbHR2" />
 
