@@ -322,6 +322,11 @@ const handleSubmit =
                                 theme: "light",
                                 autoClose: 5000,
                             });
+                            toast.success("Proceed to register as a Team ( atleast 2 members are required )", {
+                                position: "top-right",
+                                theme: "light",
+                                autoClose: 5000,
+                            });
                         }
                         else if (res.payload.status === 429) {
                             toast.error("You have attempted too many times Today, please try again tomorrow", {

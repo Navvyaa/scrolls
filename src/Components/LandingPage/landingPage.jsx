@@ -3,7 +3,10 @@ import UpdateImage from "../Assets/updateImage.jpeg";
 import domainLogo from "../Assets/domainLogo.svg";
 import cross from "../Assets/cross.svg"
 import cross1 from "../Assets/navCross.svg";
-import arrow from "../Assets/arrow.svg"
+import arrow from "../Assets/arrow.svg";
+import UpdateOP from "../Assets/UpdateOP.png";
+// import Modal from '@mui/material/Modal';
+import Modal from 'react-bootstrap/Modal';
 import { forwardRef, useEffect, useState } from "react";
 import {
   Alert,
@@ -34,7 +37,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { RegOpenThunk } from "../../Redux/registerSlice";
 import { Spinner } from "react-bootstrap";
 import Footer from "../footer/footer";
-import { setProcess } from "../../Redux/heading";
+import { setProcess, unModal } from "../../Redux/heading";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -48,6 +51,17 @@ import imgs4 from "../Assets/image-4.jpg"
 import imgs5 from "../Assets/image-5.jpg"
 import imgs6 from "../Assets/image-6.jpg"
 
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 function LandingPage() {
   const reducer = useSelector((s) => s.login);
@@ -60,8 +74,14 @@ function LandingPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const step = useSelector((s) => s.step);
-  const { title, processBool } = useSelector((s) => s.heading);
+  const { title, processBool, modal } = useSelector((s) => s.heading);
 
+  const [open, setOpen] = useState(true);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+
+  
   const settings = {
     speed: 500,
     slidesToShow: 1,
@@ -184,17 +204,19 @@ function LandingPage() {
 
   useEffect(() => {
     if (!processBool) {
-    dispatch(RegOpenThunk())
-    .then((res) => {
-      console.log(res);
-      if (res?.payload?.status === 400) {
+    // dispatch(RegOpenThunk())
+    // .then((res) => {
+    //   console.log(res);
+    //   if (res?.payload?.status === 400) {
         dispatch(setProcess());
     if (!processBool) {
       setProces(true);
     }
       }
-      })
-  }}, []);
+    }
+      // })
+  // }}
+  , []);
 
   const [timer, setTimer] = useState(10);
   useEffect(() => {
@@ -582,7 +604,8 @@ function LandingPage() {
         >
                 <img id="crs" className="cross" src={cross1} onClick={() => handleProcess()} />
           <div id="processDialog">
-            <DialogTitle
+            <img src={UpdateOP}/>
+            {/* <DialogTitle
               sx={{
                 textAlign: "center",
                 marginBottom: 0,
@@ -590,20 +613,20 @@ function LandingPage() {
               }}
             >
               Registrations will start soon.
-            </DialogTitle>
+            </DialogTitle> */}
             {/* <DialogTitle
               sx={{ textAlign: "center", marginTop: 0, paddingTop: 0 }}
             >
               Click here to view the results of S
             </DialogTitle> */}
-            <Button
+            {/* <Button
               onClick={() => {
                 navigate("/process");
                 handleProcess();
               }}
             >
               How to Register
-            </Button>
+            </Button> */}
           </div>
         </Dialog>
       </div>
