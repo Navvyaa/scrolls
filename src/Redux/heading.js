@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
     title: '',
-    processBool: false
+    processBool: false,
+    modal: true
 }
 
 const titleSlice = createSlice({
@@ -18,9 +19,12 @@ const titleSlice = createSlice({
         },
         unsetProcess: function (state, action) {
             state.processBool = false
-        }
+        },
+        unModal: function (state, action) {
+            state.modal = false
+        },
     }
 })
 
 export default titleSlice
-export const { setTitle, setProcess, unsetProcess } = titleSlice.actions
+export const { setTitle, setProcess, unsetProcess, unModal } = titleSlice.actions

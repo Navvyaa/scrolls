@@ -14,8 +14,8 @@ function Update() {
         <Navbar pg="update"/>
         <div className="updates">
             <p className="dashboard" id="update">Updates</p>
-            <UpdCard text="The deadline of CA has been extended till 17th april 2024" head="CA Registrations" />
-
+            <UpdCard text="The deadline of Registration has been extended till 21st april 2024" head="Registrations" />
+            <UpdCard text="The deadline of Synopsis submission has been extended till 22nd april 2024" head="Synopsis" />
             {/* <div className="updText">
                 <ul>
                     <li>1.  The ongoing conflict between Ukraine and Russia has had several impacts on the world economy. There are some possible effects on Energy prices, Trade, Tourism, </li>
