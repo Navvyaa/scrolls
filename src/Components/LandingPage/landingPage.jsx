@@ -6,7 +6,6 @@ import cross1 from "../Assets/navCross.svg";
 import arrow from "../Assets/arrow.svg";
 import UpdateOP from "../Assets/UpdateOP.png";
 // import Modal from '@mui/material/Modal';
-import Modal from 'react-bootstrap/Modal';
 import { forwardRef, useEffect, useState } from "react";
 import {
   Alert,
