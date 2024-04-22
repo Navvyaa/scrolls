@@ -27,7 +27,7 @@ import LogOut from "../logOut/logOut";
 import { RegOpenThunk } from "../../Redux/registerSlice";
 import { Spinner } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
-import imglogo from '../Assets/logo1.png'
+import imglogo from "../Assets/logo1.png";
 import "react-toastify/dist/ReactToastify.css";
 
 function Navbar(props) {
@@ -225,7 +225,7 @@ function Navbar(props) {
   function handleSoonClose() {
     setSoon(false);
   }
-
+  const [processStop, setProcessStop] = useState(false);
   //open registration
   function RegOpen() {
     // setSoon(true)
@@ -255,38 +255,15 @@ function Navbar(props) {
       .catch((err) => {});
   }
 
-  const [processStop, setProcessStop] = useState(false);
-
   function handleProcessStop() {
     setProcessStop(false);
   }
 
-
-  function logopen(){
-    dispatch(RegOpenThunk())
-    .then((res) => {
-      if (res.payload.status === 200) {
-        setDialogg(true);
+  function logopen() {
+    setDialogg(true);
     setLogin(true);
-       dispatch(dialog6());
-      }
-      if (res.payload.status === 400) {
-        setDialogg(true);
-        setProcessStop(true);
-      }
-      if (res.payload.status === 429) {
-        toast.error(
-          "You have attempted too many times Today, please try again tomorrow",
-          {
-            position: "top-right",
-            theme: "light",
-            autoClose: 5000,
-          }
-        );
-      }
-    })
-    .catch((err) => {});
-}
+    dispatch(dialog6());
+  }
 
   useEffect(() => {
     if (reducer.loading) {
@@ -307,9 +284,9 @@ function Navbar(props) {
           <NavLink to="/">
             <li>Home</li>
           </NavLink>
-          <li  onClick={() => setMobShow((prev) => !prev)}>
+          <li onClick={() => setMobShow((prev) => !prev)}>
             <div className="flex items-center gap-[0.125rem]">
-            Domains <img src={dropdown} id="domainIcon" />
+              Domains <img src={dropdown} id="domainIcon" />
             </div>
           </li>
           {mobShow && (
@@ -355,7 +332,7 @@ function Navbar(props) {
             <li>FAQs</li>
           </NavLink> */}
           <NavLink id="acc" to="/accommodations">
-            <li>Accommodation</li> 
+            <li>Accommodation</li>
           </NavLink>
           <NavLink to="/team_db">
             <li id="team">Dashboard</li>
@@ -375,28 +352,27 @@ function Navbar(props) {
           </li>
           <li>
             {" "}
-<div className="mt-3">
-            <button
-              className="liRegister"
-              onClick={() => {
-                RegOpen();
-              }}
-            >
-              Register
-            </button>
+            <div className="mt-3">
+              <button
+                className="liRegister"
+                onClick={() => {
+                  RegOpen();
+                }}
+              >
+                Register
+              </button>
             </div>
           </li>
           <li>
-<div className="mt-1">
-
-            <button
-              className="liLogin"
-              onClick={() => {
-                logopen();
-              } }
-            >
-              Login
-            </button>
+            <div className="mt-1">
+              <button
+                className="liLogin"
+                onClick={() => {
+                  logopen();
+                }}
+              >
+                Login
+              </button>
             </div>
           </li>
         </ul>
@@ -406,81 +382,112 @@ function Navbar(props) {
         {/* <div style={{display:"flex",alignItems:'center',justifyContent:'start' ,gap:'2rem'}}> */}
         <NavLink to="/">
           <div className="flex gap-[0.4rem] items-center">
-            <img src={imglogo} className="md:w-[2.2rem] h-[2.2rem] w-[2rem] min-w-[2rem] min-h-[2.2rem] md:h-[2.4rem]"/>
-          <p className="navScroll">
-            SCROLLS<span className="navDot">.</span>
-          </p>
+            <img
+              src={imglogo}
+              className="md:w-[2.2rem] h-[2.2rem] w-[2rem] min-w-[2rem] min-h-[2.2rem] md:h-[2.4rem]"
+            />
+            <p className="navScroll">
+              SCROLLS<span className="navDot">.</span>
+            </p>
           </div>
         </NavLink>
         <div className="navFlex1">
           <NavLink to="/">
-            <p style={{color:props.pg==="home"?"#fac949":""}} className="navHead">Home</p>
+            <p
+              style={{ color: props.pg === "home" ? "#fac949" : "" }}
+              className="navHead"
+            >
+              Home
+            </p>
           </NavLink>
-         {title===""&& <div className="relative flex flex-col">
-          <p
-            className="navHead"
-            onClick={handleDropdown}
-            onMouseOver={handleDropdown}
-            id="navdomain"
-          >
-            Domains
-          </p>
-          <div
-          className="fixed top-[3rem]"
-        id="dropdown"
-        onMouseOver={handleDropdown}
-        onMouseLeave={closeDropdown}
-      >
-        <ul>
-          <NavLink to="/domain_management">
-            <li>Management Sciences</li>
-          </NavLink>
-          <NavLink to="/domain_ece">
-            {" "}
-            <li>Electronics and Communication Engineering</li>
-          </NavLink>
-          <NavLink to="/domain_civil">
-            <li>Civil Engineering</li>
-          </NavLink>
-          <NavLink to="/domain_en">
-            {" "}
-            <li>Electrical and Electronics Engineering</li>
-          </NavLink>
-          <NavLink to="/domain_cs">
-            {" "}
-            <li>Computer Science and Information Technology</li>
-          </NavLink>
-          <NavLink to="/domain_me">
-            {" "}
-            <li>Mechanical Engineering</li>
-          </NavLink>
-        </ul>
-      </div>
-          </div>}
+          {title === "" && (
+            <div className="relative flex flex-col">
+              <p
+                className="navHead"
+                onClick={handleDropdown}
+                onMouseOver={handleDropdown}
+                id="navdomain"
+              >
+                Domains
+              </p>
+              <div
+                className="fixed top-[3rem]"
+                id="dropdown"
+                onMouseOver={handleDropdown}
+                onMouseLeave={closeDropdown}
+              >
+                <ul>
+                  <NavLink to="/domain_management">
+                    <li>Management Sciences</li>
+                  </NavLink>
+                  <NavLink to="/domain_ece">
+                    {" "}
+                    <li>Electronics and Communication Engineering</li>
+                  </NavLink>
+                  <NavLink to="/domain_civil">
+                    <li>Civil Engineering</li>
+                  </NavLink>
+                  <NavLink to="/domain_en">
+                    {" "}
+                    <li>Electrical and Electronics Engineering</li>
+                  </NavLink>
+                  <NavLink to="/domain_cs">
+                    {" "}
+                    <li>Computer Science and Information Technology</li>
+                  </NavLink>
+                  <NavLink to="/domain_me">
+                    {" "}
+                    <li>Mechanical Engineering</li>
+                  </NavLink>
+                </ul>
+              </div>
+            </div>
+          )}
           <NavLink to="/updates">
             {" "}
-            <p style={{color:props.pg==="update"?"#fac949":""}} className="navHead">Updates</p>
+            <p
+              style={{ color: props.pg === "update" ? "#fac949" : "" }}
+              className="navHead"
+            >
+              Updates
+            </p>
           </NavLink>
           <NavLink to="/rules">
             {" "}
-            <p style={{color:props.pg==="rules"?"#fac949":""}} id="navRule" className="navHead">
+            <p
+              style={{ color: props.pg === "rules" ? "#fac949" : "" }}
+              id="navRule"
+              className="navHead"
+            >
               Rules
             </p>
           </NavLink>
           <NavLink to="/ca">
-            <p style={{color:props.pg==="ca"?"#fac949":""}}  id="navCA" className="navHead">
+            <p
+              style={{ color: props.pg === "ca" ? "#fac949" : "" }}
+              id="navCA"
+              className="navHead"
+            >
               CA
             </p>
           </NavLink>
           <NavLink to="/process">
             {" "}
-            <p style={{color:props.pg==="process"?"#fac949":""}} id="navCA" className="navHead">
+            <p
+              style={{ color: props.pg === "process" ? "#fac949" : "" }}
+              id="navCA"
+              className="navHead"
+            >
               How To Register
             </p>
           </NavLink>
           <NavLink to="/result">
             {" "}
-            <p style={{color:props.pg==="res"?"#fac949":""}}  className="navHead" id="navCA">
+            <p
+              style={{ color: props.pg === "res" ? "#fac949" : "" }}
+              className="navHead"
+              id="navCA"
+            >
               Results
             </p>
           </NavLink>
@@ -494,110 +501,141 @@ function Navbar(props) {
               Accommodation
             </p>
           </NavLink> */}
-          
+
           <div className="relative ml-[-8vw] lg1:ml-[-2vw] flex flex-col">
-          <p
-            className="navHead"
-            id="navMore"
-            onClick={handleMore}
-            onMouseOver={handleMore}
-          >
-            More
-          </p>
-          <div className="fixed top-[3rem]" id="moreDD" onMouseOver={handleMore} onMouseLeave={closeDropdown}>
-        <ul>
-          <NavLink to="/rules">
-            <li>Rules</li>
-          </NavLink>
-          <NavLink to="/ca">
-            <li>CA</li>
-          </NavLink>
-          <NavLink to="/result">
-            <li>Results</li>
-          </NavLink>
-          <NavLink to="/process">
-            {" "}
-            <li>How To Register</li>
-          </NavLink>
-          {/* <NavLink to="/faq">
+            <p
+              className="navHead"
+              id="navMore"
+              onClick={handleMore}
+              onMouseOver={handleMore}
+            >
+              More
+            </p>
+            <div
+              className="fixed top-[3rem]"
+              id="moreDD"
+              onMouseOver={handleMore}
+              onMouseLeave={closeDropdown}
+            >
+              <ul>
+                <NavLink to="/rules">
+                  <li>Rules</li>
+                </NavLink>
+                <NavLink to="/ca">
+                  <li>CA</li>
+                </NavLink>
+                <NavLink to="/result">
+                  <li>Results</li>
+                </NavLink>
+                <NavLink to="/process">
+                  {" "}
+                  <li>How To Register</li>
+                </NavLink>
+                {/* <NavLink to="/faq">
             <li>FAQs</li>
           </NavLink> */}
-          {/* <NavLink to="/accommodations">
+                {/* <NavLink to="/accommodations">
             <li>Accommodation</li>
           </NavLink> */}
-        </ul>
-      </div>
-      </div>
+              </ul>
+            </div>
+          </div>
         </div>
         <div className="navFlexLogin">
           <NavLink to="/">
-            <p style={{color:props.pg==="home"?"#fac949":""}} className="navHead">Home</p>
+            <p
+              style={{ color: props.pg === "home" ? "#fac949" : "" }}
+              className="navHead"
+            >
+              Home
+            </p>
           </NavLink>
-           <div className="relative flex flex-col">
-          <p
-            className="navHead"
-            onClick={handleDropdown}
-            onMouseOver={handleDropdown}
-            id="navdomain"
-          >
-            Domains
-          </p>
-          <div
-          className="fixed top-[3rem]"
-        id="dropdown"
-        onMouseOver={handleDropdown}
-        onMouseLeave={closeDropdown}
-      >
-        <ul>
-          <NavLink to="/domain_management">
-            <li>Management Sciences</li>
-          </NavLink>
-          <NavLink to="/domain_ece">
-            {" "}
-            <li>Electronics and Communication Engineering</li>
-          </NavLink>
-          <NavLink to="/domain_civil">
-            <li>Civil Engineering</li>
-          </NavLink>
-          <NavLink to="/domain_en">
-            {" "}
-            <li>Electrical and Electronics Engineering</li>
-          </NavLink>
-          <NavLink to="/domain_cs">
-            {" "}
-            <li>Computer Science and Information Technology</li>
-          </NavLink>
-          <NavLink to="/domain_me">
-            {" "}
-            <li>Mechanical Engineering</li>
-          </NavLink>
-        </ul>
-      </div>
+          <div className="relative flex flex-col">
+            <p
+              className="navHead"
+              onClick={handleDropdown}
+              onMouseOver={handleDropdown}
+              id="navdomain"
+            >
+              Domains
+            </p>
+            <div
+              className="fixed top-[3rem]"
+              id="dropdown"
+              onMouseOver={handleDropdown}
+              onMouseLeave={closeDropdown}
+            >
+              <ul>
+                <NavLink to="/domain_management">
+                  <li>Management Sciences</li>
+                </NavLink>
+                <NavLink to="/domain_ece">
+                  {" "}
+                  <li>Electronics and Communication Engineering</li>
+                </NavLink>
+                <NavLink to="/domain_civil">
+                  <li>Civil Engineering</li>
+                </NavLink>
+                <NavLink to="/domain_en">
+                  {" "}
+                  <li>Electrical and Electronics Engineering</li>
+                </NavLink>
+                <NavLink to="/domain_cs">
+                  {" "}
+                  <li>Computer Science and Information Technology</li>
+                </NavLink>
+                <NavLink to="/domain_me">
+                  {" "}
+                  <li>Mechanical Engineering</li>
+                </NavLink>
+              </ul>
+            </div>
           </div>
           <NavLink to="/updates">
             {" "}
-            <p style={{color:props.pg==="update"?"#fac949":""}} className="navHead" id="navUpdate">
+            <p
+              style={{ color: props.pg === "update" ? "#fac949" : "" }}
+              className="navHead"
+              id="navUpdate"
+            >
               Updates
             </p>
           </NavLink>
           <NavLink to={path}>
-            <p style={{color:props.pg==="db"?"#fac949":""}}  className="navDbT">Dashboard</p>
+            <p
+              style={{ color: props.pg === "db" ? "#fac949" : "" }}
+              className="navDbT"
+            >
+              Dashboard
+            </p>
           </NavLink>
           {/* <NavLink to="/ca_db"><p className="navDbC" id="ca_db">Dashboard</p></NavLink> */}
           <NavLink to="/rules">
             {" "}
-            <p style={{color:props.pg==="rules"?"#fac949":""}}  id="navRule2" className="navHead">
+            <p
+              style={{ color: props.pg === "rules" ? "#fac949" : "" }}
+              id="navRule2"
+              className="navHead"
+            >
               Rules
             </p>
           </NavLink>
           <NavLink to="/ca">
             {" "}
-            <p style={{color:props.pg==="ca"?"#fac949":""}} id="navCA" className="navHead">
+            <p
+              style={{ color: props.pg === "ca" ? "#fac949" : "" }}
+              id="navCA"
+              className="navHead"
+            >
               CA
             </p>
           </NavLink>
-          <NavLink  to="/result">
-            <p style={{color:props.pg==="res"?"#fac949":""}} className="navHead" id="navCA">
+          <NavLink to="/result">
+            <p
+              style={{ color: props.pg === "res" ? "#fac949" : "" }}
+              className="navHead"
+              id="navCA"
+            >
               Results
             </p>
           </NavLink>
@@ -608,47 +646,55 @@ function Navbar(props) {
           </NavLink> */}
 
           <NavLink to="/accommodations">
-            <p style={{color:props.pg==="acc"?"#fac949":""}}  id="navCA" className="navHead">
+            <p
+              style={{ color: props.pg === "acc" ? "#fac949" : "" }}
+              id="navCA"
+              className="navHead"
+            >
               Accommodation
             </p>
           </NavLink>
           <div className="relative lg1:ml-[-2vw] ml-[-7vw] flex flex-col">
-          <p
-            className="navHead"
-            id="navMore"
-            onClick={handleMore2}
-            onMouseOver={handleMore2}
-          >
-            More
-          </p>
-          <div className="fixed top-[3rem]" id="moreDD2" onMouseOver={handleMore2} onMouseLeave={closeDropdown}>
-        <ul>
-          <NavLink to="/rules">
-            <li>Rules</li>
-          </NavLink>
-          <NavLink to="/ca">
-            <li>CA</li>
-          </NavLink>
-          <NavLink to="/result">
-            <li>Results</li>
-          </NavLink>
-          {/* <NavLink to="/process">
+            <p
+              className="navHead"
+              id="navMore"
+              onClick={handleMore2}
+              onMouseOver={handleMore2}
+            >
+              More
+            </p>
+            <div
+              className="fixed top-[3rem]"
+              id="moreDD2"
+              onMouseOver={handleMore2}
+              onMouseLeave={closeDropdown}
+            >
+              <ul>
+                <NavLink to="/rules">
+                  <li>Rules</li>
+                </NavLink>
+                <NavLink to="/ca">
+                  <li>CA</li>
+                </NavLink>
+                <NavLink to="/result">
+                  <li>Results</li>
+                </NavLink>
+                {/* <NavLink to="/process">
             {" "}
             <li>How To Register</li>
           </NavLink> */}
-          {/* <NavLink to="/faq">
+                {/* <NavLink to="/faq">
             <li>FAQs</li>
           </NavLink> */}
-          <NavLink to="/accommodations">
-            <li>Accommodation</li>
-          </NavLink>
-        </ul>
-      </div>
-      </div>
+                <NavLink to="/accommodations">
+                  <li>Accommodation</li>
+                </NavLink>
+              </ul>
+            </div>
+          </div>
         </div>
-        
-        {/* </div> */}
 
+        {/* </div> */}
 
         <div className="navFlex2">
           <button
@@ -754,10 +800,10 @@ function Navbar(props) {
       </Dialog>
 
       <Dialog
-      open={stepDialog.seven}
-      PaperProps={{
-        sx: { maxHeight: 500, maxWidth: 1000 },
-      }}
+        open={stepDialog.seven}
+        PaperProps={{
+          sx: { maxHeight: 500, maxWidth: 1000 },
+        }}
       >
         <Login />
       </Dialog>
@@ -766,33 +812,37 @@ function Navbar(props) {
         open={stepDialog.eight}
         PaperProps={{
           sx: { maxHeight: 500, maxWidth: 1000 },
-        }}  >
-          <Forgot />
-        </Dialog>
+        }}
+      >
+        <Forgot />
+      </Dialog>
 
-        <Dialog
+      <Dialog
         open={stepDialog.nine}
         PaperProps={{
           sx: { maxHeight: 500, maxWidth: 1000 },
-        }}>
-          <Otp />
-        </Dialog>
+        }}
+      >
+        <Otp />
+      </Dialog>
 
-        <Dialog
+      <Dialog
         open={stepDialog.ten}
         PaperProps={{
           sx: { maxHeight: 500, maxWidth: 1000 },
-        }}>
-          <Reset />
-        </Dialog>
+        }}
+      >
+        <Reset />
+      </Dialog>
 
-        <Dialog
+      <Dialog
         open={stepDialog.eleven}
         PaperProps={{
           sx: { maxHeight: 500, maxWidth: 1000 },
-        }}>
-          <LoginTeam />
-        </Dialog>
+        }}
+      >
+        <LoginTeam />
+      </Dialog>
 
       <Dialog
         open={stepDialog.twelve}
@@ -830,7 +880,7 @@ function Navbar(props) {
         <LogOut />
       </Dialog>
 
-<div style={{ position: "absolute", top: "40px", right: "20px" }}>
+      <div style={{ position: "absolute", top: "40px", right: "20px" }}>
         <Dialog
           open={processStop}
           onClose={handleProcessStop}
@@ -843,7 +893,12 @@ function Navbar(props) {
           }}
           keepMounted
         >
-                <img id="crs" className="cross" src={cross} onClick={() => handleProcessStop()} />
+          <img
+            id="crs"
+            className="cross"
+            src={cross}
+            onClick={() => handleProcessStop()}
+          />
           <div id="processDialog">
             <DialogTitle
               sx={{
@@ -852,21 +907,21 @@ function Navbar(props) {
                 paddingBottom: "8px",
               }}
             >
-              Registrations will start soon.
+              Registrations are closed now.
             </DialogTitle>
             {/* <DialogTitle
               sx={{ textAlign: "center", marginTop: 0, paddingTop: 0 }}
             >
               Click here to view the results of S
             </DialogTitle> */}
-            <Button
+            {/* <Button
               onClick={() => {
                 navigate("/process");
                 handleProcessStop();
               }}
             >
               How to Register
-            </Button>
+            </Button> */}
           </div>
         </Dialog>
       </div>
