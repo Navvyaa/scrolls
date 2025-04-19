@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import LandingPage from "./Components/LandingPage/landingPage";
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter,  Route, Routes } from "react-router-dom";
 import TeamDB from "./Components/Dashboard/teamDB";
 import CaDB from "./Components/Dashboard/CaDB";
 import Update from "./Components/updates/update";

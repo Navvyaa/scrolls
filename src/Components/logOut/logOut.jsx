@@ -29,7 +29,7 @@ function LogOut() {
                 <button className="logoutbtn2" onClick={handleCancelLog}>No</button>
             </div>
             <div className="lOut2">
-                <img src={logout} className="logoutImage" />
+                <img src={logout} alt="logout" className="logoutImage" />
             </div>
         </div>
 

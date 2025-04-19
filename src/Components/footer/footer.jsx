@@ -1,9 +1,9 @@
 import instagram from "../Assets/Instagram.svg";
-import phone from "../Assets/phone.svg"
+// import phone from "../Assets/phone.svg"
 import horizon from "../Assets/horizon.svg";
 import SI from "../Assets/SI_logo.svg"
 import "../LandingPage/landingPage.css"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Footer() {
     return <>
@@ -13,7 +13,7 @@ function Footer() {
                 <div id="footFlex1">
                     <p className="footHead">Scrolls<span className="navDot">.</span></p>
                     <p className="footHead2">Any questions or remarks? Just write us a message.</p>
-                    <p id="formLink"><a target="_blank" className="underline" style={{color:"#FAC949"}} href="https://docs.google.com/forms/d/e/1FAIpQLSe8k570vDVMd-W0VgvwtU2hKJxSCakEi2HNhW1xlLn1xl4dvA/viewform">Query Form</a></p>
+                    <p id="formLink"><a target="_blank" rel="noreferrer" className="underline" style={{color:"#FAC949"}} href="https://docs.google.com/forms/d/e/1FAIpQLSe8k570vDVMd-W0VgvwtU2hKJxSCakEi2HNhW1xlLn1xl4dvA/viewform">Query Form</a></p>
                 </div>
                 <div id="footFlex2">
     <p id="telephone">Contact</p>
@@ -55,23 +55,23 @@ function Footer() {
                 <div id="footFlex4">
                     <p id="telephone">Find us</p>
                     <div style={{margin:"0.4rem 0"}} className="footFlexRow">
-                        <img src={instagram} id="instagram" />
-                        <p id="link"><a href="https://www.instagram.com/scrolls.akgec?igsh=eHBid3liazkwdXB4" target="_blank"  >scrolls.akgec</a></p>
+                        <img src={instagram} alt="" id="instagram" />
+                        <p id="link"><a href="https://www.instagram.com/scrolls.akgec?igsh=eHBid3liazkwdXB4" target="_blank" rel="noreferrer" >scrolls.akgec</a></p>
                     </div>
                     <div className="footFlexRow">
-                        <img src={horizon} id="horizon" />
-                        <p id="link"><a href="https://instagram.com/horizon.akgec?igshid=MGU3ZTQzNzY=" target="_blank" >Team Horizon</a></p>
+                        <img src={horizon} alt="" id="horizon" />
+                        <p id="link"><a href="https://instagram.com/horizon.akgec?igshid=MGU3ZTQzNzY=" target="_blank" rel="noreferrer">Team Horizon</a></p>
                     </div>
                 </div>
             </div>
-            <div className="flex items-center justify-center flex-wrap gap-2" id="footText">Powered by <a href="https://www.instagram.com/software.incubator/" target="_blank"  >
+            <div className="flex items-center justify-center flex-wrap gap-2" id="footText">Powered by <a href="https://www.instagram.com/software.incubator/" target="_blank"  rel="noreferrer">
             <div className="flex items-center gap-2 justify-center">
-                    <img src={SI} />
+                    <img  alt="" src={SI} />
                     <span id="software">SOFTWARE</span><span id="incubator">INCUBATOR </span></div>
             </a>
-                & Managed by <a href="https://instagram.com/horizon.akgec?igshid=MGU3ZTQzNzY=" target="_blank" >
+                & Managed by <a href="https://instagram.com/horizon.akgec?igshid=MGU3ZTQzNzY=" target="_blank" rel="noreferrer">
                     <div className="flex items-center gap-2 justify-center">
-                    <img src={horizon} id="horizon" />
+                    <img src={horizon} alt="" id="horizon" />
                     <span id="incubator"> TEAM </span>
                     <span id="horizonText"> HORIZON</span>
                     </div></a></div>

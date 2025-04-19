@@ -14,7 +14,7 @@ function Team(props) {
 
     // team registration
     const [loading, setLoading] = useState(false)
-    const [referralCode, setRefferalCode] = useState('')
+    // const [referralCode, setRefferalCode] = useState('')
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.register)
     const rightpass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$#!%*?&])[A-Za-z\d@$#!%*?&]{8,}$/;
@@ -54,7 +54,7 @@ function Team(props) {
 
     useEffect(() => {
         if (team.pass || team.cPass) {
-            if (team.pass == team.cPass) {
+            if (team.pass === team.cPass) {
                 document.getElementById("WrongPwdTeam2").style.display = "none";
                 setBool1(true)
             }
@@ -67,12 +67,12 @@ function Team(props) {
 
     useEffect(() => {
         if (team.size) {
-            if (team.size == 2) {
+            if (team.size === 2) {
                 document.getElementsByClassName("teamLeader")[0].style.display = "block";
                 document.getElementsByClassName("teamLeader")[1].style.display = "block";
                 document.getElementsByClassName("teamLeader")[2].style.display = "none";
             }
-            if (team.size == 3) {
+            if (team.size === 3) {
                 document.getElementsByClassName("teamLeader")[0].style.display = "block";
                 document.getElementsByClassName("teamLeader")[1].style.display = "block";
                 document.getElementsByClassName("teamLeader")[2].style.display = "block";
@@ -105,7 +105,7 @@ function Team(props) {
 
         var data;
         if (team.referral) {
-            if (team.size == 2) {
+            if (team.size === 2) {
                 data = {
                     "name": team.name,
                     "size": parseInt(team.size),
@@ -115,7 +115,7 @@ function Team(props) {
                     "password": team.pass
                 }
             }
-            if (team.size == 3) {
+            if (team.size === 3) {
                 data = {
                     "name": team.name,
                     "size": parseInt(team.size),
@@ -128,7 +128,7 @@ function Team(props) {
             }
         }
         else {
-        if (team.size == 2) {
+        if (team.size === 2) {
             data = {
                 "name": team.name,
                 "size": parseInt(team.size),
@@ -137,7 +137,7 @@ function Team(props) {
                 "password": team.pass
             }
         }
-        if (team.size == 3) {
+        if (team.size === 3) {
             data = {
                 "name": team.name,
                 "size": parseInt(team.size),
@@ -167,7 +167,7 @@ function Team(props) {
                         });
                     }
                     else {
-                        let x = Object.keys(res.payload.data)
+                        // let x = Object.keys(res.payload.data)
                         toast.error(`${res.payload.data[Object.keys(res.payload.data)[0]]}`, {
                             position: "top-right",
                             theme: "light",
@@ -210,11 +210,11 @@ function Team(props) {
     }, [reducer.loading, timer])
 
     return <>
-        <div className="register" id="registerTeam" style={{height:team.size==2?"920px":"1000px"}}>
+        <div className="register" id="registerTeam" style={{height:team.size===2?"920px":"1000px"}}>
             <div className="regFlex" id="teamReg">
-                <img className="arrow" src={arrow} onClick={() => { !props.home?dispatch(dialog1()):dispatch(dialog16()) }} />
+                <img className="arrow" src={arrow} alt="" onClick={() => { !props.home?dispatch(dialog1()):dispatch(dialog16()) }} />
                 <p className="heading">Register as <span id="member">Team</span></p>
-                <img className="cross" src={cross} onClick={() => { dispatch(dialog0()) }} />
+                <img className="cross" src={cross} alt="" onClick={() => { dispatch(dialog0()) }} />
             </div>
             <form className="allForm" onSubmit={RegAsTeam}>
                 <p className="regName">Team Name</p>
@@ -246,15 +246,15 @@ function Team(props) {
                 <p id="WrongPwdTeam2">Password entered in two fields must be same.</p>
                 <div className="teamLeader">
                     <p className="regName">Team Leader's Scroll ID</p>
-                    <input type="text" className="regInputname" placeholder="Enter ID" required={(team.size == 2 || team.size == 3) ? true : false} value={team.leaderId} onChange={(e) => { setTeam({ ...team, leaderId: e.target.value }) }} />
+                    <input type="text" className="regInputname" placeholder="Enter ID" required={(team.size === 2 || team.size === 3) ? true : false} value={team.leaderId} onChange={(e) => { setTeam({ ...team, leaderId: e.target.value }) }} />
                 </div>
                 <div className="teamLeader">
                     <p className="regName">Member 2's Scroll ID</p>
-                    <input type="text" className="regInputname" placeholder="Enter ID" required={(team.size == 2 || team.size == 3) ? true : false} value={team.member2} onChange={(e) => { setTeam({ ...team, member2: e.target.value }) }} />
+                    <input type="text" className="regInputname" placeholder="Enter ID" required={(team.size === 2 || team.size === 3) ? true : false} value={team.member2} onChange={(e) => { setTeam({ ...team, member2: e.target.value }) }} />
                 </div>
                 <div className="teamLeader">
                     <p className="regName">Member 3's Scroll ID</p>
-                    <input type="text" className="regInputname" placeholder="Enter ID" required={team.size == 3 ? true : false} value={team.member3} onChange={(e) => { setTeam({ ...team, member3: e.target.value }) }} />
+                    <input type="text" className="regInputname" placeholder="Enter ID" required={team.size === 3 ? true : false} value={team.member3} onChange={(e) => { setTeam({ ...team, member3: e.target.value }) }} />
                 </div>
                 <button className="regButton" type='submit'>Register</button>
             </form>

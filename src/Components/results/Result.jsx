@@ -6,7 +6,7 @@ import TableComp from "./table";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { ResultThunk } from "../../Redux/resultSlice";
-import { Spinner } from "react-bootstrap";
+// import { Spinner } from "react-bootstrap";
 
 function Result() {
   const dispatch = useDispatch();
@@ -22,42 +22,42 @@ function Result() {
   };
   const [selected, setSelected] = useState(team);
   const [wait, setWait] = useState(team);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   useEffect(() => {
     dispatch(ResultThunk());
   }, []);
 
   useEffect(() => {
     if (
-      reducer.selectedTeam != "" &&
-      reducer.selectedTeam != null &&
-      reducer.selectedTeam != undefined
+      reducer.selectedTeam !== "" &&
+      reducer.selectedTeam !== null &&
+      reducer.selectedTeam !== undefined
     ) {
-      setSelected({
-        ...selected,
+      setSelected((prevSelected)=>({
+        ...prevSelected,
         MS_team: reducer.selectedTeam.msg.MS_team,
         CS_team: reducer.selectedTeam.msg.CS_team,
         EN_team: reducer.selectedTeam.msg.EN_team,
         EC_team: reducer.selectedTeam.msg.EC_team,
         CE_team: reducer.selectedTeam.msg.CE_team,
         ME_team: reducer.selectedTeam.msg.ME_team,
-      });
+      }));
     }
     if (
-      reducer.waitlistedTeam != "" &&
-      reducer.waitlistedTeam != null &&
-      reducer.waitlistedTeam != undefined
+      reducer.waitlistedTeam !== "" &&
+      reducer.waitlistedTeam !== null &&
+      reducer.waitlistedTeam !== undefined
     ) {
-      setWait({
-        ...wait,
+      setWait((prevWait)=>({
+        ...prevWait,
         MS_team: reducer.waitlistedTeam.MS_team,
         CS_team: reducer.waitlistedTeam.CS_team,
         EC_team: reducer.waitlistedTeam.EC_team,
-      });
+      }));
     }
   }, [reducer]);
 
-  const [timer, setTimer] = useState(10);
+  // const [timer, setTimer] = useState(10);
   // useEffect(() => {
   //   if (reducer.loading) {
   //     const time =

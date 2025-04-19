@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Action } from "@remix-run/router";
+// import { Action } from "@remix-run/router";
 import Baseurl from "./Baseurl";
 
 const initialState = {

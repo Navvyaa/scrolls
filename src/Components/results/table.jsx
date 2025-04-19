@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import "./result.css"
-import Table from 'react-bootstrap/Table';
+// import Table from 'react-bootstrap/Table';
 
 function TableComp(props) {
     return <>
