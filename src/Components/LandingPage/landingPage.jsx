@@ -1,15 +1,15 @@
 import landImage from "../Assets/scroll_bg.svg";
-import UpdateImage from "../Assets/updateImage.jpeg";
+// import UpdateImage from "../Assets/updateImage.jpeg";
 import domainLogo from "../Assets/domainLogo.svg";
 import cross from "../Assets/cross.svg";
 import cross1 from "../Assets/navCross.svg";
 import arrow from "../Assets/arrow.svg";
-import UpdateOP from "../Assets/UpdateOP.png";
+// import UpdateOP from "../Assets/UpdateOP.png";
 // import Modal from '@mui/material/Modal';
 import { forwardRef, useEffect, useState } from "react";
 import {
-  Alert,
-  Button,
+  // Alert,
+  // Button,
   Dialog,
   DialogTitle,
   Slide,
@@ -21,9 +21,9 @@ import {
   dialog17,
   dialog18,
   dialog19,
-  dialog20,
+  // dialog20,
 } from "../../Redux/step";
-import Register from "../Register/Register";
+// import Register from "../Register/Register";
 import Member from "../Register/member";
 import Team from "../Register/team";
 import CA1 from "../Register/CA1";
@@ -34,7 +34,7 @@ import "./timeline.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import "react-toastify/scss/_closeButton.scss"
-import { InstagramEmbed } from "react-social-media-embed";
+// import { InstagramEmbed } from "react-social-media-embed";
 import Navbar from "../Navbar/navbar";
 // import mobTimeline from "../Assets/mob_timeline.svg"
 import timelineNew from "../Assets/timeline.svg";
@@ -43,13 +43,13 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { RegOpenThunk } from "../../Redux/registerSlice";
 import { Spinner } from "react-bootstrap";
 import Footer from "../footer/footer";
-import { setProcess, unModal } from "../../Redux/heading";
+// import { setProcess, unModal } from "../../Redux/heading";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import imageCar1 from "../Assets/imageP1.JPG";
+// import imageCar1 from "../Assets/imageP1.JPG";
 import Question from "./question";
-import winnersImg from "../Assets/scrolls23Winner.svg";
+// import winnersImg from "../Assets/scrolls23Winner.svg";
 import imgs1 from "../Assets/image-1.png";
 import imgs2 from "../Assets/image-2.png";
 import imgs3 from "../Assets/image-3.png";
@@ -57,17 +57,17 @@ import imgs4 from "../Assets/image-4.jpg";
 import imgs5 from "../Assets/image-5.jpg";
 import imgs6 from "../Assets/image-6.jpg";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
+// const style = {
+//   position: "absolute",
+//   top: "50%",
+//   left: "50%",
+//   transform: "translate(-50%, -50%)",
+//   width: 400,
+//   bgcolor: "background.paper",
+//   border: "2px solid #000",
+//   boxShadow: 24,
+//   p: 4,
+// };
 
 function LandingPage() {
   const reducer = useSelector((s) => s.login);
@@ -283,7 +283,7 @@ function LandingPage() {
             {/* <img src={landImage} className="landImage" /> */}
           </div>
           <div className="landFlex">
-            <p className="landText1">
+            <p className="landText1 overflow-hidden" >
               Students' Creative & Oratory Learning Skills 2024
             </p>
             <p className="landText2">

@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import menu from "../Assets/menu.svg";
 import cross from "../Assets/navCross.svg";
 import dropdown from "../Assets/dropdown.svg";
-import domain from "../Assets/domain.svg";
+// import domain from "../Assets/domain.svg";
 import { Button, Dialog, DialogTitle } from "@mui/material";
 import Login from "../Login/CA/login";
 import Reset from "../Login/CA/reset";
@@ -19,7 +19,7 @@ import Team from "../Register/team";
 import CA1 from "../Register/CA1";
 import CA2 from "../Register/CA2";
 import Login1 from "../Login/login1";
-import { setProcess, unsetProcess } from "../../Redux/heading";
+// import { setProcess, unsetProcess } from "../../Redux/heading";
 import { useDispatch, useSelector } from "react-redux";
 import { dialog1, dialog6, logout } from "../../Redux/step";
 import "./Navbar.css";
@@ -33,7 +33,7 @@ import "react-toastify/dist/ReactToastify.css";
 function Navbar(props) {
   const [dialogg, setDialogg] = useState(false);
   const [login, setLogin] = useState(false);
-  const [register, setRegister] = useState(false);
+  // const [register, setRegister] = useState(false);
   const reducer = useSelector((s) => s.register);
   const [loading, setLoading] = useState(false);
   const [out, setOut] = useState(false);
@@ -42,7 +42,7 @@ function Navbar(props) {
   const dispatch = useDispatch();
   const step = useSelector((s) => s.step);
   const { title, processBool } = useSelector((s) => s.heading);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [stepDialog, setStepDialog] = useState({
     one: false,
@@ -381,9 +381,10 @@ function Navbar(props) {
       <div className="navbar" onMouseLeave={closeDropdown}>
         {/* <div style={{display:"flex",alignItems:'center',justifyContent:'start' ,gap:'2rem'}}> */}
         <NavLink to="/">
-          <div className="flex gap-[0.4rem] items-center">
+          <div className="flex gap-[0.4rem] items-center overflow-hidden">
             <img
               src={imglogo}
+              alt=""
               className="md:w-[2.2rem] h-[2.2rem] w-[2rem] min-w-[2rem] min-h-[2.2rem] md:h-[2.4rem]"
             />
             <p className="navScroll">
