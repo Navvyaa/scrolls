@@ -352,9 +352,10 @@ function Navbar(props) {
           </li>
           <li>
             {" "}
-            <div className="mt-3">
+            <div className=" ">
               <button
-                className="liRegister"
+              
+                className="liRegister text-black !important"
                 onClick={() => {
                   RegOpen();
                 }}
@@ -364,7 +365,7 @@ function Navbar(props) {
             </div>
           </li>
           <li>
-            <div className="mt-1">
+            <div className="">
               <button
                 className="liLogin"
                 onClick={() => {

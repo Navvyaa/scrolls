@@ -221,28 +221,39 @@
 
 #uli {
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: rgba(25, 25, 25, 0.98);
+    backdrop-filter: blur(10px);
     position: fixed;
-    transition: all .5s;
+    transition: all 0.3s ease-in-out;
     top: 0px;
     right: 0px;
     width: 0vw;
     height: 100vh;
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 80px;
     font-weight: 600;
-    z-index: 8;
+    z-index: 1000;
     display: flex;
     display: none;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
 }
 
 #crossimg {
-    margin-top: 20px;
-    margin-left: 46vw;
-    width: 30px;
-    height: 30px;
-    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
+    transition: transform 0.2s ease;
+    padding: 10px;
+    border-radius: 50%;
+    filter: invert(1);
+}
+
+#crossimg:hover {
+    transform: rotate(90deg);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #uli ul {
@@ -251,25 +262,85 @@
     display: flex;
     flex-direction: column;
     padding-left: 8vw;
+    gap: 12px;
 }
 
 #uli ul li {
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.1rem;
     line-height: 24px;
-    margin-bottom: 4px;
+    padding: 8px 12px;
     cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    color: #FFFFFF;
+    width: 85%;
+}
+
+#uli ul li:hover {
+    background-color: rgba(250, 201, 73, 0.15);
+    color: #FAC949;
 }
 
 #uli ul a {
     text-decoration: none;
-    color: black;
+    color: #FFFFFF;
+    transition: color 0.2s ease;
+}
+
+#uli ul a:hover {
+    color: #FAC949;
 }
 
 #uli ul a.active {
-    color: #FAC949
+    color: #FAC949;
+}
+
+#liDropdown {
+    overflow: scroll;
+    padding: 8px 0;
+    margin-left: 12px;
+    border-left: 2px solid rgba(250, 201, 73, 0.3);
+}
+
+#liDropdown ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 12px;
+    gap: 8px;
+}
+
+#liDropdown ul li {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 20px;
+    padding: 6px 12px;
+    transition: all 0.2s ease;
+    color: #FFFFFF;
+    width: 85%;
+}
+
+#liDropdown ul li:hover {
+    background-color: rgba(250, 201, 73, 0.15);
+    color: #FAC949;
+}
+
+#liDropdown ul a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 0.2s ease;
+}
+
+#liDropdown ul a:hover {
+    color: #FAC949;
+}
+
+#liDropdown ul a.active {
+    color: #FAC949;
 }
 
 #dropdown {
@@ -380,40 +451,17 @@
     cursor: pointer;
 }
 
-#liDropdown {
-    overflow: hidden;
-    padding-bottom: 12px;
-}
-
-#liDropdown ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-#liDropdown ul li {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.8rem;
-    line-height: 16px;
-}
-
-#liDropdown ul a {
-    text-decoration: none;
-    color: black;
-}
-
-#liDropdown ul a.active {
-    text-decoration: underline;
-}
-
 #domainIcon {
     position: relative;
-    /* left: 12px; */
     width: 12px;
     height: 12px;
     cursor: pointer;
+    filter: invert(1) brightness(2);
+    transition: transform 0.2s ease;
+}
+
+#domainIcon:hover {
+    transform: rotate(180deg);
 }
 
 #domain {
@@ -680,11 +728,81 @@
 }
 
 @media(max-width:612px) {
+    #uli {
+        width: 0;
+        padding-top: 70px;
+    }
+
+    #uli ul {
+        padding-left: 6vw;
+    }
+
+    #uli ul li {
+        font-size: 1rem;
+        padding: 6px 10px;
+        width: 85%;
+    }
+
+    #crossimg {
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        padding: 8px;
+    }
 
     .navScroll {
-        font-size: 1.5rem;
-        min-width:20rem !important;
+        font-size: 1.8rem;
     }
+
+    .liRegister,
+    .liLogin {
+        width: 100%;
+        font-size: 0.95rem;
+        height: 36px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .liRegister {
+        margin-bottom: 0;
+    }
+
+    #uli ul {
+        padding-left: 6vw;
+    }
+
+    #uli ul li {
+        font-size: 1rem;
+        padding: 6px 10px;
+        width: 85%;
+    }
+
+    #crossimg {
+        top: 15px;
+        right: 15px;
+    }
+
+    #menu {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 16px;
+        right: 5vw;
+        cursor: pointer;
+    }
+
+    #menu2 {
+        display: block;
+        display: none;
+        width: 24px;
+        height: 24px;
+        margin-top: -4px;
+        margin-bottom: 6px;
+        cursor: pointer;
+    }
+
     .navFlex1,
     .navRegister,
     .navLogin,
@@ -734,8 +852,11 @@
 
     .liRegister,
     .liLogin {
-        width: 30vw;
-
+        width: 100%;
+        font-size: 0.95rem;
+        height: 36px;
+        margin: 0;
+        padding: 0;
     }
 
     .liRegister {
@@ -751,9 +872,23 @@
     #moreDD2 ul {
         display: none;
     }
+
+    #domainIcon {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 @media(max-width:450px) {
+    #uli ul {
+        padding-left: 5vw;
+    }
+
+    #uli ul li {
+        font-size: 0.95rem;
+        width: 85%;
+    }
+
     #menu {
         margin-left: 50vw;
     }
@@ -779,20 +914,41 @@
 }
 
 @media(max-width:360px) {
-    #menu {
-        margin-left: 30vw;
-    }
-
     #uli {
         width: 70vw;
     }
 
-    .liLogin,
-    .liRegister {
-        width: 36vw;
+    #uli ul {
+        padding-left: 4vw;
+    }
+
+    #uli ul li {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+        width: 85%;
     }
 
     #liDropdown {
         width: 50vw;
+    }
+
+    .liRegister,
+    .liLogin {
+        width: 100%;
+        font-size: 0.9rem;
+        height: 34px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #crossimg {
+        width: 28px;
+        height: 28px;
+        padding: 7px;
+    }
+
+    #domainIcon {
+        width: 12px;
+        height: 12px;
     }
 }
