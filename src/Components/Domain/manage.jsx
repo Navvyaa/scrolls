@@ -18,7 +18,7 @@ function DomainManage() {
                     <li>
                         <div id="liItem">
                             <p className="domainHeading">India's Digital Public Infrastructure: UPI, Aadhaar, ONDC</p>
-                            <p className="domainText">India has developed world-class digital infrastructure including UPI for instant payments, Aadhaar for digital identity verification, and ONDC for open e-commerce networks. These systems promote financial inclusion, transparency, and ease of access for citizens and businesses. UPI enables seamless transactions across banks and apps, Aadhaar facilitates authentication, and ONDC democratizes online trade. Together, they reduce dependency on intermediaries and foster innovation in digital services. The integration of these platforms is transforming India into a digital-first economy.</p>
+                            <p className="domainText">India has developed world-class digital infrastructure including UPI for instant payments, Aadhaar for digital identity verification, and ONDC for open e-commerce networks. These systems promote financial inclusion, transparency, and ease of access for citizens and businesses. UPI enables seamless transactions across banks and apps, Aadhaar facilitates authentication , and ONDC democratizes online trade. Together, they reduce dependency on intermediaries and foster innovation in digital services. The integration of these platforms is transforming India into a digital-first economy.</p>
                         </div>
                     </li>
                     <li>
