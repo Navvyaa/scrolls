@@ -50,7 +50,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import imageCar1 from "../Assets/imageP1.JPG";
 import Question from "./question";
 // import winnersImg from "../Assets/scrolls23Winner.svg";
-import imgs1 from "../Assets/image-1.png";
+import imgs1 from "../Assets/what.jpeg";
 import imgs2 from "../Assets/image-2.png";
 import imgs3 from "../Assets/image-3.png";
 import imgs4 from "../Assets/image-4.jpg";
@@ -86,6 +86,7 @@ function LandingPage() {
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
+    arrows: false,
   };
 
   const [stepDialog, setStepDialog] = useState({

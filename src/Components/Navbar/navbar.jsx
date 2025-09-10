@@ -325,9 +325,9 @@ function Navbar(props) {
           <NavLink to="/rules">
             <li>Rules</li>
           </NavLink>
-          <NavLink to="/ca">
+          {/* <NavLink to="/ca">
             <li>CA</li>
-          </NavLink>
+          </NavLink> */}
           {/* <NavLink to="/faq">
             <li>FAQs</li>
           </NavLink> */}
