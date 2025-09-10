@@ -33,7 +33,7 @@ function Result() {
       reducer.selectedTeam !== null &&
       reducer.selectedTeam !== undefined
     ) {
-      setSelected((prevSelected)=>({
+      setSelected((prevSelected) => ({
         ...prevSelected,
         MS_team: reducer.selectedTeam.msg.MS_team,
         CS_team: reducer.selectedTeam.msg.CS_team,
@@ -48,7 +48,7 @@ function Result() {
       reducer.waitlistedTeam !== null &&
       reducer.waitlistedTeam !== undefined
     ) {
-      setWait((prevWait)=>({
+      setWait((prevWait) => ({
         ...prevWait,
         MS_team: reducer.waitlistedTeam.MS_team,
         CS_team: reducer.waitlistedTeam.CS_team,
@@ -57,31 +57,9 @@ function Result() {
     }
   }, [reducer]);
 
-  // const [timer, setTimer] = useState(10);
-  // useEffect(() => {
-  //   if (reducer.loading) {
-  //     const time =
-  //       timer > 0 &&
-  //       setInterval(() => {
-  //         setTimer(timer - 1);
-  //       }, 1000);
-  //     return () => clearInterval(time);
-  //   }
-  // }, [timer, reducer.loading]);
-
-  // useEffect(() => {
-  //   if (timer > 0 && reducer.loading) {
-  //     setLoading(true);
-  //     document.body.style.opacity = 0.5;
-  //   } else {
-  //     setLoading(false);
-  //     document.body.style.opacity = 1;
-  //   }
-  // }, [reducer.loading, timer]);
-
   return (
     <>
-      <Navbar pg="res"/>
+      <Navbar pg="res" />
       <div className="sm:px-[2rem]" id="RESULT">
         <div id="resultHead">Scrolls Winners-2023</div>
         <TableComp
@@ -89,58 +67,58 @@ function Result() {
           data={selected.CS_team}
           wait={wait.CS_team}
           bool="true"
-          team1="Ananta"
-          team2="Udi Baba"
-          team3="The Recyclers"
+          team1="Firstcall Fleet"
+          team2="D-Generation Z"
+          team3="Terminators"
         />
         <TableComp
           name="Civil Engineering"
           data={selected.CE_team}
           wait={wait.CE_team}
           bool="false"
-          team1="Bro-Gang"
-          team2="Innovators"
-          team3="CRYstals"
+          team1="Lightning Engineers"
+          team2="Team Trifecta"
+          team3="Team Bytebuilders"
         />
         <TableComp
           name="Electrical and Electronics Engineering"
           data={selected.EN_team}
           wait={wait.EN_team}
           bool="false"
-          team1="Explorers"
-          team2="Unbeaten"
-          team3="Innovators"
+          team1="Robo Rangers"
+          team2="Curiosity Crusaders"
+          team3="Rover Rangers"
         />
         <TableComp
           name="Electronics and Communication Engineering"
           data={selected.EC_team}
           wait={wait.EC_team}
           bool="true"
-          team1="AUGN"
-          team2="Research Rockets"
-          team3="Captivators"
+          team1="Eunoia"
+          team2="Virtual Visionaries"
+          team3="Little Bits"
         />
         <TableComp
           name="Mechanical Engineering"
           data={selected.ME_team}
           wait={wait.ME_team}
           bool="false"
-          team1="Mischief Managed"
-          team2="Shubham Bahuguna"
-          team3="Alpha"
+          team1="Team Resistance"
+          team2="Team Mechmages"
+          team3="Smart Researchers"
         />
         <TableComp
           name="Management Sciences"
           data={selected.MS_team}
           wait={wait.MS_team}
           bool="true"
-          team1="Meta Mavericks"
-          team2="Sahasra"
-          team3="Vanquishers"
+          team1="Synergy Squad"
+          team2="Planet Protecors"
+          team3="Lifetech Leader"
         />
       </div>
       <Footer />
-{/* 
+      {/* 
       {loading ? (
         <Spinner animation="border" variant="dark" id="loadSpinner" />
       ) : null} */}
