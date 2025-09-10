@@ -325,9 +325,9 @@ function Navbar(props) {
           <NavLink to="/rules">
             <li>Rules</li>
           </NavLink>
-          <NavLink to="/ca">
+          {/* <NavLink to="/ca">
             <li>CA</li>
-          </NavLink>
+          </NavLink> */}
           {/* <NavLink to="/faq">
             <li>FAQs</li>
           </NavLink> */}
@@ -464,7 +464,7 @@ function Navbar(props) {
               Rules
             </p>
           </NavLink>
-          <NavLink to="/ca">
+          {/* <NavLink to="/ca">
             <p
               style={{ color: props.pg === "ca" ? "#fac949" : "" }}
               id="navCA"
@@ -472,7 +472,7 @@ function Navbar(props) {
             >
               CA
             </p>
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/process">
             {" "}
             <p

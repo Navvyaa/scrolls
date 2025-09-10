@@ -50,7 +50,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import imageCar1 from "../Assets/imageP1.JPG";
 import Question from "./question";
 // import winnersImg from "../Assets/scrolls23Winner.svg";
-import imgs1 from "../Assets/image-1.png";
+import imgs1 from "../Assets/what.jpeg";
 import imgs2 from "../Assets/image-2.png";
 import imgs3 from "../Assets/image-3.png";
 import imgs4 from "../Assets/image-4.jpg";
@@ -86,6 +86,7 @@ function LandingPage() {
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
+    arrows: false,
   };
 
   const [stepDialog, setStepDialog] = useState({
@@ -229,7 +230,7 @@ function LandingPage() {
 
   const faqData = [
     {
-      question: "How many rounds are there in SCROLLS'24?",
+      question: "How many rounds are there in SCROLLS'25?",
       answer:
         "Scrolls comprises of two rounds - <br/> i) The initial round entails the synopsis submission. <br/> ii) Selected teams will advance to the subsequent round, wherein they will submit and present their technical paper.",
     },
@@ -240,14 +241,14 @@ function LandingPage() {
         "Submissions are assessed based on the Originality, Clarity of thoughts, Innovation, Critical thinking and Presentation Skills of the teams.",
     },
     {
-      question: "What are the principal areas of focus for Scrolls 2024?",
+      question: "What are the principal areas of focus for Scrolls 2025?",
       answer:
-        "The primary objectives of Scrolls 2024 include nurturing the problem-solving skills, enhancing presentation abilities and fostering inventiveness of the participants.",
+        "The primary objectives of Scrolls 2025 include nurturing the problem-solving skills, enhancing presentation abilities and fostering inventiveness of the participants.",
     },
     {
       question: "Is this an individual or group competition?",
       answer:
-        "SCROLLS'24 is a team-based competition. Each team must consist of a minimum of 2 and a maximum of 3 members.",
+        "SCROLLS'25 is a team-based competition. Each team must consist of a minimum of 2 and a maximum of 3 members.",
     },
     {
       question:
@@ -268,7 +269,7 @@ function LandingPage() {
     },
     {
       question:
-        "Where can participants find the latest updates regarding Scrolls ‘24?",
+        "Where can participants find the latest updates regarding Scrolls ‘25?",
       answer:
         "For the latest updates, follow the official Instagram page of Scrolls (<a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://www.instagram.com/scrolls.akgec/'>Scrolls Instagram</a>) OR Team Horizon (<a target='_blank' style='text-decoration:underline; color:#FAC949;' href='https://www.instagram.com/horizon.akgec/'>Team Horizon Instagram</a>).<br/><br/>Fill the given below form in case of any queries:<br/><a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://docs.google.com/forms/d/e/1FAIpQLSe8k570vDVMd-W0VgvwtU2hKJxSCakEi2HNhW1xlLn1xl4dvA/viewform'>Click here to access the query form</a>",
     },
@@ -284,7 +285,7 @@ function LandingPage() {
           </div>
           <div className="landFlex">
             <p className="landText1 overflow-hidden" >
-              Students' Creative & Oratory Learning Skills 2024
+              Students' Creative & Oratory Learning Skills 2025
             </p>
             <p className="landText2">
               Prestigious National Level Technical Paper Presentation organized
@@ -427,7 +428,7 @@ function LandingPage() {
         <div className="landScrolls">
           <div id="text1Border">
             <p className="aboutScroll" id="timelineHeading">
-              SCROLLS' 23
+              SCROLLS' 24
             </p>
           </div>
           <div style={{ width: "100%", marginTop: "4rem" }}>

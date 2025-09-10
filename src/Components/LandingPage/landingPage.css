@@ -1678,6 +1678,7 @@ body {
     display: none;
     }
 button.slick-next {
+  
     height:10rem;
     width:4rem;
     background: url(/src/Components/Assets/arrow2.svg);
