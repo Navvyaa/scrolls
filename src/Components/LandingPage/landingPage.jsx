@@ -271,7 +271,7 @@ function LandingPage() {
       question:
         "Where can participants find the latest updates regarding Scrolls ‘25?",
       answer:
-        "For the latest updates, follow the official Instagram page of Scrolls (<a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://www.instagram.com/scrolls.akgec/'>Scrolls Instagram</a>) OR Team Horizon (<a target='_blank' style='text-decoration:underline; color:#FAC949;' href='https://www.instagram.com/horizon.akgec/'>Team Horizon Instagram</a>).<br/><br/>Fill the given below form in case of any queries:<br/><a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://docs.google.com/forms/d/e/1FAIpQLSe8k570vDVMd-W0VgvwtU2hKJxSCakEi2HNhW1xlLn1xl4dvA/viewform'>Click here to access the query form</a>",
+        "For the latest updates, follow the official Instagram page of Scrolls (<a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://www.instagram.com/scrolls.akgec/'>Scrolls Instagram</a>) OR Team Horizon (<a target='_blank' style='text-decoration:underline; color:#FAC949;' href='https://www.instagram.com/horizon.akgec/'>Team Horizon Instagram</a>).<br/><br/>Fill the given below form in case of any queries:<br/><a target='_blank' style='text-decoration:underline; color:#FAC949' href='https://docs.google.com/forms/d/e/1FAIpQLScLAJM03xEGgmCgHwyNcpGxGXtOHzNgfuRjmWabu_jl3SCu1A/viewform?usp=sharing&ouid=107278240654037608151'>Click here to access the query form</a>",
     },
   ];
 

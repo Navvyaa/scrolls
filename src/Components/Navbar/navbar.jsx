@@ -164,7 +164,7 @@ function Navbar(props) {
 
     if (title === "") {
       document.getElementsByClassName("liRegister")[0].style.display = "block";
-      document.getElementsByClassName("liLogin")[0].style.display = "block";
+      document.getElementsByClassName("liLogin")[0].style.display = "none";
       document.getElementById("ca").style.display = "none";
       document.getElementById("team").style.display = "none";
       document.getElementById("liTitle").style.display = "none";
@@ -172,7 +172,7 @@ function Navbar(props) {
       document.getElementsByClassName("navFlex1")[0].style.display = "flex";
       document.getElementsByClassName("navFlexLogin")[0].style.display = "none";
       document.getElementsByClassName("navRegister")[0].style.display = "block";
-      document.getElementsByClassName("navLogin")[0].style.display = "block";
+      document.getElementsByClassName("navLogin")[0].style.display = "none";
       document.getElementsByClassName("navDbT")[0].style.display = "none";
       document.getElementsByClassName("navFlex3")[0].style.display = "none";
       document.getElementById("acc").style.display = "none";

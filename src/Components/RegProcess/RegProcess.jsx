@@ -14,10 +14,11 @@ const RegProcess = () => {
     return <>
         <Navbar pg="process"/>
         <div className="regProcess">
-            <p id="process">Registration Process</p>
-            <img src={image1} alt='' className="carouselImg" />
+            {/* <p id="process">Registration Process</p> */}
+            <p id="process">Registrations will be live soon.</p>
+            {/* <img src={image1} alt='' className="carouselImg" />
             <img src={image2} alt='' className="carouselImg" />
-            <img src={image3} alt='' className="carouselImg" />
+            <img src={image3} alt='' className="carouselImg" /> */}
             {/* <div className="carousel">
                 <Carousel showThumbs={false} showArrows={true} autoPlay={false} interval={2000}>
 

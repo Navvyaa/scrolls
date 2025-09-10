@@ -13,7 +13,7 @@ function Footer() {
                 <div id="footFlex1">
                     <p className="footHead overflow-hidden">Scrolls<span className="navDot">.</span></p>
                     <p className="footHead2">Any questions or remarks? Just write us a message.</p>
-                    <p id="formLink"><a target="_blank" rel="noreferrer" className="underline" style={{color:"#FAC949"}} href="https://docs.google.com/forms/d/e/1FAIpQLSe8k570vDVMd-W0VgvwtU2hKJxSCakEi2HNhW1xlLn1xl4dvA/viewform">Query Form</a></p>
+                    <p id="formLink"><a target="_blank" rel="noreferrer" className="underline" style={{color:"#FAC949"}} href="https://docs.google.com/forms/d/e/1FAIpQLScLAJM03xEGgmCgHwyNcpGxGXtOHzNgfuRjmWabu_jl3SCu1A/viewform?usp=sharing&ouid=107278240654037608151">Query Form</a></p>
                 </div>
                 <div id="footFlex2">
     <p id="telephone">Contact</p>
