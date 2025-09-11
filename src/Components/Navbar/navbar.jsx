@@ -389,7 +389,8 @@ function Navbar(props) {
               className="md:w-[2.2rem] h-[2.2rem] w-[2rem] min-w-[2rem] min-h-[2.2rem] md:h-[2.4rem]"
             />
             <p className="navScroll">
-              SCROLLS<span className="navDot">.</span>
+              SCROLLS
+             
             </p>
           </div>
         </NavLink>
