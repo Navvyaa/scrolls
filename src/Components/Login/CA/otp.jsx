@@ -38,7 +38,7 @@ function Otp() {
     const handleSubmit = 
     () => {
       if (!executeRecaptcha) {
-        console.log("recaptcha not loaded");
+        console.log("recaptca not loaded");
         return;
       }
       executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {

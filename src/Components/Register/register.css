@@ -288,10 +288,12 @@ margin-right: 3%;
     margin-left: 1.5vw;
     margin-top: 20px;
     padding: 10px 0;
+    display: none;
 }
 
 #recaptcha iframe
 {
+    display: none;
      min-width: 300px;
     transform: scale(0.77);
         -webkit-transform: scale(0.77);
@@ -590,6 +592,7 @@ margin-right: 3%;
 
     #recaptcha {
         margin-left: 4vw;
+        display: none;
     }
 
     .forgotPass {
@@ -614,6 +617,7 @@ margin-right: 3%;
 @media(max-width:2000px) and (min-width:1500px) {
     #recaptcha {
         margin-left: 3vw;
+        display: none;
     }
 
     #wrongName,
@@ -865,6 +869,7 @@ margin-right: 3%;
 @media(max-width:1000px) {
     #recaptcha {
         margin-left: 0vw;
+        display: none;
     }
 
     .forgotPass {
@@ -1142,7 +1147,8 @@ margin-right: 3%;
     }
 
     #recaptcha {
-        margin-left: 0vw;
+        margin-left: 0vw;        
+        display: none;
     }
 
     .otpInput {
@@ -1152,7 +1158,8 @@ margin-right: 3%;
 
 @media(max-width:690px) {
     #recaptcha {
-        margin-left: 0vw;
+        margin-left: 0vw;        
+        display: none;
     }
 }
 
@@ -1218,7 +1225,9 @@ margin-right: 3%;
 
     #recaptcha {
         margin-left: -1.5vw;
-        transform: scale(0.9)
+        transform: scale(0.9);
+        
+        display: none;
     }
 
     /* #teamReg {
@@ -1293,6 +1302,8 @@ margin-right: 3%;
 @media(max-width:530px) {
     #recaptcha {
         margin-left: -3vw;
+        
+        display: none;
     }
 
     #memberReg {
@@ -1372,6 +1383,8 @@ margin-right: 3%;
 @media(max-width:470px) {
     #recaptcha {
         margin-left: -2vw;
+        
+        display: none;
     }
 }
 
@@ -1453,7 +1466,9 @@ margin-right: 3%;
 
     #recaptcha {
         margin-left: -7vw;
-        transform: scale(0.8)
+        transform: scale(0.8);
+        
+        display: none;
     }
 
     .forgotPass {
@@ -1527,6 +1542,8 @@ margin-right: 3%;
 
     #recaptcha {
         margin-left: -7vw;
+        
+        display: none;
     }
 }
 
@@ -1534,7 +1551,9 @@ margin-right: 3%;
 
     #recaptcha {
         margin-left: -10vw;
-        transform: scale(0.7)
+        transform: scale(0.7);
+        
+        display: none;
     }
 
     #back {
@@ -1565,6 +1584,8 @@ margin-right: 3%;
 @media(max-width:360px) {
     #recaptcha {
         margin-left: -13vw;
+        
+        display: none;
         /* margin-left: 0; */
     }
 
