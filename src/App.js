@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import LandingPage from "./Components/LandingPage/landingPage";
-import { BrowserRouter,  Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TeamDB from "./Components/Dashboard/teamDB";
 import CaDB from "./Components/Dashboard/CaDB";
 import Update from "./Components/updates/update";
@@ -60,9 +60,37 @@ function App() {
 
   // });
 
+
+  useEffect(() => {
+    function rescaleCaptcha() {
+      const captcha = document.querySelector('.g-recaptcha');
+      if (captcha) {
+        const width = captcha.parentElement.offsetWidth;
+        let scale;
+        if (width < 302) {
+          scale = width / 302;
+        } else {
+          scale = 1.0;
+        }
+
+        captcha.style.transform = `scale(${scale})`;
+        captcha.style.WebkitTransform = `scale(${scale})`;
+        captcha.style.transformOrigin = '0 0';
+        captcha.style.WebkitTransformOrigin = '0 0';
+      }
+    }
+
+    rescaleCaptcha();
+    window.addEventListener('resize', rescaleCaptcha);
+    
+    return () => {
+      window.removeEventListener('resize', rescaleCaptcha);
+    };
+  }, []);
+
   return <>
-                        
-  
+
+
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<LandingPage />} />

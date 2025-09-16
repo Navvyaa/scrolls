@@ -175,7 +175,7 @@ function Member(props) {
     const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
     const [valu, setValu] = useState('')
     const [token, setToken] = useState(false);
-    const key = "6Lf7i6gpAAAAACYEnXjxMVcz6Hqu2No6daGGVUpb"
+    const key = "6Lf8gCArAAAAABPccOnj3uLVCQc3DayBS35evQHV"
     const onVerify = (token) => {
         setValu(token)
         console.log(token);
@@ -188,21 +188,21 @@ function Member(props) {
             setCount(false)
     }, [valu])
 
-    // useEffect(() => {
-    //     if (bool.one && bool.two && bool.four && bool.six && input.gender && input.course && input.college && input.year) {
-    //         setCount(true)
-    //     }
-    // }, [bool, input])
+    useEffect(() => {
+        if (bool.one && bool.two && bool.four && bool.six && input.gender && input.course && input.college && input.year) {
+            setCount(true)
+        }
+    }, [bool, input])
 
     // change captcha value
-    // function changeValu() {
-    //     setValu('')
-    // }
-    // useEffect(() => {
-    //     if (bool.one && bool.two && bool.four && bool.six && input.gender && input.course && input.college && input.year) {
-    //         setTimeout(changeValu, 1000)
-    //     }
-    // })
+    function changeValu() {
+        setValu('')
+    }
+    useEffect(() => {
+        if (bool.one && bool.two && bool.four && bool.six && input.gender && input.course && input.college && input.year) {
+            setTimeout(changeValu, 1000)
+        }
+    })
     const [load, setLoad] = useState(false)
 
 const handleSubmit = 
@@ -459,10 +459,10 @@ const handleSubmit =
                 <p className="teamError">{msg4}</p>
                 <button className="regButton" type="submit">Register</button>
                      
-                    {/* <ReCAPTCHA size="normal"
+                    <ReCAPTCHA size="normal"
                         sitekey={key}
-                        onChange={onChange}
-                    /> */}
+                        onChange={onVerify}
+                    />
             </form >
 
         </div >

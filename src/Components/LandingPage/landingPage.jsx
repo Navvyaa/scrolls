@@ -17,13 +17,14 @@ import {
 } from "@mui/material";
 import {
   dialog0,
+  dialog1,
   dialog16,
   dialog17,
   dialog18,
   dialog19,
   // dialog20,
 } from "../../Redux/step";
-// import Register from "../Register/Register";
+import Register from "../Register/Register";
 import Member from "../Register/member";
 import Team from "../Register/team";
 import CA1 from "../Register/CA1";
@@ -78,6 +79,7 @@ function LandingPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const step = useSelector((s) => s.step);
+  const [showRegister, setShowRegister] = useState(false);
   const { title, processBool, modal } = useSelector((s) => s.heading);
   const [process, setProces] = useState(false);
 
@@ -301,7 +303,16 @@ function LandingPage() {
             >
               Register Now
             </button>
-            {/* <button className="landRegister" id="toReg" onClick={() => { setDialogg(true); dispatch(dialog1()) }} >Register Now</button> */}
+            {/* <button
+              className="landRegister"
+              id="toReg"
+              onClick={() => {
+                setShowRegister(true);
+                dispatch(dialog1());
+              }}
+            >
+              Register Now
+            </button> */}
             <button
               className="landRegister"
               id="toDash"
@@ -684,7 +695,14 @@ function LandingPage() {
       {loading ? (
         <Spinner animation="border" variant="dark" id="loadSpinner" />
       ) : null}
-      <ToastContainer />
+      <ToastContainer autoClose={2000} />
+      {showRegister && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <Register />
+          </div>
+        </div>
+      )}
     </>
   );
 }

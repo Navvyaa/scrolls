@@ -12,13 +12,13 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<>
-{/* <GoogleReCaptchaProvider reCaptchaKey="6Lf7i6gpAAAAACYEnXjxMVcz6Hqu2No6daGGVUpb"> */}
+<GoogleReCaptchaProvider reCaptchaKey="6Lf8gCArAAAAABPccOnj3uLVCQc3DayBS35evQHV">
     <Provider store={store}>
     <PersistGate persistor={persistor} >
     <App />
     </PersistGate>
     </Provider>
-    {/* </GoogleReCaptchaProvider> */}
+    </GoogleReCaptchaProvider>
     </>
 );
 

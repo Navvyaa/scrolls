@@ -10,11 +10,11 @@ function Register() {
     return <>
         <div className="register" id="regDiv">
             <div className="regFlex">
-                <img className="arrow" src={arrow} alt="" onClick={() => { dispatch(dialog0()) }}/>
+                <img className="arrow" src={arrow} alt="" onClick={() => { dispatch(dialog0()) }} />
                 <p className="heading" id="registerAs">Register as</p>
                 <img className="cross" alt="" src={cross} onClick={() => { dispatch(dialog0()) }} />
             </div>
-            <button className="asRegister" id="regMember" onClick={() => {dispatch(dialog2()) }} >Member</button>
+            <button className="asRegister" id="regMember" onClick={() => { dispatch(dialog2()) }} >Member</button>
             <button className="asRegister" onClick={() => { dispatch(dialog3()) }} >Team</button>
             <button className="asRegister" id="CA" onClick={() => { dispatch(dialog4()) }} >Campus Ambassador</button>
         </div>
