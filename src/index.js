@@ -7,12 +7,12 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/es/integration/react';
 import { persistor } from './Redux/store';
 import store from './Redux/store';
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 // store.subscribe(()=>console.log(store.getState()))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<>
-<GoogleReCaptchaProvider reCaptchaKey="6LeOm8srAAAAAIAg3DGbn-jRysSDMImgEgU-v5Fz">
+<GoogleReCaptchaProvider reCaptchaKey="6LfsmMsrAAAAAHPfr5uNDiu3jG3nr6RmEv2D_cZv" scriptProps={{ async: true, defer: true, appendTo: 'head' }}>
     <Provider store={store}>
     <PersistGate persistor={persistor} >
     <App />
