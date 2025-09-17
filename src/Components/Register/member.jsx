@@ -11,12 +11,9 @@ import { dialog0, dialog1, dialog16 } from "../../Redux/step";
 import { RegMemberThunk } from "../../Redux/registerSlice";
 import { Spinner } from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { useCallback } from "react";
 
 function Member(props) {
 
-    const { executeRecaptcha } = useGoogleReCaptcha();
     const [loading, setLoading] = useState(false)
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.register)
@@ -61,6 +58,7 @@ function Member(props) {
     }
 
     useEffect(() => {
+        
         if (rightName.test(input.name)) {
             document.getElementById("wrongName").style.display = "none";
             setBool({ ...bool, one: true })
@@ -171,55 +169,41 @@ function Member(props) {
         setInput({ ...input, gender: gender })
     }
 
-    //captcha
-    const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
-    const [valu, setValu] = useState('')
-    const [token, setToken] = useState(false);
-    const key = "6Lf8gCArAAAAABPccOnj3uLVCQc3DayBS35evQHV"
-    const onVerify = (token) => {
-        setValu(token)
-        console.log(token);
-    }
-
-    const [count, setCount] = useState(false)
-
-    useEffect(() => {
-        if (valu != '')
-            setCount(false)
-    }, [valu])
-
-    useEffect(() => {
-        if (bool.one && bool.two && bool.four && bool.six && input.gender && input.course && input.college && input.year) {
-            setCount(true)
-        }
-    }, [bool, input])
-
-    // change captcha value
-    function changeValu() {
-        setValu('')
-    }
-    useEffect(() => {
-        if (bool.one && bool.two && bool.four && bool.six && input.gender && input.course && input.college && input.year) {
-            setTimeout(changeValu, 1000)
-        }
-    })
+    // reCAPTCHA state
+    const [recaptchaValue, setRecaptchaValue] = useState(null);
+    const [recaptchaError, setRecaptchaError] = useState('');
+    const recaptchaKey = "6LeKgcsrAAAAAHpynXdlT1_v7UvNxJiDEYBTtWZp";
+    
+    const onRecaptchaChange = (value) => {
+        setRecaptchaValue(value);
+        setRecaptchaError('');
+    };
+    
+    const onRecaptchaExpired = () => {
+        setRecaptchaValue(null);
+        setRecaptchaError('reCAPTCHA has expired. Please verify again.');
+    };
+    
+    const onRecaptchaError = () => {
+        setRecaptchaValue(null);
+        setRecaptchaError('Error verifying reCAPTCHA. Please try again.');
+    };
     const [load, setLoad] = useState(false)
 
-const handleSubmit = 
-    (e) => {
-      e.preventDefault();
-      if (!executeRecaptcha) {
-        console.log("recaptcha not loaded");
+const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Validate reCAPTCHA
+    if (!recaptchaValue) {
+        setRecaptchaError('Please verify that you are not a robot');
         return;
-      }
-      executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
-        console.log(gReCaptcha, "recaptcha");
-        RegAsMember(gReCaptcha);
-
-      });
     }
+    
+    // Proceed with registration
+    RegAsMember(recaptchaValue);
+}
 
-    const RegAsMember = (valuee)=> {
+    const RegAsMember = (recaptchaToken) => {
         if (!input.gender) {
             setMsg1("Chhose a gender")
         }
@@ -245,7 +229,7 @@ const handleSubmit =
         console.log(bool.year);
         if (bool.one && bool.two && bool.four && bool.six && input.gender && bool.course && input.college && bool.year) {
             setLoad(true);
-            if (valuee != '') {
+            if (recaptchaToken) {
                 var data;
                 if (input.branch) {
                     if (input.course == "others") {
@@ -258,7 +242,7 @@ const handleSubmit =
                             "course": input.otherCourse,
                             "college": input.college,
                             "year_of_study": input.year,
-                            "g-recaptcha-response": valuee,
+                            "g-recaptcha-response": recaptchaToken,
                             "branch": input.branch
                         }
                     }
@@ -272,7 +256,7 @@ const handleSubmit =
                             "course": input.course,
                             "college": input.college,
                             "year_of_study": input.year,
-                            "g-recaptcha-response": valuee,
+                            "g-recaptcha-response": recaptchaToken,
                             "branch": input.branch
                         }
                     }
@@ -288,7 +272,7 @@ const handleSubmit =
                             "course": input.otherCourse,
                             "college": input.college,
                             "year_of_study": input.year,
-                            "g-recaptcha-response": valuee
+                            "g-recaptcha-response": recaptchaToken
                         }
                     }
                     else {
@@ -301,13 +285,13 @@ const handleSubmit =
                             "course": input.course,
                             "college": input.college,
                             "year_of_study": input.year,
-                            "g-recaptcha-response": valuee
+                            "g-recaptcha-response": recaptchaToken
                         }
                     }
                 }
     
-                dispatch(RegMemberThunk(data)).
-                    then((res) => {
+                dispatch(RegMemberThunk(data))
+                    .then((res) => {
                         var y = res.payload.data.msg.replace(
                             /\w\S*/g,
                             function (txt) {
@@ -322,21 +306,7 @@ const handleSubmit =
                                 theme: "light",
                                 autoClose: 5000,
                             });
-                            toast.success("Proceed to register as a Team ( atleast 2 members are required )", {
-                                position: "top-right",
-                                theme: "light",
-                                autoClose: 5000,
-                            });
-                        }
-                        else if (res.payload.status === 429) {
-                            toast.error("You have attempted too many times Today, please try again tomorrow", {
-                                position: "top-right",
-                                theme: "light",
-                                autoClose: 5000,
-                            });
-                        }
-                        else {
-                            toast.error(y, {
+                            toast.success("Proceed to register as a Team ( at least 2 members are required )", {
                                 position: "top-right",
                                 theme: "light",
                                 autoClose: 5000,
@@ -344,6 +314,13 @@ const handleSubmit =
                         }
                     })
                     .catch((err) => {
+                        console.error("Registration error:", err);
+                        setLoad(false);
+                        toast.error("Registration failed. Please try again.", {
+                            position: "top-right",
+                            theme: "light",
+                            autoClose: 5000,
+                        });
                     })
             }
         }
@@ -459,9 +436,13 @@ const handleSubmit =
                 <p className="teamError">{msg4}</p>
                 <button className="regButton" type="submit">Register</button>
                      
-                    <ReCAPTCHA size="normal"
-                        sitekey={key}
-                        onChange={onVerify}
+                    <ReCAPTCHA 
+                        sitekey={recaptchaKey}
+                        onChange={onRecaptchaChange}
+                        onExpired={onRecaptchaExpired}
+                        onErrored={onRecaptchaError}
+                        size="normal"
+                        theme="light"
                     />
             </form >
 
