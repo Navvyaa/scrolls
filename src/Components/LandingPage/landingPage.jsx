@@ -552,7 +552,7 @@ function LandingPage() {
               >
                 Team
               </button>
-              <button
+              {/* <button
                 className="asRegister"
                 id="CA"
                 onClick={() => {
@@ -560,7 +560,7 @@ function LandingPage() {
                 }}
               >
                 Campus Ambassador
-              </button>
+              </button> */}
             </div>
           </Dialog>
           <Dialog
