@@ -181,28 +181,7 @@ function Member(props) {
         console.log(token);
     }
 
-    const [count, setCount] = useState(false)
-
-    useEffect(() => {
-        if (valu != '')
-            setCount(false)
-    }, [valu])
-
-    useEffect(() => {
-        if (bool.one && bool.two && bool.four && bool.six && input.gender && input.course && input.college && input.year) {
-            setCount(true)
-        }
-    }, [bool, input])
-
-    // change captcha value
-    function changeValu() {
-        setValu('')
-    }
-    useEffect(() => {
-        if (bool.one && bool.two && bool.four && bool.six && input.gender && input.course && input.college && input.year) {
-            setTimeout(changeValu, 1000)
-        }
-    })
+    // removed auto-clearing of v2 token so it persists until submit
     const [load, setLoad] = useState(false)
 
 const handleSubmit = 
