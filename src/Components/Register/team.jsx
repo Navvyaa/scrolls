@@ -220,7 +220,7 @@ function Team(props) {
                 <p className="regName">Team Name</p>
                 <input required type="text" className="regInputname" placeholder="Enter team name" value={team.name} onChange={(e) => { setTeam({ ...team, name: e.target.value }) }} />
                 <p className="regName">Team Size</p>
-                <select required className="regInputname" value={team.size} onChange={(e) => { setTeam({ ...team, size: e.target.value }) }}>
+                <select required className="regInputname" value={team.size} onChange={(e) => { setTeam({ ...team, size: parseInt(e.target.value, 10) }) }}>
                     <option value="" >--select--</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
