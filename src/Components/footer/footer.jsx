@@ -11,7 +11,7 @@ function Footer() {
         <div className="landFooter">
             <div id="footer">
                 <div id="footFlex1">
-                    <p className="footHead overflow-hidden">Scrolls<span className="navDot">.</span></p>
+                    <p className="footHead overflow-hidden">Scrolls</p>
                     <p className="footHead2">Any questions or remarks? Just write us a message.</p>
                     <p id="formLink"><a target="_blank" rel="noreferrer" className="underline" style={{color:"#FAC949"}} href="https://docs.google.com/forms/d/e/1FAIpQLScLAJM03xEGgmCgHwyNcpGxGXtOHzNgfuRjmWabu_jl3SCu1A/viewform?usp=sharing&ouid=107278240654037608151">Query Form</a></p>
                 </div>
