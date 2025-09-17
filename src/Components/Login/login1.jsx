@@ -38,14 +38,14 @@ function Login1() {
         >
           Team
         </button>
-        <button
+        {/* <button
           className="asRegister"
           onClick={() => {
             dispatch(dialog7());
           }}
         >
           Campus Ambassador
-        </button>
+        </button> */}
       </div>
     </>
   );

@@ -6,18 +6,16 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from "react-redux"
 import { FgtTeamThunk } from "../../../Redux/loginSlice";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { dialog12, dialog0, dialog13, dialog11 } from "../../../Redux/step";
 import ReCAPTCHA from "react-google-recaptcha";
-import {
-    GoogleReCaptchaProvider,
-    GoogleReCaptcha
-} from 'react-google-recaptcha-v3';
-import { useCallback } from "react";
 
 function ForgotTeam() {
 
-    const {executeRecaptcha} = useGoogleReCaptcha();
+    const [valu, setValu] = useState('')
+    const key = "6LeKgcsrAAAAAHpynXdlT1_v7UvNxJiDEYBTtWZp"
+    const onVerify = (token) => {
+        setValu(token)
+    }
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.login)
     const [email, setEmail] = useState("")
@@ -37,18 +35,18 @@ function ForgotTeam() {
 
     const [load, setLoad] = useState(false)
 
-    const handleSubmit = 
-    (e) => {
-      e.preventDefault();
-      if (!executeRecaptcha) {
-        console.log("recaptcha not loaded");
-        return;
-      }
-      executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
-        console.log(gReCaptcha, "recaptcha");
-        ForgotPassword(gReCaptcha);
-
-      });
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Use v2 checkbox token exclusively
+        if (valu && valu !== '') {
+            ForgotPassword(valu);
+            return;
+        }
+        toast.error("Please complete the reCAPTCHA checkbox before submitting.", {
+            position: "top-right",
+            theme: "light",
+            autoClose: 4000,
+        });
     }
 
     function ForgotPassword(valu) {
@@ -59,74 +57,75 @@ function ForgotTeam() {
         if (bool) {
             setLoad(true)
             localStorage.setItem("login_email", email);
-        dispatch(FgtTeamThunk(data)).
-            then((res) => {
-                setLoad(false)
-                var y = res.payload.data.msg.replace(
-                    /\w\S*/g,
-                    function (txt) {
-                        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            dispatch(FgtTeamThunk(data)).
+                then((res) => {
+                    setLoad(false)
+                    var y = res.payload.data.msg.replace(
+                        /\w\S*/g,
+                        function (txt) {
+                            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                        }
+                    );
+
+                    if (res.payload.status == 400) {
+                        toast.error(y, {
+                            position: "top-right",
+                            theme: "light",
+                            autoClose: 5000,
+                        });
                     }
-                );
+                    if (res.payload.status == 201) {
+                        dispatch(dialog13())
+                        toast.success(y, {
+                            position: "top-right",
+                            theme: "light",
+                            autoClose: 5000,
+                        });
+                    }
+                    if (res.payload.status === 429) {
+                        toast.error("You have attempted too many times Today, please try again tomorrow", {
+                            position: "top-right",
+                            theme: "light",
+                            autoClose: 5000,
+                        });
+                    }
+                })
+        }
+    }
+    // if (token && email && bool) {
+    //     dispatch(FgtTeamThunk(data)).
+    //         then((res) => {
+    //             var y = res.payload.data.msg.replace(
+    //                 /\w\S*/g,
+    //                 function (txt) {
+    //                     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    //                 }
+    //             );
 
-                if (res.payload.status == 400) {
-                    toast.error(y, {
-                        position: "top-right",
-                        theme: "light",
-                        autoClose: 5000,
-                    });
-                }
-                if (res.payload.status == 201) {
-                    dispatch(dialog13())
-                    toast.success(y, {
-                        position: "top-right",
-                        theme: "light",
-                        autoClose: 5000,
-                    });
-                }
-                if (res.payload.status === 429) {
-                    toast.error("You have attempted too many times Today, please try again tomorrow", {
-                        position: "top-right",
-                        theme: "light",
-                        autoClose: 5000,
-                    });
-                }
-            })
-    }}
-        // if (token && email && bool) {
-        //     dispatch(FgtTeamThunk(data)).
-        //         then((res) => {
-        //             var y = res.payload.data.msg.replace(
-        //                 /\w\S*/g,
-        //                 function (txt) {
-        //                     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-        //                 }
-        //             );
-
-        //             if (res.payload.status == 400) {
-        //                 toast.error(y, {
-        //                     position: "top-right",
-        //                     theme: "light",
-        //                     autoClose: 5000,
-        //                 });
-        //             }
-        //             if (res.payload.status == 201) {
-        //                 dispatch(dialog13())
-        //                 toast.success(y, {
-        //                     position: "top-right",
-        //                     theme: "light",
-        //                     autoClose: 5000,
-        //                 });
-        //             }
-        //             if (res.payload.status === 429) {
-        //                 toast.error("You have attempted too many times Today, please try again tomorrow", {
-        //                     position: "top-right",
-        //                     theme: "light",
-        //                     autoClose: 5000,
-        //                 });
-        //             }
-        //         })
-        // }
+    //             if (res.payload.status == 400) {
+    //                 toast.error(y, {
+    //                     position: "top-right",
+    //                     theme: "light",
+    //                     autoClose: 5000,
+    //                 });
+    //             }
+    //             if (res.payload.status == 201) {
+    //                 dispatch(dialog13())
+    //                 toast.success(y, {
+    //                     position: "top-right",
+    //                     theme: "light",
+    //                     autoClose: 5000,
+    //                 });
+    //             }
+    //             if (res.payload.status === 429) {
+    //                 toast.error("You have attempted too many times Today, please try again tomorrow", {
+    //                     position: "top-right",
+    //                     theme: "light",
+    //                     autoClose: 5000,
+    //                 });
+    //             }
+    //         })
+    // }
 
     const [timer, setTimer] = useState(10)
     useEffect(() => {
@@ -168,9 +167,31 @@ function ForgotTeam() {
             <form className='allForm' onSubmit={handleSubmit} id="loginForm">
                 <p className="forgotText">We’ll send you a One Time Password on this email.</p>
                 <p className="regName">Email ID</p>
-                <input type="text" className="regInputname" required placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <p id="wrongEmailLog1">Please enter a valid Email address</p>
-                <button className="regButton" type="submit" >Continue</button>
+                <input
+                    type="email"
+                    className="regInputname"
+                    required
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <p id="wrongEmailLog1" style={{ display: 'none', color: 'red', fontSize: '12px' }}>Please enter a valid Email address</p>
+
+                {/* reCAPTCHA v2 Widget */}
+                <ReCAPTCHA
+                    size="normal"
+                    sitekey={key}
+                    onChange={onVerify}
+                    style={{ margin: '15px 0' }}
+                />
+
+                <button
+                    className="regButton"
+                    type="submit"
+                    disabled={!bool}
+                >
+                    Continue
+                </button>
             </form>
         </div>
         <ToastContainer />

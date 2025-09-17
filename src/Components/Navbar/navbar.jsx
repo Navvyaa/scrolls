@@ -164,7 +164,7 @@ function Navbar(props) {
 
     if (title === "") {
       document.getElementsByClassName("liRegister")[0].style.display = "block";
-      document.getElementsByClassName("liLogin")[0].style.display = "none";
+      document.getElementsByClassName("liLogin")[0].style.display = "block";
       document.getElementById("ca").style.display = "none";
       document.getElementById("team").style.display = "none";
       document.getElementById("liTitle").style.display = "none";
@@ -172,7 +172,7 @@ function Navbar(props) {
       document.getElementsByClassName("navFlex1")[0].style.display = "flex";
       document.getElementsByClassName("navFlexLogin")[0].style.display = "none";
       document.getElementsByClassName("navRegister")[0].style.display = "block";
-      document.getElementsByClassName("navLogin")[0].style.display = "none";
+      document.getElementsByClassName("navLogin")[0].style.display = "block";
       document.getElementsByClassName("navDbT")[0].style.display = "none";
       document.getElementsByClassName("navFlex3")[0].style.display = "none";
       document.getElementById("acc").style.display = "none";
@@ -252,7 +252,7 @@ function Navbar(props) {
           );
         }
       })
-      .catch((err) => {});
+      .catch((err) => { });
   }
 
   function handleProcessStop() {
@@ -354,7 +354,7 @@ function Navbar(props) {
             {" "}
             <div className=" ">
               <button
-              
+
                 className="liRegister text-black !important"
                 onClick={() => {
                   RegOpen();
@@ -524,9 +524,9 @@ function Navbar(props) {
                 <NavLink to="/rules">
                   <li>Rules</li>
                 </NavLink>
-                <NavLink to="/ca">
+                {/* <NavLink to="/ca">
                   <li>CA</li>
-                </NavLink>
+                </NavLink> */}
                 <NavLink to="/result">
                   <li>Results</li>
                 </NavLink>
@@ -623,7 +623,7 @@ function Navbar(props) {
               Rules
             </p>
           </NavLink>
-          <NavLink to="/ca">
+          {/* <NavLink to="/ca">
             {" "}
             <p
               style={{ color: props.pg === "ca" ? "#fac949" : "" }}
@@ -632,7 +632,7 @@ function Navbar(props) {
             >
               CA
             </p>
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/result">
             <p
               style={{ color: props.pg === "res" ? "#fac949" : "" }}
@@ -676,9 +676,9 @@ function Navbar(props) {
                 <NavLink to="/rules">
                   <li>Rules</li>
                 </NavLink>
-                <NavLink to="/ca">
+                {/* <NavLink to="/ca">
                   <li>CA</li>
-                </NavLink>
+                </NavLink> */}
                 <NavLink to="/result">
                   <li>Results</li>
                 </NavLink>

@@ -7,12 +7,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from "react-redux"
 import { dialog7, dialog0, dialog9 } from "../../../Redux/step";
 import { FgtCAThunk } from "../../../Redux/loginSlice";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
+/* global grecaptcha */
 
 function Forgot() {
 
-    const {executeRecaptcha} = useGoogleReCaptcha();
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.login)
     const [email, setEmail] = useState("")
@@ -30,20 +29,15 @@ function Forgot() {
         }
     }, [email]);
 
-    const handleSubmit = 
-    (e) => {
-      e.preventDefault();
-      if (!executeRecaptcha) {
-        console.log("recaptcha not loaded");
-        return;
-      }
-      executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
-        console.log(gReCaptcha, "recaptcha");
-        ForgotPassword(gReCaptcha);
-
-      });
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const recaptchaResponse = grecaptcha.getResponse();
+        if (!recaptchaResponse) {
+            console.log("Please complete the reCAPTCHA");
+            return;
+        }
+        ForgotPassword(recaptchaResponse);
     }
-   
 
     function ForgotPassword(valu) {
         const data = {
