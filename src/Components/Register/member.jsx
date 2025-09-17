@@ -11,12 +11,11 @@ import { dialog0, dialog1, dialog16 } from "../../Redux/step";
 import { RegMemberThunk } from "../../Redux/registerSlice";
 import { Spinner } from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useCallback } from "react";
 
 function Member(props) {
 
-    const { executeRecaptcha } = useGoogleReCaptcha();
+    // Using only reCAPTCHA v2 checkbox now
     const [loading, setLoading] = useState(false)
     const dispatch = useDispatch()
     const reducer = useSelector((s) => s.register)
@@ -209,22 +208,15 @@ function Member(props) {
 const handleSubmit = 
     (e) => {
       e.preventDefault();
-      if (!executeRecaptcha) {
-        toast.error("reCAPTCHA is still loading. Please try again in a moment.", {
-            position: "top-right",
-            theme: "light",
-            autoClose: 4000,
-        });
+      // Use v2 checkbox token exclusively
+      if (valu && valu !== '') {
+        RegAsMember(valu);
         return;
       }
-      executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
-        RegAsMember(gReCaptcha);
-      }).catch(() => {
-        toast.error("Failed to verify reCAPTCHA. Please retry.", {
-            position: "top-right",
-            theme: "light",
-            autoClose: 4000,
-        });
+      toast.error("Please complete the reCAPTCHA checkbox before submitting.", {
+          position: "top-right",
+          theme: "light",
+          autoClose: 4000,
       });
     }
 
