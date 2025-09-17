@@ -210,19 +210,27 @@ const handleSubmit =
     (e) => {
       e.preventDefault();
       if (!executeRecaptcha) {
-        console.log("recaptcha not loaded");
+        toast.error("reCAPTCHA is still loading. Please try again in a moment.", {
+            position: "top-right",
+            theme: "light",
+            autoClose: 4000,
+        });
         return;
       }
       executeRecaptcha("enquiryFormSubmit").then((gReCaptcha) => {
-        console.log(gReCaptcha, "recaptcha");
         RegAsMember(gReCaptcha);
-
+      }).catch(() => {
+        toast.error("Failed to verify reCAPTCHA. Please retry.", {
+            position: "top-right",
+            theme: "light",
+            autoClose: 4000,
+        });
       });
     }
 
     const RegAsMember = (valuee)=> {
         if (!input.gender) {
-            setMsg1("Chhose a gender")
+            setMsg1("Choose a gender")
         }
         else if (!input.course) {
             setMsg2("Select a course")
