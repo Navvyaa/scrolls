@@ -12,7 +12,7 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<>
-<GoogleReCaptchaProvider reCaptchaKey="6LfsmMsrAAAAAHPfr5uNDiu3jG3nr6RmEv2D_cZv">
+<GoogleReCaptchaProvider reCaptchaKey="6LfsmMsrAAAAAHPfr5uNDiu3jG3nr6RmEv2D_cZv" scriptProps={{ async: true, defer: true, appendTo: 'head' }}>
     <Provider store={store}>
     <PersistGate persistor={persistor} >
     <App />
