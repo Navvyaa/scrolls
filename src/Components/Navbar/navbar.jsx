@@ -331,9 +331,9 @@ function Navbar(props) {
           {/* <NavLink to="/faq">
             <li>FAQs</li>
           </NavLink> */}
-          <NavLink id="acc" to="/accommodations">
+          {/* <NavLink id="acc" to="/accommodations">
             <li>Accommodation</li>
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/team_db">
             <li id="team">Dashboard</li>
           </NavLink>
@@ -648,7 +648,7 @@ function Navbar(props) {
             </p>
           </NavLink> */}
 
-          <NavLink to="/accommodations">
+          {/* <NavLink to="/accommodations">
             <p
               style={{ color: props.pg === "acc" ? "#fac949" : "" }}
               id="navCA"
@@ -656,7 +656,7 @@ function Navbar(props) {
             >
               Accommodation
             </p>
-          </NavLink>
+          </NavLink> */}
           <div className="relative lg1:ml-[-2vw] ml-[-7vw] flex flex-col">
             <p
               className="navHead"

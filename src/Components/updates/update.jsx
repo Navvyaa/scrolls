@@ -14,7 +14,7 @@ function Update() {
         <Navbar pg="update"/>
         <div className="updates">
             <p className="dashboard" id="update">Updates</p>
-            <UpdCard text="Registrations will be live soon." head="Registrations" />
+            <UpdCard text="Registrations are live." head="Registrations" />
             {/* <UpdCard text="The deadline of Synopsis submission has been extended till 22nd april 2024" head="Synopsis" /> */}
             {/* <div className="updText">
                 <ul>
