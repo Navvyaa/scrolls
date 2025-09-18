@@ -175,7 +175,7 @@ function Navbar(props) {
       document.getElementsByClassName("navLogin")[0].style.display = "block";
       document.getElementsByClassName("navDbT")[0].style.display = "none";
       document.getElementsByClassName("navFlex3")[0].style.display = "none";
-      document.getElementById("acc").style.display = "none";
+      // document.getElementById("acc").style.display = "none";
     }
   }, [title]);
 
