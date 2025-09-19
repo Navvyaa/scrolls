@@ -408,34 +408,31 @@ function TeamDB() {
             {uplDom === "Electronics and Communication Engineering" ? (
                 <>
                     <option id="option">--select--</option>
-                    <option value="Organic LEDs: Lighting Innovation">Organic LEDs: Lighting Innovation</option>
-                    <option value="Fuel Cell Technology">Fuel Cell Technology</option>
-                    <option value="Hybrid Cars">Hybrid Cars</option>
-                    <option value="Optical Wireless and 5G">Optical Wireless and 5G</option>
+                    <option value="Harnessing Nanotechnology for Clean Energy">Harnessing Nanotechnology for Clean Energy</option>
+                    <option value="Integrated Photonic Devices">Integrated Photonic Devices</option>
+                    <option value="AI-Driven Communication Networks for 5G">AI-Driven Communication Networks for 5G</option>
                     <option value="Smart Antenna">Smart Antenna</option>
                     <option value="Semiconductor Industry Revolution">Semiconductor Industry Revolution</option>
                     <option value="Industrial IoT and Automation">Industrial IoT and Automation</option>
                     <option value="4D Printing Revolution in Electronics">4D Printing Revolution in Electronics</option>
-                    <option value="Bio-Circuits">Bio-Circuits</option>
-                    <option value="AI Vision and Image Processing">AI Vision and Image Processing</option>
-                    <option value="Energy Harvesting Sensors for Sustainable Smart Homes">Energy Harvesting Sensors for Sustainable Smart Homes</option>
-                    <option value="Beyond Silicon: Future Trends">Beyond Silicon: Future Trends</option>
-                    <option value="Quantum Computing in Electronics">Quantum Computing in Electronics</option>
-                    <option value="Bioelectronics in Biomedicine">Bioelectronics in Biomedicine</option>
+                    <option value="Robotic Sensors for Precision Agriculture">Robotic Sensors for Precision Agriculture</option>
+                    <option value="Advanced VLSI Design for High-Performance">Advanced VLSI Design for High-Performance</option>
+                    <option value="Terahertz Communication">Terahertz Communication</option>
+                    <option value="V2X (Vehicle-to-Everything) Communication for Autonomous Cars">V2X (Vehicle-to-Everything) Communication for Autonomous Cars</option>
                 </>
             ) : null}
             {uplDom === "Civil Engineering" ? (
                 <>
                     <option id="option">--select--</option>
-                    <option value="Stressed Ribbon Bridge">Stressed Ribbon Bridge</option>
-                    <option value="Green Building">Green Building</option>
+                    <option value="Landslide Detection Using Remote Sensing">Landslide Detection Using Remote Sensing</option>
+                    <option value="3D Printing in Construction">3D Printing in Construction</option>
                     <option value="Self-Healing Concrete">Self-Healing Concrete</option>
                     <option value="Fiber-Reinforced Concrete">Fiber-Reinforced Concrete</option>
                     <option value="Advanced Earthquake Techniques">Advanced Earthquake Techniques</option>
-                    <option value="Base Isolation Building">Base Isolation Building</option>
+                    <option value="Green Buildings and Net-Zero Energy Design">Green Buildings and Net-Zero Energy Design</option>
                     <option value="AI in Civil Engineering">AI in Civil Engineering</option>
-                    <option value="Intelligent Transport System">Intelligent Transport System</option>
-                    <option value="Mixed Traffic Control">Mixed Traffic Control</option>
+                    <option value="Waste-to-Bricks Technology">Waste-to-Bricks Technology</option>
+                    <option value="Passive Cooling Techniques in Urban Design">Passive Cooling Techniques in Urban Design</option>
                     <option value="Advanced Pavement Design">Advanced Pavement Design</option>
                     <option value="Augmented Reality for Construction">Augmented Reality for Construction</option>
                     <option value="Water Management in Changing Climate">Water Management in Changing Climate</option>
@@ -444,55 +441,55 @@ function TeamDB() {
             {uplDom === "Electrical and Electronics Engineering" ? (
                 <>
                     <option id="option">--select--</option>
-                    <option value="Vehicular Power Electronic Circuits and Charging Systems">Vehicular Power Electronic Circuits and Charging Systems</option>
-                    <option value="Robot Design, Development, and Control">Robot Design, Development, and Control</option>
-                    <option value="Integrating Multiple Energy Sources">Integrating Multiple Energy Sources</option>
+                    <option value="Thermoelectric Generators for Waste Heat Recovery">Thermoelectric Generators for Waste Heat Recovery</option>
+                    <option value="Robot Design, Development and Control">Robot Design, Development and Control</option>
+                    <option value="Solid-State Transformers for Smart Grids">Solid-State Transformers for Smart Grids</option>
+                    <option value="Nano-Engineered Solar Cells">Nano-Engineered Solar Cells</option>
                     <option value="Smart Grids and Sustainable Systems">Smart Grids and Sustainable Systems</option>
-                    <option value="IoT in Power Systems">IoT in Power Systems</option>
-                    <option value="Energy Policies & Standards">Energy Policies & Standards</option>
+                    <option value="Circular Economy for Electronic Waste">Circular Economy for Electronic Waste</option>
                     <option value="Battery Energy Management System">Battery Energy Management System</option>
                     <option value="E-Mobility: Opportunities & Challenges">E-Mobility: Opportunities & Challenges</option>
-                    <option value="Application of AI & ML in Power Stations">Application of AI & ML in Power Stations</option>
+                    <option value="Energy Auditing Using IoT">Energy Auditing Using IoT</option>
                     <option value="Solar Photovoltaic Systems">Solar Photovoltaic Systems</option>
                     <option value="Modeling Control of AC/DC Converters">Modeling Control of AC/DC Converters</option>
-                    <option value="Energy-Efficient Power Electronics">Energy-Efficient Power Electronics</option>
+                    <option value="Hydroelectric Energy: Small-Scale and Off-Grid Applications">Hydroelectric Energy: Small-Scale and Off-Grid Applications</option>
                 </>
             ) : null}
             {uplDom === "Mechanical Engineering" ? (
                 <>
                     <option id="option">--select--</option>
-                    <option value="CAD/CAE: Design Innovation">CAD/CAE: Design Innovation</option>
                     <option value="Self-Healing and Smart Materials: Future of Engineering">Self-Healing and Smart Materials: Future of Engineering</option>
                     <option value="Optimizing Supply Chains: Blockchain for Transparency">Optimizing Supply Chains: Blockchain for Transparency</option>
-                    <option value="Sustainable Manufacturing Solutions">Sustainable Manufacturing Solutions</option>
                     <option value="3D Printing Revolution: Printing Electronics On-Demand">3D Printing Revolution: Printing Electronics On-Demand</option>
-                    <option value="MEMS – Micro Electro Mechanical Systems">MEMS – Micro Electro Mechanical Systems</option>
-                    <option value="Automated Driving: EV & Self-Driving Tech">Automated Driving: EV & Self-Driving Tech</option>
-                    <option value="Friction Stir Welding: Innovation">Friction Stir Welding: Innovation</option>
+                    <option value="MEMS (Micro-Electro-Mechanical Systems)">MEMS (Micro-Electro-Mechanical Systems)</option>
                     <option value="Industry 4.0: Smart Factory">Industry 4.0: Smart Factory</option>
                     <option value="Nanotechnology">Nanotechnology</option>
-                    <option value="Cobots: Collaborative Robots">Cobots: Collaborative Robots</option>
                     <option value="Bioprinting: Organs on Demand">Bioprinting: Organs on Demand</option>
+                    <option value="Kinetic Energy Recovery Systems (KERS) in Vehicles">Kinetic Energy Recovery Systems (KERS) in Vehicles</option>
+                    <option value="Supercritical CO₂ in Power Generation">Supercritical CO₂ in Power Generation</option>
+                    <option value="Autonomous Drones for Inspection and Delivery">Autonomous Drones for Inspection and Delivery</option>
+                    <option value="Bio-Inspired Cooling Systems">Bio-Inspired Cooling Systems</option>
+                    <option value="CAD/CAM in Reverse Engineering">CAD/CAM in Reverse Engineering</option>
                 </>
             ) : null}
             {uplDom === "Computer Science and Information Technology" ? (
                 <>
                     <option id="option">--select--</option>
-                    <option value="Cloud Computing">Cloud Computing</option>
+                    <option value="AI in Healthcare: Diagnosis and Drug Discovery">AI in Healthcare: Diagnosis and Drug Discovery</option>
+                    <option value="Federated Learning">Federated Learning</option>
                     <option value="AI & Cognitive Science">AI & Cognitive Science</option>
-                    <option value="Image Processing (Computer Vision)">Image Processing (Computer Vision)</option>
                     <option value="Deep Learning">Deep Learning</option>
-                    <option value="Machine Learning">Machine Learning</option>
-                    <option value="Augmented Reality(AR), Virtual Reality(VR) & Metaverse Technology">Augmented Reality(AR), Virtual Reality(VR) & Metaverse Technology</option>
-                    <option value="Big Data and Analytics">Big Data and Analytics</option>
-                    <option value="Web 3.0">Web 3.0</option>
-                    <option value="Semantic Analysis of Social Media or E-commerce Data.">Semantic Analysis of Social Media or E-commerce Data.</option>
-                    <option value="Explainable artificial intelligence (XAI)">Explainable artificial intelligence (XAI)</option>
-                    <option value="EV's and Self Driving Revolution">EV's and Self Driving Revolution</option>
+                    <option value="Reinforcement Learning in Robotics">Reinforcement Learning in Robotics</option>
+                    <option value="Image Processing (Computer Vision)">Image Processing (Computer Vision)</option>
+                    <option value="Blockchain for Secure Voting & Identity Management in India">Blockchain for Secure Voting & Identity Management in India</option>
+                    <option value="Deepfake Detection using Multi-Layer CNNs">Deepfake Detection using Multi-Layer CNNs</option>
+                    <option value="Digital Twins: Revolutionizing Brain Research">Digital Twins: Revolutionizing Brain Research</option>
+                    <option value="Retrieval-Augmented Generation (RAG) in LLMs">Retrieval-Augmented Generation (RAG) in LLMs</option>
+                    <option value="Semantic Analysis of Social Media or E-commerce Data">Semantic Analysis of Social Media or E-commerce Data</option>
+                    <option value="Zero Trust Architecture in Cybersecurity">Zero Trust Architecture in Cybersecurity</option>
                     <option value="Bio-Inspired Security for IOT & Edge Computing">Bio-Inspired Security for IOT & Edge Computing</option>
-                    <option value="Quantum computing">Quantum computing</option>
+                    <option value="Quantum Computing">Quantum Computing</option>
                     <option value="Space Exploration">Space Exploration</option>
-                    <option value="Cyber Security">Cyber Security</option>
                 </>
             ) : null}
         </select>
