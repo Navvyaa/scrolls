@@ -3,7 +3,7 @@ import Footer from "../footer/footer"
 import Navbar from "../Navbar/navbar"
 import UpdCard from "./card"
 import "./update.css"
-
+import update from "../Assets/update_post.png"
 function Update() {
 
     useEffect(() => {
@@ -14,7 +14,8 @@ function Update() {
         <Navbar pg="update"/>
         <div className="updates">
             <p className="dashboard" id="update">Updates</p>
-            <UpdCard text="Registrations are live." head="Registrations" />
+            <img src={update} alt="update" className="lg:w-[40%]"/>
+            {/* <UpdCard text="Registrations are live." head="Registrations" /> */}
             {/* <UpdCard text="The deadline of Synopsis submission has been extended till 22nd april 2024" head="Synopsis" /> */}
             {/* <div className="updText">
                 <ul>
