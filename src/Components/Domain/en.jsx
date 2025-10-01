@@ -86,6 +86,12 @@ function DomainEn() {
               <p className="domainText">Small-scale hydro systems harness flowing water to generate electricity for rural and off-grid communities. Unlike large dams, they have minimal environmental impact, lower costs, and adaptability to local conditions. These systems provide sustainable energy access for villages and industries, improving rural development. Advances in turbine design, power electronics, and microgrids make small hydro a practical and eco-friendly solution in the global clean energy mix.</p>
             </div>
           </li>
+          <li>
+            <div id="liItem">
+              <p className="domainHeading">Integrating multiple energy sources Applications</p>
+              <p className="domainText">Integrating multiple energy sources is a key approach in modern power systems to enhance reliability, efficiency, and sustainability. By combining renewable sources like solar, wind, and biomass with conventional systems or storage technologies, energy supply can be balanced against variable demand and fluctuating generation. Hybrid energy systems optimize resource utilization, reduce dependency on fossil fuels, and improve grid stability. With advances in smart grids, control algorithms, and power electronics, integrating diverse sources enables cost-effective, cleaner, and more resilient energy solutions for the future.</p>
+            </div>
+          </li>
         </ul>
       </div>
       <Footer />

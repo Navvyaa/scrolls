@@ -388,21 +388,21 @@ function TeamDB() {
             {uplDom === "Management Science" ? (
                 <>
                     <option id="option">--select--</option>
-                    <option value="Work-Life Integration">Work-Life Integration</option>
+                    <option value="India's Digital Public Infrastructure">India's Digital Public Infrastructure</option>
+                    <option value="India's Semiconductor Mission">India's Semiconductor Mission</option>
+                    <option value="Neuromarketing: Understanding Consumer Psychology with Technology">Neuromarketing: Understanding Consumer Psychology with Technology</option>
+                    <option value="Decentralized Finance (DeFi) and Its Impact on Traditional Banking Models">Decentralized Finance (DeFi) and Its Impact on Traditional Banking Models</option>
+                    <option value="Digital Diplomacy">Digital Diplomacy</option>
                     <option value="India's Youth Dividend">India's Youth Dividend</option>
-                    <option value="Global Connectivity">Global Connectivity</option>
-                    <option value="Sustainability in India">Sustainability in India</option>
+                    <option value="Navigating the Hybrid Workforce">Navigating the Hybrid Workforce</option>
+                    <option value="Globalization and SMEs">Globalization and SMEs</option>
                     <option value="Democratizing News">Democratizing News</option>
-                    <option value="Human-AI Collaboration">Human-AI Collaboration</option>
-                    <option value="IRL vs. URL">IRL vs. URL</option>
                     <option value="Universal Basic Income (UBI)">Universal Basic Income (UBI)</option>
-                    <option value="The Creator Hustle">The Creator Hustle</option>
-                    <option value="Ethical Gene Editing">Ethical Gene Editing</option>
-                    <option value="AI and Creativity">AI and Creativity</option>
-                    <option value="India's Fintech Boom">India's Fintech Boom</option>
-                    <option value="Algorithmic Society">Algorithmic Society</option>
-                    <option value="Climate Change Action">Climate Change Action</option>
-                    <option value="India's Electric Revolution">India's Electric Revolution</option>
+                    <option value="Supply Chain Optimization">Supply Chain Optimization</option>
+                    <option value="Global Energy Crisis and Its Impact on Economies">Global Energy Crisis and Its Impact on Economies</option>
+                    <option value="Future of Work: AI and Automation">Future of Work: AI and Automation</option>
+                    <option value="Sustainability in Business Models">Sustainability in Business Models</option>
+                    <option value="Impact of Inflation on Global Supply Chains">Impact of Inflation on Global Supply Chains</option>                    
                 </>
             ) : null}
             {uplDom === "Electronics and Communication Engineering" ? (
@@ -419,6 +419,7 @@ function TeamDB() {
                     <option value="Advanced VLSI Design for High-Performance">Advanced VLSI Design for High-Performance</option>
                     <option value="Terahertz Communication">Terahertz Communication</option>
                     <option value="V2X (Vehicle-to-Everything) Communication for Autonomous Cars">V2X (Vehicle-to-Everything) Communication for Autonomous Cars</option>
+                    <option value="Organic LEDs">Organic LEDs</option>
                 </>
             ) : null}
             {uplDom === "Civil Engineering" ? (
@@ -443,7 +444,7 @@ function TeamDB() {
                     <option id="option">--select--</option>
                     <option value="Thermoelectric Generators for Waste Heat Recovery">Thermoelectric Generators for Waste Heat Recovery</option>
                     <option value="Robot Design, Development and Control">Robot Design, Development and Control</option>
-                    <option value="Solid-State Transformers for Smart Grids">Solid-State Transformers for Smart Grids</option>
+                    <option value="Integrating multiple energy sources">Integrating multiple energy sources</option>
                     <option value="Nano-Engineered Solar Cells">Nano-Engineered Solar Cells</option>
                     <option value="Smart Grids and Sustainable Systems">Smart Grids and Sustainable Systems</option>
                     <option value="Circular Economy for Electronic Waste">Circular Economy for Electronic Waste</option>

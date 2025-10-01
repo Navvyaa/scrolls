@@ -74,10 +74,17 @@ function DomainEce() {
                             <p className="domainText">Terahertz (THz) communication is emerging as a frontier technology for ultra-high-speed wireless networks. Operating between microwave and infrared frequencies, THz waves offer enormous bandwidth, enabling data rates far beyond what 5G can provide. Applications include 6G networks, secure military communication, and high-resolution imaging. Although challenges such as signal attenuation and hardware development remain, terahertz communication has the potential to revolutionize connectivity in the coming decades.</p>
                         </div>
                     </li>
+                    
                     <li>
                         <div id="liItem">
                             <p className="domainHeading">V2X (Vehicle-to-Everything) Communication for Autonomous Cars</p>
                             <p className="domainText">V2X communication enables vehicles to interact with other vehicles, infrastructure, pedestrians, and networks, ensuring safer and more efficient transportation systems. By exchanging real-time information, V2X reduces accidents, optimizes traffic flow, and supports autonomous driving. Applications include warning systems, traffic management, and cooperative navigation. As the automotive industry advances toward self-driving cars, V2X communication stands out as a critical technology for making autonomous mobility reliable, connected, and sustainable.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="liItem">
+                            <p className="domainHeading">Organic LEDs</p>
+                            <p className="domainText">Organic LEDs (OLEDs) are transforming display and lighting technologies by using thin organic films that emit light when electrified. Unlike conventional LEDs, they are thinner, flexible, and deliver superior color contrast without needing a backlight. Advances in materials have boosted their efficiency, brightness, and lifespan, enabling applications in smartphones, TVs, wearables, and energy-efficient lighting. With low power use and potential for flexible and transparent designs, OLEDs are shaping the future of sustainable electronics.</p>
                         </div>
                     </li>
                 </ul>
