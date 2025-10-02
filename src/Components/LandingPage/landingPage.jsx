@@ -148,7 +148,7 @@ function LandingPage() {
     if (title === "CA") {
       setPath("/ca_db");
       document.getElementById("toDash").style.display = "inline";
-      document.getElementById("toReg").style.display = "none";
+      // document.getElementById("toReg").style.display = "none";
     }
     if (title === "Team") {
       setPath("/team_db");
