@@ -157,7 +157,7 @@ function LandingPage() {
     }
     if (title === "") {
       document.getElementById("toDash").style.display = "none";
-      document.getElementById("toReg").style.display = "inline";
+      // document.getElementById("toReg").style.display = "inline";
     }
   }, [title]);
 
@@ -294,7 +294,7 @@ function LandingPage() {
               by A.K.G.E.C. in association with Ghaziabad Management
               Association.
             </p>
-            <button
+            {/* <button
               className="landRegister"
               id="toReg"
               onClick={() => {
@@ -302,7 +302,7 @@ function LandingPage() {
               }}
             >
               Register Now
-            </button>
+            </button> */}
             {/* <button
               className="landRegister"
               id="toReg"
