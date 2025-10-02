@@ -153,7 +153,7 @@ function LandingPage() {
     if (title === "Team") {
       setPath("/team_db");
       document.getElementById("toDash").style.display = "inline";
-      document.getElementById("toReg").style.display = "none";
+      // document.getElementById("toReg").style.display = "none";
     }
     if (title === "") {
       document.getElementById("toDash").style.display = "none";
