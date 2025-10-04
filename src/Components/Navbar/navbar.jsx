@@ -140,7 +140,7 @@ function Navbar(props) {
       setPath("/team_db");
       document.getElementsByClassName("navFlex1")[0].style.display = "none";
       document.getElementsByClassName("navFlexLogin")[0].style.display = "flex";
-      // document.getElementsByClassName("navRegister")[0].style.display = "none";
+      document.getElementsByClassName("navRegister")[0].style.display = "none";
       document.getElementsByClassName("navLogin")[0].style.display = "none";
       document.getElementsByClassName("navDbT")[0].style.display = "block";
       document.getElementsByClassName("navFlex3")[0].style.display = "flex";
@@ -156,7 +156,7 @@ function Navbar(props) {
       setPath("/ca_db");
       document.getElementsByClassName("navFlex1")[0].style.display = "none";
       document.getElementsByClassName("navFlexLogin")[0].style.display = "flex";
-      // document.getElementsByClassName("navRegister")[0].style.display = "none";
+      document.getElementsByClassName("navRegister")[0].style.display = "none";
       document.getElementsByClassName("navLogin")[0].style.display = "none";
       document.getElementsByClassName("navDbT")[0].style.display = "block";
       document.getElementsByClassName("navFlex3")[0].style.display = "flex";
@@ -171,7 +171,7 @@ function Navbar(props) {
       document.getElementById("liLogout").style.display = "none";
       document.getElementsByClassName("navFlex1")[0].style.display = "flex";
       document.getElementsByClassName("navFlexLogin")[0].style.display = "none";
-      // document.getElementsByClassName("navRegister")[0].style.display = "block";
+      document.getElementsByClassName("navRegister")[0].style.display = "block";
       document.getElementsByClassName("navLogin")[0].style.display = "block";
       document.getElementsByClassName("navDbT")[0].style.display = "none";
       document.getElementsByClassName("navFlex3")[0].style.display = "none";
@@ -700,14 +700,14 @@ function Navbar(props) {
         {/* </div> */}
 
         <div className="navFlex2">
-          {/* <button
+          <button
             className="navRegister"
             onClick={() => {
               RegOpen();
             }}
           >
             Register
-          </button> */}
+          </button>
           <button
             className="navLogin"
             onClick={() => {

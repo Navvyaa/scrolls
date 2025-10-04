@@ -148,16 +148,16 @@ function LandingPage() {
     if (title === "CA") {
       setPath("/ca_db");
       document.getElementById("toDash").style.display = "inline";
-      // document.getElementById("toReg").style.display = "none";
+      document.getElementById("toReg").style.display = "none";
     }
     if (title === "Team") {
       setPath("/team_db");
       document.getElementById("toDash").style.display = "inline";
-      // document.getElementById("toReg").style.display = "none";
+      document.getElementById("toReg").style.display = "none";
     }
     if (title === "") {
       document.getElementById("toDash").style.display = "none";
-      // document.getElementById("toReg").style.display = "inline";
+      document.getElementById("toReg").style.display = "inline";
     }
   }, [title]);
 
@@ -294,7 +294,7 @@ function LandingPage() {
               by A.K.G.E.C. in association with Ghaziabad Management
               Association.
             </p>
-            {/* <button
+            <button
               className="landRegister"
               id="toReg"
               onClick={() => {
@@ -302,7 +302,7 @@ function LandingPage() {
               }}
             >
               Register Now
-            </button> */}
+            </button>
             {/* <button
               className="landRegister"
               id="toReg"
