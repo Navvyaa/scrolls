@@ -535,7 +535,7 @@ function LandingPage() {
                   }}
                 />
               </div>
-              {/* <button
+              <button
                 className="asRegister"
                 id="regMember"
                 onClick={() => {
@@ -543,7 +543,7 @@ function LandingPage() {
                 }}
               >
                 Member
-              </button> */}
+              </button>
               <button
                 className="asRegister"
                 onClick={() => {
