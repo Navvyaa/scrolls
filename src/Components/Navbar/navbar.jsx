@@ -131,7 +131,7 @@ function Navbar(props) {
 
   useEffect(() => {
     if (title === "Team") {
-      document.getElementsByClassName("liRegister")[0].style.display = "none";
+      // document.getElementsByClassName("liRegister")[0].style.display = "none";
       document.getElementsByClassName("liLogin")[0].style.display = "none";
       document.getElementById("ca").style.display = "none";
       document.getElementById("team").style.display = "block";
@@ -140,14 +140,14 @@ function Navbar(props) {
       setPath("/team_db");
       document.getElementsByClassName("navFlex1")[0].style.display = "none";
       document.getElementsByClassName("navFlexLogin")[0].style.display = "flex";
-      document.getElementsByClassName("navRegister")[0].style.display = "none";
+      // document.getElementsByClassName("navRegister")[0].style.display = "none";
       document.getElementsByClassName("navLogin")[0].style.display = "none";
       document.getElementsByClassName("navDbT")[0].style.display = "block";
       document.getElementsByClassName("navFlex3")[0].style.display = "flex";
     }
 
     if (title === "CA") {
-      document.getElementsByClassName("liRegister")[0].style.display = "none";
+      // document.getElementsByClassName("liRegister")[0].style.display = "none";
       document.getElementsByClassName("liLogin")[0].style.display = "none";
       document.getElementById("team").style.display = "none";
       document.getElementById("ca").style.display = "block";
@@ -156,14 +156,14 @@ function Navbar(props) {
       setPath("/ca_db");
       document.getElementsByClassName("navFlex1")[0].style.display = "none";
       document.getElementsByClassName("navFlexLogin")[0].style.display = "flex";
-      document.getElementsByClassName("navRegister")[0].style.display = "none";
+      // document.getElementsByClassName("navRegister")[0].style.display = "none";
       document.getElementsByClassName("navLogin")[0].style.display = "none";
       document.getElementsByClassName("navDbT")[0].style.display = "block";
       document.getElementsByClassName("navFlex3")[0].style.display = "flex";
     }
 
     if (title === "") {
-      document.getElementsByClassName("liRegister")[0].style.display = "block";
+      // document.getElementsByClassName("liRegister")[0].style.display = "block";
       document.getElementsByClassName("liLogin")[0].style.display = "block";
       document.getElementById("ca").style.display = "none";
       document.getElementById("team").style.display = "none";
@@ -171,7 +171,7 @@ function Navbar(props) {
       document.getElementById("liLogout").style.display = "none";
       document.getElementsByClassName("navFlex1")[0].style.display = "flex";
       document.getElementsByClassName("navFlexLogin")[0].style.display = "none";
-      document.getElementsByClassName("navRegister")[0].style.display = "block";
+      // document.getElementsByClassName("navRegister")[0].style.display = "block";
       document.getElementsByClassName("navLogin")[0].style.display = "block";
       document.getElementsByClassName("navDbT")[0].style.display = "none";
       document.getElementsByClassName("navFlex3")[0].style.display = "none";
@@ -353,7 +353,7 @@ function Navbar(props) {
           <li>
             {" "}
             <div className=" ">
-              <button
+              {/* <button
 
                 className="liRegister text-black !important"
                 onClick={() => {
@@ -361,7 +361,7 @@ function Navbar(props) {
                 }}
               >
                 Register
-              </button>
+              </button> */}
             </div>
           </li>
           <li>
@@ -700,14 +700,14 @@ function Navbar(props) {
         {/* </div> */}
 
         <div className="navFlex2">
-          <button
+          {/* <button
             className="navRegister"
             onClick={() => {
               RegOpen();
             }}
           >
             Register
-          </button>
+          </button> */}
           <button
             className="navLogin"
             onClick={() => {

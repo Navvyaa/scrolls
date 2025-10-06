@@ -357,7 +357,7 @@ function TeamDB() {
             </table>
             <hr className="dbHR2" />
 
-            <div className="dbFlex1">
+            {/* <div className="dbFlex1">
                 <div className="dbFlex2">
                     <p className="dbHead">Domain</p>
                     <p className="dbText">Select Team Domain</p>
@@ -373,10 +373,10 @@ function TeamDB() {
                         <option value="Mechanical Engineering">Mechanical Engineering</option>
                     </select>
                 </> : <div className="teamID_box">{domain}</div>}
-            </div>
+            </div> */}
 
             <hr className="dbHR2" />
-
+{/* 
             <div className="dbFlex1">
                 <div className="dbFlex2">
                     <p className="dbHead">Topic</p>
@@ -499,18 +499,18 @@ function TeamDB() {
     )}
 </div>
 
-</div>
+</div> */}
 
             <hr className="dbHR2" />
 
-            <div id="synopsis">
+            {/* <div id="synopsis">
                 <div className="dbFlex1">
                     <div className="dbFlex2">
                         <p className="dbHead">Synopsis</p>
                         <p className="dbText">Note: You can upload the document (only PDF, DOCx) of size less than or equals to 1MB only once. Please carefully recheck your document while uploading.</p>
                     </div>
 
-                    {synopsis === '' || synopsis === null || synopsis === undefined ? <>
+                     {synopsis === '' || synopsis === null || synopsis === undefined ? <>
                         {(uplSyn.length == 0) ?
                             <label for="uploadSyn">
                                 <div className="file_box">
@@ -531,7 +531,7 @@ function TeamDB() {
                         : <div className="synopsis"><a href={`https://scrollsdev.silive.in/${synopsis}`}>{`https://scrollsdev.silive.in/${synopsis}`}</a></div>}
                 </div>
                 <hr className="dbHR2" />
-            </div>
+            </div> */}
 
             <div id="Paper">
                 <div className="dbFlex1">
