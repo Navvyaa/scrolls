@@ -18,13 +18,13 @@ function Footer() {
                 <div id="footFlex2">
     <p id="telephone">Contact</p>
     <div className="footFlexRow">
-        <a href="tel:7037236902">
+        <a href="tel:9354593985">
             <p className="w-[4.7rem] xl1:w-[7.2rem]">9354593985</p>
         </a>
         <p>(Ayush Pathak)</p>
     </div>
     <div className="footFlexRow">
-        <a href="tel:6394785007">
+        <a href="tel:8529166527">
             <p className="w-[4.7rem] xl1:w-[7.2rem]">8529166527</p>
         </a>
         <p>(Madhav Chaturvedi)</p>
